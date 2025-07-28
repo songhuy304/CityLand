@@ -1,5 +1,24 @@
 $(document).ready(function () {
-  // Khi click vào các phần tử có thuộc tính data-target
+  initOpenModal();
+  AOSInit();
+  addFullpage();
+  swiper();
+  MenuOpen();
+  fistPopUp();
+});
+
+function openModal(target) {
+  $(target).addClass("active");
+  $("body").css("overflow", "hidden");
+}
+
+// Hàm đóng modal
+function closeModal(target) {
+  $(target).removeClass("active");
+  $("body").css("overflow", "");
+}
+
+function initOpenModal() {
   $(document).on("click", "[data-target]", function (e) {
     e.preventDefault();
     const target = $(this).data("target");
@@ -18,23 +37,6 @@ $(document).ready(function () {
     const modal = $(this).closest(".modal-container");
     closeModal(modal);
   });
-
-  AOSInit();
-  addFullpage();
-  swiper();
-  MenuOpen();
-  fistPopUp(); // Gọi hàm hiển thị popup khi trang web tải xong
-});
-
-function openModal(target) {
-  $(target).addClass("active");
-  $("body").css("overflow", "hidden");
-}
-
-// Hàm đóng modal
-function closeModal(target) {
-  $(target).removeClass("active");
-  $("body").css("overflow", "");
 }
 
 function AOSInit() {
@@ -80,20 +82,19 @@ function MenuOpen() {
     $(".header-nav-icon").toggleClass("is-showing");
     $("#nk-main-menu").toggleClass("active");
 
-    // Thêm hoặc xóa transition-delay cho các menu item
     if ($("#nk-main-menu").hasClass("active")) {
-      // Khi menu active, thêm transition-delay
       $("#menu-main li").each(function (index) {
         $(this).css("transition-delay", 1 + index * 0.1 + "s");
       });
 
-      // Thêm transition-delay cho form tìm kiếm
       $("#menu-main")
         .next("form")
         .css("transition-delay", 1 + $("#menu-main li").length * 0.1 + "s");
+
+      $("body").removeClass("is-light-section").addClass("is-dark-section");
     } else {
-      // Khi menu không active, xóa transition-delay
       $("#menu-main li").css("transition-delay", "");
+      $("body").removeClass("is-dark-section").addClass("is-light-section");
     }
   });
 }
@@ -248,10 +249,18 @@ function addFullpage() {
         });
       },
 
-      afterLoad: function (destination) {
+      afterLoad: function (origin, destination, direction) {
         jQuery(".section.active [data-aos]").addClass("aos-animate");
-        if (destination.item.classList.contains("section-home-1")) {
-          $(".section-home-1").addClass("active");
+
+        const currentSectionClass = destination.item.classList;
+
+        const isDarkSection = currentSectionClass.contains("section-dark");
+        const isLightSection = currentSectionClass.contains("section-light");
+
+        if (isDarkSection) {
+          $("body").addClass("is-dark-section").removeClass("is-light-section");
+        } else if (isLightSection) {
+          $("body").addClass("is-light-section").removeClass("is-dark-section");
         }
       },
       onSlideLeave: function () {
@@ -260,6 +269,7 @@ function addFullpage() {
 
       afterSlideLoad: function () {
         jQuery(".slide.active [data-aos]").addClass("aos-animate");
+        console.log("destination.item.classList");
       },
 
       afterResize: function () {},
