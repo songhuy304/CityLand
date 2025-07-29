@@ -2443,6 +2443,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 }
 
 @media only screen and (max-width: 1024px) {
+  .grid-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
   #masthead .header_logo {
     width: 120px;
     height: auto;
@@ -2458,7 +2462,8 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
   }
 
   .add-pt {
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .home-sec-2 .flex-box {
@@ -2552,10 +2557,6 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 }
 
 @media only screen and (max-width: 767px) {
-  .grid-container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
   .load_home_page svg {
     width: 200px;
   }
@@ -2700,6 +2701,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
   section.progress-page .progress-thumb.swiper {
     width: 100%;
     height: auto;
+  }
+
+  section.progress-page .progress-thumb .arrow {
+    display: none !important;
   }
 }
 

@@ -5,6 +5,7 @@ $(document).ready(function () {
   swiper();
   MenuOpen();
   fistPopUp();
+  NKcustomSelect();
 });
 
 function openModal(target) {
@@ -1013,4 +1014,92 @@ function swiper() {
       });
     });
   }
+}
+
+function NKcustomSelect() {
+  jQuery("select.custom-sl").each(function () {
+    var $this = jQuery(this),
+      numberOfOptions = jQuery(this).children("option").length;
+
+    $this.addClass("select-hidden");
+
+    var val = jQuery(this).val();
+
+    $this.wrap('<div class="select"></div>');
+
+    $this.after('<div class="select-styled"></div>');
+
+    jQuery(this).hide();
+
+    var $styledSelect = $this.next("div.select-styled");
+
+    var $list = jQuery("<ul />", { class: "select-options" }).insertAfter(
+      $styledSelect
+    );
+
+    for (var i = 0; i < numberOfOptions; i++) {
+      var active = val == $this.children("option").eq(i).val() ? "active" : "";
+
+      $styledSelect.text($this.children("option:selected").text());
+
+      jQuery("<li />", {
+        text: $this.children("option").eq(i).text(),
+
+        rel: $this.children("option").eq(i).val(),
+
+        crclass: $this.children("option").eq(i).attr("class"),
+
+        "data-class-section": $this
+          .children("option")
+          .eq(i)
+          .attr("data-class-section"),
+
+        class: active,
+      }).appendTo($list);
+    }
+
+    var $listItems = $list.children("li");
+
+    $styledSelect.click(function (e) {
+      e.stopPropagation();
+
+      jQuery("div.select-styled.active")
+        .not(this)
+        .each(function () {
+          jQuery(this)
+            .removeClass("active")
+            .next("ul.select-options")
+            .slideUp();
+        });
+
+      jQuery(this)
+        .toggleClass("active")
+        .next("ul.select-options")
+        .slideToggle();
+    });
+
+    $listItems.click(function (e) {
+      $listItems.removeClass("active");
+
+      jQuery(this).addClass("active");
+
+      e.stopPropagation();
+
+      $styledSelect.text(jQuery(this).text()).removeClass("active");
+
+      $this.val(jQuery(this).attr("rel"));
+
+      $this.trigger("change");
+
+      $list.slideUp();
+    });
+
+    jQuery(document).click(function () {
+      $styledSelect.removeClass("active");
+
+      $list.slideUp();
+    });
+
+    jQuery("ul.select-options").slideUp();
+  });
 }
