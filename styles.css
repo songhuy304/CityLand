@@ -2580,6 +2580,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     flex: 1;
   }
 
+  .section-home-1 .flex-box {
+    flex-direction: column;
+  }
+
   #fullpage > section {
     min-height: 100vh;
   }
@@ -2618,6 +2622,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
   .mobile-col-12 {
     flex: 0 0 auto;
     width: 100% !important;
+  }
+
+  .section-home-1 .mobile-col-12 {
+    height: 360px;
   }
 
   .mobile-text-center {
