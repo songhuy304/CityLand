@@ -208,6 +208,10 @@ body {
   display: flex;
 }
 
+.jus-between {
+  justify-content: space-between;
+}
+
 .flex-col {
   max-height: 100%;
   flex-direction: column;
@@ -1195,6 +1199,17 @@ section .section-bg {
   background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/04/gioithieu.jpg);
 }
 
+.section-home-1 .video-wrapper {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 100%;
+}
+
+.section-home-1 .video-wrapper video {
+  width: 100%;
+  height: 100%;
+}
 .section-home-1 .col-4 {
   padding-bottom: 4.167rem;
 }
@@ -2563,6 +2578,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
   #nk-main-menu .main-menu {
     flex: 1;
+  }
+
+  #fullpage > section {
+    min-height: 100vh;
   }
 
   #nk-main-menu .menu-logo {
