@@ -1,0 +1,90 @@
+# WordPress core files
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/plugins/hello.php
+
+# Build files
+*.min.js
+*.min.css
+dist/
+build/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs
+*.log
+error_log
+access_log
+
+# Cache files
+*.cache
+cache/
+tmp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# SVG files (keep as is)
+*.svg
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.webp
+
+# Font files
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Configuration files that should not be formatted
+.env*
+wp-config.php
+
+# Git files
+.git/
+.gitignore
+
+# Package files
+package-lock.json
+yarn.lock 

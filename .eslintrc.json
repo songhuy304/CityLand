@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jquery": true
+    },
+    "extends": ["eslint:recommended", "prettier"],
+    "plugins": ["prettier"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "no-debugger": "error",
+        "prefer-const": "warn",
+        "no-var": "warn",
+        "object-shorthand": "warn",
+        "prefer-template": "warn",
+        "template-curly-spacing": "warn",
+        "arrow-spacing": "warn",
+        "no-duplicate-imports": "warn",
+        "no-useless-rename": "warn",
+        "object-property-newline": "off",
+        "array-element-newline": "off",
+        "no-undef": "warn"
+    },
+    "globals": {
+        "jQuery": "readonly",
+        "$": "readonly",
+        "AOS": "readonly",
+        "Swiper": "readonly",
+        "fullpage": "readonly",
+        "lepopup_submit": "readonly"
+    }
+}

@@ -1,0 +1,139 @@
+{
+  "printWidth": 100,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": false,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": false,
+  "htmlWhitespaceSensitivity": "css",
+  "vueIndentScriptAndStyle": false,
+  "proseWrap": "preserve",
+  "insertPragma": false,
+  "requirePragma": false,
+  "plugins": ["@prettier/plugin-php"],
+  "phpVersion": "8.0",
+  "braceStyle": "1tbs",
+  "trailingCommaPHP": false,
+  "overrides": [
+    {
+      "files": "*.php",
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf",
+        "htmlWhitespaceSensitivity": "css",
+        "singleAttributePerLine": false,
+        "parser": "php",
+        "phpVersion": "8.0",
+        "braceStyle": "1tbs",
+        "trailingCommaPHP": false,
+        "embeddedLanguageFormatting": "auto"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf",
+        "htmlWhitespaceSensitivity": "strict",
+        "singleAttributePerLine": false
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf"
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": false,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "arrowParens": "always",
+        "endOfLine": "lf",
+        "embeddedLanguageFormatting": "auto",
+        "singleAttributePerLine": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "endOfLine": "lf"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf",
+        "proseWrap": "preserve"
+      }
+    }
+  ]
+} 

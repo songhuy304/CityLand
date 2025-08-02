@@ -1,0 +1,57 @@
+{
+    "name": "clone-khome-project",
+    "version": "1.0.0",
+    "description": "K-Home New City WordPress project with custom theme",
+    "main": "index.html",
+    "scripts": {
+        "format": "npm run format:web && npm run format:php",
+        "format:web": "npm run format:js && npm run format:css && npm run format:html && npm run format:md",
+        "format:php": "npm run format:php-code && npm run format:php-html",
+        "format:php-code": "~/.config/composer/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes && echo '✅ PHP code formatted with PHP-CS-Fixer'",
+        "format:php-html": "find wp-theme/link-city -name '*.php' -exec sh -c 'html-beautify -r -s 4 \"$1\"' _ {} \\; && echo '✅ HTML in PHP files formatted with html-beautify'",
+        "format:js": "prettier --write \"**/*.{js,jsx,ts,tsx}\" && echo '✅ JavaScript files formatted'",
+        "format:css": "prettier --write \"**/*.{css,scss}\" && echo '✅ CSS files formatted'",
+        "format:html": "prettier --write \"**/*.html\" && echo '✅ HTML files formatted'",
+        "format:md": "prettier --write \"**/*.md\" && echo '✅ Markdown files formatted'",
+        "format:json": "prettier --write \"**/*.json\" && echo '✅ JSON files formatted'",
+        "format:theme": "npm run format:theme:web && npm run format:theme:php",
+        "format:theme:web": "prettier --write \"wp-theme/link-city/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" && echo '✅ Theme web files formatted'",
+        "format:theme:php": "~/.config/composer/vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes && npm run format:php-html && echo '✅ Theme PHP files formatted'",
+        "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+        "lint": "eslint \"**/*.{js,jsx}\"",
+        "lint:fix": "eslint \"**/*.{js,jsx}\" --fix",
+        "lint:theme": "eslint \"wp-theme/link-city/**/*.{js,jsx}\"",
+        "lint:theme:fix": "eslint \"wp-theme/link-city/**/*.{js,jsx}\" --fix"
+    },
+    "keywords": [
+        "wordpress",
+        "theme",
+        "k-home",
+        "real-estate",
+        "responsive",
+        "fullpage",
+        "clone"
+    ],
+    "author": "1227 Team",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@prettier/plugin-php": "^0.24.0",
+        "eslint": "^8.0.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "js-beautify": "^1.15.4",
+        "prettier": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=8.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/clone-khome.git"
+    },
+    "bugs": {
+        "url": "https://github.com/your-username/clone-khome/issues"
+    },
+    "homepage": "https://k-homenewcity.vn"
+}
