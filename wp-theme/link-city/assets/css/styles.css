@@ -2773,3 +2773,9 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     flex-direction: column;
   }
 }
+
+.fp-watermark {
+  display: none !important;
+  visibility: hidden !important;
+  z-index: -999 !important;
+}

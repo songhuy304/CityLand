@@ -47,9 +47,14 @@ function link_city_scripts() {
     // Enqueue main stylesheet
     wp_enqueue_style('link-city-style', get_stylesheet_uri(), array(), '1.0.0');
     
+    // Enqueue theme CSS files
+    wp_enqueue_style('link-city-core', get_template_directory_uri() . '/assets/css/core.css', array(), '1.0.0');
+    wp_enqueue_style('link-city-styles', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.0.0');
+    
     // Enqueue external CSS
     wp_enqueue_style('fullpage-css', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.css', array(), '4.0.37');
     wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), '2.3.1');
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.0.0');
     
     // Enqueue external JavaScript
     wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '2.3.1', true);
@@ -61,6 +66,12 @@ function link_city_scripts() {
     
     // Add inline script to ensure $ is available
     wp_add_inline_script('jquery', 'window.$ = window.jQuery;', 'after');
+    
+    // Add custom inline scripts if needed
+    wp_add_inline_script('link-city-app', '
+        // Initialize any additional scripts here
+        console.log("Link City theme scripts loaded successfully");
+    ', 'after');
 }
 add_action('wp_enqueue_scripts', 'link_city_scripts');
 
@@ -81,17 +92,6 @@ function link_city_customize_register($wp_customize) {
     ));
     $wp_customize->add_control('phone_number', array(
         'label'   => __('Số điện thoại', 'link-city'),
-        'section' => 'link_city_contact',
-        'type'    => 'text',
-    ));
-    
-    // Phone Display
-    $wp_customize->add_setting('phone_display', array(
-        'default'           => '09.222.222.56',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('phone_display', array(
-        'label'   => __('Hiển thị số điện thoại', 'link-city'),
         'section' => 'link_city_contact',
         'type'    => 'text',
     ));
@@ -183,70 +183,6 @@ function link_city_customize_register($wp_customize) {
         'section' => 'link_city_contact',
         'type'    => 'password',
     ));
-    
-    // Images Section
-    $wp_customize->add_section('link_city_images', array(
-        'title'    => __('Hình ảnh', 'link-city'),
-        'priority' => 35,
-    ));
-    
-    // Logo Image
-    $wp_customize->add_setting('logo_image', array(
-        'default'           => get_template_directory_uri() . '/assets/images/logo.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo_image', array(
-        'label'   => __('Logo chính', 'link-city'),
-        'section' => 'link_city_images',
-    )));
-    
-    // Logo Dark Image
-    $wp_customize->add_setting('logo_dark_image', array(
-        'default'           => get_template_directory_uri() . '/assets/images/logo-dark.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo_dark_image', array(
-        'label'   => __('Logo tối', 'link-city'),
-        'section' => 'link_city_images',
-    )));
-    
-    // Header Background Image
-    $wp_customize->add_setting('header_bg_image', array(
-        'default'           => get_template_directory_uri() . '/assets/images/header-bg-min.jpg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_bg_image', array(
-        'label'   => __('Ảnh nền header', 'link-city'),
-        'section' => 'link_city_images',
-    )));
-    
-    // Icon Images
-    $wp_customize->add_setting('phone_icon', array(
-        'default'           => get_template_directory_uri() . '/assets/images/Mask-group.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'phone_icon', array(
-        'label'   => __('Icon điện thoại', 'link-city'),
-        'section' => 'link_city_images',
-    )));
-    
-    $wp_customize->add_setting('zalo_icon', array(
-        'default'           => get_template_directory_uri() . '/assets/images/Group-18811.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'zalo_icon', array(
-        'label'   => __('Icon Zalo', 'link-city'),
-        'section' => 'link_city_images',
-    )));
-    
-    $wp_customize->add_setting('messenger_icon', array(
-        'default'           => get_template_directory_uri() . '/assets/images/Vector.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'messenger_icon', array(
-        'label'   => __('Icon Messenger', 'link-city'),
-        'section' => 'link_city_images',
-    )));
 }
 add_action('customize_register', 'link_city_customize_register');
 

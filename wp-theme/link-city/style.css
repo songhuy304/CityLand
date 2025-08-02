@@ -5,6 +5,4 @@ Author: 1227 Team
 Version: 1.0
 */
 
-/* Import the original styles */
-@import url("assets/css/styles.css");
-@import url("assets/css/core.css");
+/* CSS files are loaded via functions.php */
