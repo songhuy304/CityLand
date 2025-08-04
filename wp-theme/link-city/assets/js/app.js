@@ -5,6 +5,7 @@ $(document).ready(function () {
     MenuOpen();
     fistPopUp();
     NKcustomSelect();
+    addHeaderMobileClass();
 
     swiper();
 });
@@ -1075,4 +1076,12 @@ function NKcustomSelect() {
 
         jQuery("ul.select-options").slideUp();
     });
+}
+
+function addHeaderMobileClass() {
+    if (window.innerWidth <= 549) {
+        jQuery("#header").addClass("header-mobile");
+    } else {
+        jQuery("#header").removeClass("header-mobile");
+    }
 }

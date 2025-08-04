@@ -6,7 +6,7 @@ $(document).ready(function () {
     fistPopUp();
     NKcustomSelect();
     addHeaderMobileClass();
-    
+
     swiper();
 });
 
@@ -1085,5 +1085,3 @@ function addHeaderMobileClass() {
         jQuery("#header").removeClass("header-mobile");
     }
 }
-
-
