@@ -1092,6 +1092,15 @@ header#header .header-button-2 > a > span.hotline {
     opacity: 1;
 }
 
+body.is-dark-section .wrap-fp-nav #fp-nav ul li a.active + .fp-tooltip,
+body.is-dark-section .wrap-fp-nav #fp-nav ul li a.active {
+    text-shadow: 0px 2px 4px #06506d;
+}
+
+body.is-dark-section .wrap-fp-nav #fp-nav ul li a:before {
+    box-shadow: 0px 2px 4px #06506d;
+}
+
 .wrap-fp-nav #fp-nav ul li a {
     height: auto;
     padding-right: 0.521rem;
@@ -1193,7 +1202,7 @@ section .section-bg {
     background-position: center center;
 }
 
-.section-home-1 .section-bg {
+.section-home-1 {
     background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/04/gioithieu.jpg);
 }
 
@@ -1212,13 +1221,55 @@ section .section-bg {
     padding-bottom: 4.167rem;
 }
 
+.section-home-1 .col-6 {
+    display: flex;
+    justify-content: center;
+}
+
 .section-home-1 > .flex-box {
     gap: 20px;
     flex: 1;
     align-items: center;
+    justify-content: space-between;
 }
 
-.section-home-1 .video-col {
+/*  section 2 */
+
+section.section-home-1 .swiper-video-wrapper {
+    width: calc(100% - 5.5rem);
+}
+
+section.section-home-1 .swiper-video-wrapper .swiper-wrapper {
+    height: fit-content;
+}
+
+section.section-home-1 .swiper-video-thumb {
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+section.section-home-1 .swiper-video .swiper-slide .video-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+section.section-home-1 .swiper-video-thumb .swiper-slide .video-wrap {
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+section.section-home-1 .swiper-video-thumb .swiper-slide-thumb-active .video-wrap {
+    border-color: var(--sub-cl);
+}
+
+.swiper-slide video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 16/9;
 }
 
@@ -2584,10 +2635,11 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     .section-home-1 .flex-box {
         flex-direction: column;
         justify-content: space-around;
+        height: 100%;
     }
 
-    .section-home-1 .video-col {
-        aspect-ratio: 8/9;
+    section.section-home-1 .swiper-video-wrapper {
+        width: 100%;
     }
 
     #fullpage > section {
