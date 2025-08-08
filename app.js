@@ -123,7 +123,6 @@ function addFullpage() {
             navigation: true,
             navigationPosition: "left",
             navigationTooltips: listTitle,
-            autoScrolling: true,
             showActiveTooltip: true,
             slidesNavigation: true,
             slidesNavPosition: "left",
@@ -154,8 +153,6 @@ function addFullpage() {
             continuousVertical: false,
 
             continuousHorizontal: false,
-
-            scrollHorizontally: false,
 
             interlockedSlides: false,
 
@@ -666,45 +663,45 @@ function swiper() {
     //   },
     // });
 
-    // var homeSwiper2 = new Swiper(".home-swiper-2", {
-    //   slidesPerView: 3,
+    var homeSwiper2 = new Swiper(".home-swiper-2", {
+        slidesPerView: 3,
 
-    //   speed: 600,
+        speed: 600,
 
-    //   loop: true,
+        loop: true,
 
-    //   navigation: {
-    //     nextEl: ".home-sec-3 .next",
+        navigation: {
+            nextEl: ".home-sec-3 .next",
 
-    //     prevEl: ".home-sec-3 .prev",
-    //   },
+            prevEl: ".home-sec-3 .prev",
+        },
 
-    //   pagination: {
-    //     el: ".home-sec-3 .swiper-pagination",
+        pagination: {
+            el: ".home-sec-3 .swiper-pagination",
 
-    //     clickable: true,
-    //   },
+            clickable: true,
+        },
 
-    //   autoplay: {
-    //     delay: 5000,
+        // autoplay: {
+        //     delay: 5000,
 
-    //     disableOnInteraction: false,
-    //   },
+        //     disableOnInteraction: false,
+        // },
 
-    //   breakpoints: {
-    //     992: {
-    //       slidesPerView: 3,
-    //     },
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
 
-    //     768: {
-    //       slidesPerView: 2,
-    //     },
+            768: {
+                slidesPerView: 2,
+            },
 
-    //     300: {
-    //       slidesPerView: 2,
-    //     },
-    //   },
-    // });
+            300: {
+                slidesPerView: 2,
+            },
+        },
+    });
 
     var homeSwiper3 = new Swiper(".home-swiper-3", {
         slidesPerView: 3,
