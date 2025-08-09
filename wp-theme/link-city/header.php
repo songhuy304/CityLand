@@ -15,6 +15,8 @@
     <div class="wrapper" id="wrapper">
         <!-- ============================ HEADER ============================ -->
 
+        <!-- Them class="header-mobile" o trang chi tiet -->
+
         <header id="header">
             <div class="header-wrapper">
                 <div id="masthead" class="header-main">

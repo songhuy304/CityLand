@@ -30,7 +30,7 @@ echo !empty($categories) ? esc_html($categories[0]->name) : esc_html__('Tin dự
                         <span class="fs-16 lh-24 fw400"><?php esc_html_e('Chia sẻ:', 'link-city'); ?></span>
                         <?php $permalink = urlencode(get_permalink()); ?>
                         <a class="hover-zoom-img flex-box" href="http://www.facebook.com/sharer.php?u=<?php echo $permalink; ?>" target="_blank" rel="noopener">
-                            <svg width="24" height="24" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="24" height="244" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18.5 9C18.5 4.02943 14.4706 0 9.5 0C4.52943 0 0.5 4.02943 0.5 9C0.5 13.4921 3.79115 17.2155 8.09375 17.8907V11.6016H5.80859V9H8.09375V7.01719C8.09375 4.76156 9.43742 3.51562 11.4932 3.51562C12.4776 3.51562 13.5078 3.69141 13.5078 3.69141V5.90625H12.373C11.255 5.90625 10.9062 6.60006 10.9062 7.3125V9H13.4023L13.0033 11.6016H10.9062V17.8907C15.2088 17.2155 18.5 13.4921 18.5 9Z" fill="#666666"></path>
                             </svg>
                         </a>
@@ -107,7 +107,7 @@ if (!empty($cats)) {
 }
 $related_query = new WP_Query($related_args);
 if ($related_query->have_posts()) : ?>
-        <section class="section section-light home-sec-3 overflow-hidden utilities-3">
+        <section class="section section-light home-sec-3 overflow-hidden">
             <div class="grid-container add-pt">
                 <div class="title-group text-center">
                     <h2 class="sec-title text-primary" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
