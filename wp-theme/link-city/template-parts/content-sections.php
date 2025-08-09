@@ -398,115 +398,60 @@
                 </div>
 
                 <div class="box-swiper relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="500" data-aos-duration="500">
-                    <div class="swiper home-swiper-2 swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper home-swiper-2">
                         <div class="swiper-wrapper" aria-live="off">
-                            <!-- Các slide swiper ở đây -->
+                            <?php
+                            $news_query = new WP_Query([
+                                'post_type' => 'post',
+                                'posts_per_page' => 10,
+                                'ignore_sticky_posts' => true,
+                                'orderby' => 'date',
+                                'order' => 'DESC',
+                            ]);
+if ($news_query->have_posts()):
+    while ($news_query->have_posts()): $news_query->the_post();
+        $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large');
+        if (!$thumb) {
+            $thumb = get_template_directory_uri() . '/assets/images/header-bg-min.jpg';
+        }
+        ?>
                             <div class="swiper-slide" style="width: 389px">
                                 <div class="post-item relative overflow-hidden bdrs-20">
                                     <div class="img-wrap bdrs-20">
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <img width="800" height="373" src="https://k-homenewcity.vn/wp-content/uploads/2025/08/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song.jpg" decoding="async" sizes="(max-width: 800px) 100vw, 800px" data-ll-status="loaded" />
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img width="800" height="373" src="<?php echo esc_url($thumb); ?>" decoding="async" sizes="(max-width: 800px) 100vw, 800px" alt="<?php echo esc_attr(get_the_title()); ?>" />
                                         </a>
                                     </div>
                                     <div class="cont-wrap">
-                                        <time class="date fs-14 lh-22 text-3 fw300"> 06/08/2025 </time>
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0">
-                                                K-Home Apartment: Tòa Anh Đào vừa "cháy hàng", tòa Cát Tường
-                                                lập tức lên sóng
-                                            </h3>
+                                        <time class="date fs-14 lh-22 text-3 fw300"> <?php echo esc_html(get_the_date('d/m/Y')); ?> </time>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0"><?php the_title(); ?></h3>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-
+                            <?php endwhile;
+    wp_reset_postdata();
+else: ?>
                             <div class="swiper-slide" style="width: 389px">
                                 <div class="post-item relative overflow-hidden bdrs-20">
-                                    <div class="img-wrap bdrs-20">
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <img width="800" height="373" src="https://k-homenewcity.vn/wp-content/uploads/2025/08/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song.jpg" decoding="async" sizes="(max-width: 800px) 100vw, 800px" data-ll-status="loaded" />
-                                        </a>
-                                    </div>
                                     <div class="cont-wrap">
-                                        <time class="date fs-14 lh-22 text-3 fw300"> 06/08/2025 </time>
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0">
-                                                K-Home Apartment: Tòa Anh Đào vừa "cháy hàng", tòa Cát Tường
-                                                lập tức lên sóng
-                                            </h3>
-                                        </a>
+                                        <h3 class="fs-20 lh-32 fw700 text-0"><?php esc_html_e('Chưa có bài viết.', 'link-city'); ?></h3>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="swiper-slide" style="width: 389px">
-                                <div class="post-item relative overflow-hidden bdrs-20">
-                                    <div class="img-wrap bdrs-20">
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <img width="800" height="373" src="https://k-homenewcity.vn/wp-content/uploads/2025/07/soi-dong-roadshow-dua-can-ho-chuan-singapore-k-home-apartment-den-gan-hon-voi-khach-hang-6-712x400.jpg" decoding="async" sizes="(max-width: 800px) 100vw, 800px" data-ll-status="loaded" />
-                                        </a>
-                                    </div>
-                                    <div class="cont-wrap">
-                                        <time class="date fs-14 lh-22 text-3 fw300"> 06/08/2025 </time>
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0">
-                                                K-Home Apartment: Tòa Anh Đào vừa "cháy hàng", tòa Cát Tường
-                                                lập tức lên sóng
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide" style="width: 389px">
-                                <div class="post-item relative overflow-hidden bdrs-20">
-                                    <div class="img-wrap bdrs-20">
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <img width="800" height="373" src="https://k-homenewcity.vn/wp-content/uploads/2025/07/nha-pho-k-home-new-city-dat-chung-chi-cong-trinh-xanh-edge-1-674x400.jpg" decoding="async" sizes="(max-width: 800px) 100vw, 800px" data-ll-status="loaded" />
-                                        </a>
-                                    </div>
-                                    <div class="cont-wrap">
-                                        <time class="date fs-14 lh-22 text-3 fw300"> 06/08/2025 </time>
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0">
-                                                K-Home Apartment: Tòa Anh Đào vừa "cháy hàng", tòa Cát Tường
-                                                lập tức lên sóng
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide" style="width: 389px">
-                                <div class="post-item relative overflow-hidden bdrs-20">
-                                    <div class="img-wrap bdrs-20">
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <img width="800" height="373" src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-711x400.jpg" decoding="async" sizes="(max-width: 800px) 100vw, 800px" data-ll-status="loaded" />
-                                        </a>
-                                    </div>
-                                    <div class="cont-wrap">
-                                        <time class="date fs-14 lh-22 text-3 fw300"> 06/08/2025 </time>
-                                        <a href="https://k-homenewcity.vn/k-home-apartment-toa-anh-dao-vua-chay-hang-toa-cat-tuong-lap-tuc-len-song/">
-                                            <h3 class="limit-line limit-2 ts-04 fs-20 lh-32 fw700 text-0">
-                                                K-Home Apartment: Tòa Anh Đào vừa "cháy hàng", tòa Cát Tường
-                                                lập tức lên sóng
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Các slide khác -->
+                            <?php endif; ?>
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
 
-                    <div class="swiper-arrow-2 style-2 prev arrow-outer prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-6fa710823ded7e36a">
+                    <div class="swiper-arrow-2 style-2 prev arrow-outer prev" tabindex="0" role="button" aria-label="Previous slide">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 4.5L7.5 12L15 19.5" stroke="#326768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </div>
 
-                    <div class="swiper-arrow-2 style-2 next arrow-outer next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-6fa710823ded7e36a"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="swiper-arrow-2 style-2 next arrow-outer next" tabindex="0" role="button" aria-label="Next slide"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 4.5L16.5 12L9 19.5" stroke="#326768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </div>

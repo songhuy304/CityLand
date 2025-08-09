@@ -28,11 +28,11 @@ get_header(); ?>
                                 <path d="M9 4.5L16.5 12L9 19.5" stroke="#326768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                         </div>
-                    </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 </div>
 <!-- ============================ END CONTENT ============================ -->
 
