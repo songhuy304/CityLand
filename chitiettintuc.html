@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.css"
+            integrity="sha512-pW8yu5iZIqHN6UUao8gXHi/98pqz+s31ybm7am1OPAqtuxsqzJ9tuspoMOTBXszrzqLhC5OvN0yef62Sg/0RPQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="core.css" />
+        <title>Document</title>
+    </head>
+    <body class="is-light-section">
+        <div class="wrapper" id="wrapper">
+            <!-- ============================ HEADER ============================ -->
+
+            <header id="header" class="header-mobile">
+                <div class="header-wrapper">
+                    <div id="masthead" class="header-main">
+                        <div class="header-left">
+                            <ul class="header-nav header-nav-main nav nav-left nav-uppercase">
+                                <li class="nav-icon has-icon">
+                                    <a href="#" class="header-nav-icon" aria-label="Menu">
+                                        <span class="hamburger"><span></span><span></span><span></span></span>
+                                        <span class="menu-text hide-for-small">MENU</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-wrapper">
+                            <a href="https://k-homenewcity.vn/" title="K – Home New City">
+                                <img
+                                    src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Layer_1.svg"
+                                    class="header_logo header-logo"
+                                    alt="K – Home New City"
+                                />
+                                <img
+                                    src="https://k-homenewcity.vn/wp-content/uploads/2024/10/logo-light.svg"
+                                    class="header_logo header-logo-dark"
+                                    alt="K – Home New City"
+                                />
+                            </a>
+                        </div>
+
+                        <div class="flex-col hide-for-medium flex-right">
+                            <ul class="header-nav header-nav-main nav nav-right nav-uppercase">
+                                <li class="header-search header-search-lightbox has-icon">
+                                    <a
+                                        href="#search-lightbox"
+                                        aria-label="Search"
+                                        data-open="#search-lightbox"
+                                        data-focus="input.search-field"
+                                        class="is-small"
+                                        data-target="#search-lightbox"
+                                    >
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 22 22"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M20.7055 20L16.9712 16.3056M19.6385 9.97222C19.6385 14.9274 15.5781 18.9444 10.5692 18.9444C5.56044 18.9444 1.5 14.9274 1.5 9.97222C1.5 5.017 5.56044 1 10.5692 1C15.5781 1 19.6385 5.017 19.6385 9.97222Z"
+                                                stroke="white"
+                                                stroke-width="1.5"
+                                                stroke-linecap="square"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="html header-button-1">
+                                    <a href="tel:0937961212" target="_self">
+                                        <span class="icon">
+                                            <svg
+                                                width="50"
+                                                height="50"
+                                                viewBox="0 0 50 50"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M43.63 39.3891C39.3223 44.9042 32.6101 48.4499 25.0698 48.4499C12.0706 48.4499 1.53271 37.912 1.53271 24.9128C1.53271 11.9136 12.0706 1.37573 25.0698 1.37573C33.0542 1.37573 40.1101 5.35141 44.3658 11.4312L45.5987 11.4677C41.2145 4.78728 33.6573 0.375732 25.0698 0.375732C11.5183 0.375732 0.532715 11.3614 0.532715 24.9128C0.532715 38.4643 11.5183 49.4499 25.0698 49.4499C33.1911 49.4499 40.391 45.5043 44.8569 39.4255L43.63 39.3891Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                            <svg
+                                                width="25"
+                                                height="24"
+                                                viewBox="0 0 25 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M21.5149 14.8525L17.1239 12.9706C16.8946 12.8719 16.6443 12.8322 16.3957 12.855C16.1472 12.8779 15.9083 12.9626 15.7009 13.1014L13.3531 14.6664C11.9182 13.9685 10.7568 12.8123 10.0526 11.3805L10.0528 11.3803L11.6123 8.99734C11.748 8.79047 11.8304 8.55318 11.852 8.30669C11.8736 8.0602 11.8338 7.8122 11.7361 7.58487L9.85248 3.19006C9.72426 2.89174 9.50286 2.64298 9.22143 2.48103C8.94 2.31907 8.61367 2.25263 8.29132 2.29166C7.02463 2.45452 5.86056 3.07296 5.01656 4.03144C4.17256 4.98992 3.70637 6.22289 3.70508 7.5C3.70508 14.944 9.76111 21 17.2051 21C18.4822 20.9987 19.7152 20.5325 20.6737 19.6885C21.6321 18.8445 22.2506 17.6804 22.4134 16.4137C22.4523 16.0913 22.3858 15.765 22.2239 15.4836C22.0619 15.2022 21.8132 14.9808 21.5149 14.8525Z"
+                                                    fill="#F26A23"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="hotline ts-04">09.222.222.56</span>
+                                    </a>
+                                </li>
+                                <li class="header-divider"></li>
+                                <li class="html header-button-2">
+                                    <a href="tel:1900633968" target="_self">
+                                        <span class="hotline ts-04">09.222.222.56</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- header-right mobile -->
+
+                        <div class="flex-right show-for-medium">
+                            <ul class="header-nav nav nav-right">
+                                <li class="header-search header-search-lightbox has-icon">
+                                    <a
+                                        aria-label="Search"
+                                        class="is-small"
+                                        data-open="#search-lightbox"
+                                        data-focus="input.search-field"
+                                        data-target="#search-lightbox"
+                                    >
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 22 22"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M20.7055 20L16.9712 16.3056M19.6385 9.97222C19.6385 14.9274 15.5781 18.9444 10.5692 18.9444C5.56044 18.9444 1.5 14.9274 1.5 9.97222C1.5 5.017 5.56044 1 10.5692 1C15.5781 1 19.6385 5.017 19.6385 9.97222Z"
+                                                stroke="white"
+                                                stroke-width="1.5"
+                                                stroke-linecap="square"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="html header-button-1">
+                                    <a href="tel:0937961212" target="_self">
+                                        <span class="icon">
+                                            <svg
+                                                width="50"
+                                                height="50"
+                                                viewBox="0 0 50 50"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M43.63 39.3891C39.3223 44.9042 32.6101 48.4499 25.0698 48.4499C12.0706 48.4499 1.53271 37.912 1.53271 24.9128C1.53271 11.9136 12.0706 1.37573 25.0698 1.37573C33.0542 1.37573 40.1101 5.35141 44.3658 11.4312L45.5987 11.4677C41.2145 4.78728 33.6573 0.375732 25.0698 0.375732C11.5183 0.375732 0.532715 11.3614 0.532715 24.9128C0.532715 38.4643 11.5183 49.4499 25.0698 49.4499C33.1911 49.4499 40.391 45.5043 44.8569 39.4255L43.63 39.3891Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                            <svg
+                                                width="25"
+                                                height="24"
+                                                viewBox="0 0 25 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M21.5149 14.8525L17.1239 12.9706C16.8946 12.8719 16.6443 12.8322 16.3957 12.855C16.1472 12.8779 15.9083 12.9626 15.7009 13.1014L13.3531 14.6664C11.9182 13.9685 10.7568 12.8123 10.0526 11.3805L10.0528 11.3803L11.6123 8.99734C11.748 8.79047 11.8304 8.55318 11.852 8.30669C11.8736 8.0602 11.8338 7.8122 11.7361 7.58487L9.85248 3.19006C9.72426 2.89174 9.50286 2.64298 9.22143 2.48103C8.94 2.31907 8.61367 2.25263 8.29132 2.29166C7.02463 2.45452 5.86056 3.07296 5.01656 4.03144C4.17256 4.98992 3.70637 6.22289 3.70508 7.5C3.70508 14.944 9.76111 21 17.2051 21C18.4822 20.9987 19.7152 20.5325 20.6737 19.6885C21.6321 18.8445 22.2506 17.6804 22.4134 16.4137C22.4523 16.0913 22.3858 15.765 22.2239 15.4836C22.0619 15.2022 21.8132 14.9808 21.5149 14.8525Z"
+                                                    fill="#F26A23"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="hotline ts-04">09.222.222.56</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header-bg-container fill">
+                        <div class="header-bg-image fill"></div>
+                        <div class="header-bg-color fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MENU LEFT -->
+            <div
+                id="nk-main-menu"
+                class="flex-box flex-col jus-center rocket-lazyload lazyloaded"
+                style="
+                    background-image: url(&quot;https://k-homenewcity.vn/wp-content/uploads/2024/11/header-bg-min.jpg&quot;);
+                "
+                data-ll-status="loaded"
+            >
+                <div class="main-menu-inner">
+                    <div class="grid-container flex-box al-center">
+                        <div class="main-menu bdrs-20 overflow-y">
+                            <ul id="menu-main" class="ls-none m-0 main-nav">
+                                <li
+                                    id="menu-item-349"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-309 current_page_item menu-item-349"
+                                >
+                                    <a href="https://k-homenewcity.vn/" aria-current="page">Trang chủ</a>
+                                </li>
+                                <li
+                                    id="menu-item-673"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-673"
+                                >
+                                    <a href="https://k-homenewcity.vn/thiet-ke-k-home/">Thiết kế</a>
+                                </li>
+                                <li
+                                    id="menu-item-722"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"
+                                >
+                                    <a href="https://k-homenewcity.vn/tien-ich/">Tiện ích</a>
+                                </li>
+                                <li
+                                    id="menu-item-671"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"
+                                >
+                                    <a href="https://k-homenewcity.vn/vi-tri-du-an/">Vị trí</a>
+                                </li>
+                                <li
+                                    id="menu-item-672"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"
+                                >
+                                    <a href="https://k-homenewcity.vn/trai-nghiem/">Trải nghiệm</a>
+                                </li>
+                                <li
+                                    id="menu-item-721"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721"
+                                >
+                                    <a href="https://k-homenewcity.vn/san-pham/">Sản phẩm</a>
+                                </li>
+                                <li
+                                    id="menu-item-2356"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2356"
+                                >
+                                    <a href="https://k-homenewcity.vn/can-ho/">Căn hộ K-Home Apartment</a>
+                                </li>
+                                <li
+                                    id="menu-item-674"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674"
+                                >
+                                    <a href="https://k-homenewcity.vn/tien-do-du-an/">Tiến độ dự án</a>
+                                </li>
+                                <li
+                                    id="menu-item-2674"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2674"
+                                >
+                                    <a href="https://k-homenewcity.vn/category/tin-du-an/">Tin tức</a>
+                                </li>
+                                <li
+                                    id="menu-item-1164"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1164"
+                                >
+                                    <a href="https://k-homenewcity.vn/#doi-tac" aria-current="page">Đối tác</a>
+                                </li>
+                                <li
+                                    id="menu-item-566"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566"
+                                >
+                                    <a href="https://k-homenewcity.vn/lien-he/">Liên hệ</a>
+                                </li>
+                            </ul>
+                            <form method="get" class="searchform" action="https://k-homenewcity.vn/" role="search">
+                                <div class="flex-row relative">
+                                    <div class="input-container">
+                                        <input
+                                            class="search-field mb-0"
+                                            name="s"
+                                            value=""
+                                            id="s"
+                                            placeholder="Tìm kiếm"
+                                        />
+                                    </div>
+                                    <div class="flex-col">
+                                        <button
+                                            type="submit"
+                                            class="ux-search-submit submit-button secondary button icon mb-0"
+                                            aria-label="Nộp"
+                                        >
+                                            <svg
+                                                width="29"
+                                                height="29"
+                                                viewBox="0 0 29 29"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M13.1406 22.6565C18.396 22.6565 22.6562 18.3962 22.6562 13.1409C22.6562 7.88553 18.396 3.62524 13.1406 3.62524C7.88529 3.62524 3.625 7.88553 3.625 13.1409C3.625 18.3962 7.88529 22.6565 13.1406 22.6565Z"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                                <path
+                                                    d="M19.8687 19.8698L25.3742 25.3753"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="live-search-results text-left z-top"></div>
+                            </form>
+                        </div>
+                        <div class="menu-logo text-center">
+                            <svg
+                                class="draw-svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                version="1.2"
+                                viewBox="0 0 418 180"
+                                width="450"
+                                height="194"
+                            >
+                                <path
+                                    class="path-white"
+                                    d="m20.2 166.4q-1.5-1-2.3-2.7-0.7-1.6-0.7-3.5 0-1.9 0.7-3.5 0.8-1.7 2.3-2.7 1.6-1 3.7-1 1.9 0 3.2 0.7 1.3 0.7 2 1.8 0.7 1.1 0.9 2.4h-2.2q-0.3-1.2-1.2-2-1-0.9-2.7-0.9-1.4 0-2.4 0.7-1 0.8-1.6 2-0.5 1.1-0.5 2.5 0 1.3 0.5 2.5 0.6 1.2 1.6 1.9 1 0.8 2.4 0.8 1.7 0 2.7-0.9 0.9-0.8 1.2-2h2.2q-0.2 1.3-0.9 2.4-0.7 1.1-2 1.8-1.3 0.7-3.2 0.7-2.1 0-3.7-1z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m33.9 166.7q-1.2-0.7-1.8-1.9-0.6-1.2-0.6-2.6 0-1.4 0.6-2.6 0.6-1.2 1.8-1.9 1.1-0.7 2.7-0.7 1.6 0 2.7 0.7 1.2 0.7 1.8 1.9 0.6 1.2 0.6 2.6 0 1.4-0.6 2.6-0.6 1.2-1.8 1.9-1.1 0.7-2.7 0.7-1.6 0-2.7-0.7zm1.3-10.9h-1.9l2.4-3.3h1.8l2.3 3.3h-1.8l-1.4-2zm2.9 9.3q0.7-0.5 1-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-1-1.2-0.6-0.5-1.5-0.5-0.9 0-1.6 0.5-0.6 0.4-1 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.4 0.7 1 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5zm-2.5 6.2q-0.4-0.4-0.4-1 0-0.5 0.4-0.9 0.4-0.4 1-0.4 0.5 0 0.9 0.4 0.4 0.4 0.4 0.9 0 0.6-0.4 1-0.4 0.4-0.9 0.4-0.6 0-1-0.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m43.5 167.2v-10h2.1v1.4h0.1q0.4-0.6 1-1.1 0.7-0.5 1.9-0.5 1.1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m55.6 170.2q-1.2-0.9-1.4-2.3h2.1q0.2 0.6 0.8 1.1 0.6 0.4 1.7 0.4 1.4 0 2.1-0.8 0.6-0.7 0.6-2v-1.1h-0.1q-0.3 0.7-1.1 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.8-1-0.7-1.5-1.8-0.6-1.2-0.6-2.5 0-1.4 0.6-2.5 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5 0.8 0.5 1.1 1.1h0.1v-1.4h2.2v9.4q0 2.1-1.3 3.4-1.2 1.2-3.5 1.2-2.2 0-3.3-1zm4.7-5.3q0.6-0.5 0.9-1.2 0.3-0.8 0.3-1.6 0-0.9-0.3-1.7-0.3-0.7-0.9-1.2-0.7-0.4-1.5-0.4-0.9 0-1.6 0.4-0.6 0.5-0.9 1.2-0.4 0.8-0.4 1.7 0 0.8 0.4 1.6 0.3 0.7 0.9 1.2 0.7 0.5 1.6 0.5 0.8 0 1.5-0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m80.9 154.6v1.5h-1.7v11.1h-2.2v-1.5h-0.1q-0.4 0.7-1.1 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.7-1-0.8-1.5-2-0.6-1.2-0.6-2.5 0-1.4 0.6-2.6 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5 0.7 0.5 1.1 1.2h0.1v-2.6h-2.6v-1.5h2.6v-1.8h2.2v1.8zm-5.1 10.5q0.6-0.5 0.9-1.2 0.4-0.8 0.4-1.7 0-0.9-0.4-1.7-0.3-0.8-0.9-1.2-0.6-0.5-1.5-0.5-0.9 0-1.6 0.5-0.6 0.4-0.9 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.3 0.7 0.9 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m83.8 166.7q-1.2-0.7-1.8-1.9-0.6-1.2-0.6-2.6 0-1.4 0.6-2.6 0.6-1.2 1.8-1.9 1.1-0.7 2.7-0.7 1.6 0 2.7 0.7 1.2 0.7 1.8 1.9 0.6 1.2 0.6 2.6 0 1.4-0.6 2.6-0.6 1.2-1.8 1.9-1.1 0.7-2.7 0.7-1.6 0-2.7-0.7zm1.3-10.9h-1.9l2.4-2.9h1.8l2.3 2.9h-1.8l-1.4-1.7zm2.9 9.3q0.7-0.5 1-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-1-1.2-0.6-0.5-1.5-0.5-0.9 0-1.6 0.5-0.6 0.4-1 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.4 0.7 1 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5zm2.9-11.8h-1.8l-2-3.4h2.2z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m93.4 167.2v-10h2.1v1.4h0.1q0.4-0.6 1-1.1 0.7-0.5 1.9-0.5 1.1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m105.5 170.2q-1.2-0.9-1.4-2.3h2.1q0.2 0.6 0.8 1.1 0.6 0.4 1.7 0.4 1.4 0 2.1-0.8 0.6-0.7 0.6-2v-1.1h-0.1q-0.3 0.7-1.1 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.8-1-0.7-1.5-1.8-0.6-1.2-0.6-2.5 0-1.4 0.6-2.5 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5 0.8 0.5 1.1 1.1h0.1v-1.4h2.2v9.4q0 2.1-1.3 3.4-1.2 1.2-3.5 1.2-2.2 0-3.3-1zm4.7-5.3q0.6-0.5 0.9-1.2 0.3-0.8 0.3-1.6 0-0.9-0.3-1.7-0.3-0.7-0.9-1.2-0.7-0.4-1.5-0.4-0.9 0-1.6 0.4-0.6 0.5-0.9 1.2-0.4 0.8-0.4 1.7 0 0.8 0.4 1.6 0.3 0.7 0.9 1.2 0.7 0.5 1.6 0.5 0.8 0 1.5-0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m119.5 167.2v-14.4h2.2v5.8h0.1q0.3-0.6 1-1.1 0.6-0.5 1.8-0.5 1.1 0 1.9 0.5 0.7 0.5 1.1 1.3 0.4 0.9 0.4 1.9v6.5h-2.1v-6.2q0-1-0.6-1.6-0.5-0.6-1.4-0.6-1.1 0-1.7 0.8-0.5 0.8-0.5 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m136.4 157.5q0.7 0.5 1.1 1.2h0.1v-1.5h2.2v10h-2.2v-1.5h-0.1q-0.4 0.7-1.1 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.7-1-0.8-1.5-2-0.5-1.2-0.5-2.5 0-1.4 0.5-2.6 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5zm-3.1 1.8q-0.6 0.4-0.9 1.2-0.4 0.8-0.4 1.7 0 0.9 0.4 1.7 0.3 0.7 0.9 1.2 0.7 0.5 1.5 0.5 0.9 0 1.6-0.5 0.6-0.5 0.9-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-0.9-1.2-0.7-0.5-1.6-0.5-0.8 0-1.5 0.5zm0.7 12q-0.4-0.4-0.4-1 0-0.5 0.4-0.9 0.4-0.4 0.9-0.4 0.6 0 1 0.4 0.4 0.4 0.4 0.9 0 0.6-0.4 1-0.4 0.4-1 0.4-0.5 0-0.9-0.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m141.8 167.2v-10h2.2v1.4h0.1q0.3-0.6 1-1.1 0.7-0.5 1.8-0.5 1.1 0 1.9 0.5 0.7 0.5 1.1 1.3 0.4 0.9 0.4 1.9v6.5h-2.1v-6.2q0-1-0.5-1.6-0.6-0.6-1.5-0.6-1.1 0-1.7 0.8-0.5 0.8-0.5 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m152.5 167.2v-14.4h2.1v5.8h0.1q0.4-0.6 1-1.1 0.7-0.5 1.9-0.5 1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m166.9 170.9v-13.7h2.1v1.5h0.2q0.3-0.7 1.1-1.2 0.8-0.5 2-0.5 1.5 0 2.5 0.7 1 0.7 1.5 1.9 0.5 1.2 0.5 2.6 0 1.3-0.5 2.5-0.5 1.2-1.5 2-1 0.7-2.5 0.7-1.2 0-2-0.5-0.7-0.5-1.1-1.2h-0.2v5.2zm2.5-7q0.3 0.7 1 1.2 0.6 0.5 1.5 0.5 0.9 0 1.5-0.5 0.7-0.5 1-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-1-1.2-0.6-0.5-1.5-0.5-0.9 0-1.5 0.5-0.7 0.4-1 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m178.8 167.2v-14.4h2.1v5.8h0.1q0.4-0.6 1-1.1 0.7-0.5 1.9-0.5 1.1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m190.3 166.5q-0.8-1-0.8-2.6v-6.7h2.1v6.5q0 0.9 0.5 1.4 0.5 0.5 1.3 0.5 1.1 0 1.7-0.8 0.6-0.9 0.6-2.1v-5.5h2.1v10h-2.1v-1.4h-0.1q-0.4 0.6-1.1 1.1-0.6 0.5-1.8 0.5-1.5 0-2.4-0.9zm6.2-14.3l-2 3.5h-1.8l1.6-3.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m202 166.7q-1.1-0.8-1.7-2-0.6-1.2-0.6-2.5 0-1.4 0.6-2.6 0.6-1.2 1.7-1.9 1.2-0.7 2.8-0.7 2 0 3.2 1 1.1 1.1 1.3 2.7h-2q-0.2-0.8-0.8-1.4-0.7-0.5-1.7-0.5-0.9 0-1.6 0.4-0.7 0.5-1 1.3-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.3 0.8 1 1.2 0.7 0.5 1.6 0.5 1 0 1.7-0.5 0.6-0.6 0.8-1.4h2q-0.2 1.6-1.3 2.6-1.2 1.1-3.2 1.1-1.6 0-2.8-0.7z"
+                                ></path>
+                                <path class="path-white" d="m222.9 162.2h-7.1v-1.8h7.1z"></path>
+                                <path class="path-white" d="m238.7 163.3v-10.1h2.2v14h-2l-6.9-10v10h-2.2v-14h2z"></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m249.4 157.5q0.8 0.5 1.2 1.2h0.1v-1.5h2.2v10h-2.2v-1.5h-0.1q-0.4 0.7-1.2 1.2-0.7 0.5-2 0.5-1.4 0-2.4-0.7-1-0.8-1.6-2-0.5-1.2-0.5-2.5 0-1.4 0.5-2.6 0.5-1.2 1.6-1.9 1-0.7 2.4-0.7 1.3 0 2 0.5zm-2.8-1.7h-1.8l2.3-3.3h1.8l2.3 3.3h-1.8l-1.4-2zm-0.2 3.4q-0.7 0.5-1 1.3-0.3 0.8-0.3 1.7 0 0.9 0.3 1.6 0.3 0.8 1 1.3 0.6 0.5 1.5 0.5 0.9 0 1.5-0.5 0.7-0.5 1-1.3 0.3-0.7 0.3-1.6 0-0.9-0.3-1.7-0.3-0.8-1-1.3-0.6-0.4-1.5-0.4-0.9 0-1.5 0.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m254.9 167.2v-10h2.1v1.4h0.2q0.3-0.6 1-1.1 0.6-0.5 1.8-0.5 1.1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m267 170.2q-1.2-0.9-1.4-2.3h2.1q0.2 0.6 0.8 1.1 0.7 0.4 1.8 0.4 1.3 0 2-0.8 0.7-0.7 0.7-2v-1.1h-0.1q-0.4 0.7-1.2 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.8-1-0.7-1.5-1.8-0.5-1.2-0.5-2.5 0-1.4 0.5-2.5 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5 0.8 0.5 1.2 1.1h0.1v-1.4h2.1v9.4q0 2.1-1.2 3.4-1.3 1.2-3.6 1.2-2.1 0-3.3-1zm4.7-5.3q0.6-0.5 0.9-1.2 0.4-0.8 0.4-1.6 0-0.9-0.4-1.7-0.3-0.7-0.9-1.2-0.6-0.4-1.5-0.4-0.9 0-1.6 0.4-0.6 0.5-0.9 1.2-0.3 0.8-0.3 1.7 0 0.8 0.3 1.6 0.3 0.7 0.9 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m286.8 165.5v1.8q-0.8 0.1-1.6 0.1-1.7 0-2.4-0.9-0.8-0.9-0.8-2.3v-5.3h-1.8v-1.7h1.8v-2.6h2.1v2.6h2.4v1.7h-2.4v5.3q0 1.4 1.6 1.4 0.5 0 1.1-0.1z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m294.8 157.5q0.8 0.5 1.2 1.2h0.1v-1.5h2.2v10h-2.2v-1.5h-0.1q-0.4 0.7-1.1 1.2-0.8 0.5-2.1 0.5-1.4 0-2.4-0.7-1-0.8-1.6-2-0.5-1.2-0.5-2.5 0-1.4 0.5-2.6 0.6-1.2 1.6-1.9 1-0.7 2.4-0.7 1.3 0 2 0.5zm-2.8-1.7h-1.8l2.3-2.9h1.8l2.4 2.9h-1.9l-1.4-1.7zm-0.2 3.5q-0.6 0.4-1 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.4 0.7 1 1.2 0.6 0.5 1.5 0.5 0.9 0 1.5-0.5 0.7-0.5 1-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-1-1.2-0.6-0.5-1.5-0.5-0.9 0-1.5 0.5zm6-6h-1.7l-2-3.4h2.1z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m313.9 158q0.9 1.1 0.9 2.7v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.4-0.6-1 0-1.6 0.8-0.5 0.8-0.5 1.9v5.7h-2.2v-6.2q0-1-0.4-1.6-0.5-0.6-1.4-0.6-1.1 0-1.6 0.8-0.5 0.8-0.5 1.9v5.7h-2.2v-10h2.2v1.4q0.4-0.7 1-1.2 0.7-0.4 1.8-0.4 1.1 0 1.9 0.5 0.7 0.5 1.1 1.4 0.5-0.9 1.2-1.4 0.8-0.5 2-0.5 1.5 0 2.4 1z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m321.4 166.5q-1.1-1-1.3-2.4h2.2q0.1 0.7 0.6 1.1 0.5 0.5 1.5 0.5 0.8 0 1.3-0.4 0.4-0.4 0.4-0.9 0-0.5-0.3-0.8-0.4-0.3-1.1-0.4l-1.3-0.3q-1.4-0.3-2.2-1-0.9-0.7-0.9-1.9 0-0.9 0.5-1.6 0.4-0.7 1.3-1 0.8-0.4 1.9-0.4 1.7 0 2.7 0.8 1 0.9 1.2 2.1h-2.1q-0.1-0.5-0.5-0.9-0.5-0.3-1.3-0.3-0.8 0-1.2 0.3-0.4 0.4-0.4 0.9 0 0.8 1.3 1.1l1.4 0.3q3.1 0.6 3.1 3 0 0.9-0.5 1.6-0.5 0.7-1.3 1.1-0.9 0.4-2.1 0.4-1.9 0-2.9-0.9z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m331.9 166.7q-1.1-0.7-1.7-1.9-0.6-1.2-0.6-2.6 0-1.4 0.6-2.6 0.6-1.2 1.7-1.9 1.2-0.7 2.8-0.7 1.6 0 2.7 0.7 1.2 0.7 1.7 1.9 0.6 1.2 0.6 2.6 0 1.4-0.6 2.6-0.5 1.2-1.7 1.9-1.1 0.7-2.7 0.7-1.6 0-2.8-0.7zm1.4-10.9h-1.9l2.4-2.9h1.8l2.3 2.9h-1.8l-1.4-1.7zm2.9 9.3q0.7-0.5 1-1.2 0.3-0.8 0.3-1.7 0-0.9-0.3-1.7-0.3-0.8-1-1.2-0.6-0.5-1.5-0.5-0.9 0-1.6 0.5-0.6 0.4-1 1.2-0.3 0.8-0.3 1.7 0 0.9 0.3 1.7 0.4 0.7 1 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5zm4.4-15.2l-2 3.4h-1.7l1.6-3.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m341.6 167.2v-10h2.1v1.4h0.1q0.4-0.6 1-1.1 0.7-0.5 1.9-0.5 1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m353.7 170.2q-1.2-0.9-1.4-2.3h2.1q0.2 0.6 0.8 1.1 0.6 0.4 1.7 0.4 1.4 0 2.1-0.8 0.6-0.7 0.6-2v-1.1h-0.1q-0.4 0.7-1.1 1.2-0.8 0.5-2.1 0.5-1.4 0-2.4-0.8-1-0.7-1.6-1.8-0.5-1.2-0.5-2.5 0-1.4 0.5-2.5 0.6-1.2 1.6-1.9 1-0.7 2.4-0.7 1.3 0 2.1 0.5 0.7 0.5 1.1 1.1h0.1v-1.4h2.2v9.4q0 2.1-1.3 3.4-1.2 1.2-3.5 1.2-2.2 0-3.3-1zm4.7-5.3q0.6-0.5 0.9-1.2 0.3-0.8 0.3-1.6 0-0.9-0.3-1.7-0.3-0.7-0.9-1.2-0.7-0.4-1.6-0.4-0.9 0-1.5 0.4-0.6 0.5-0.9 1.2-0.4 0.8-0.4 1.7 0 0.8 0.4 1.6 0.3 0.7 0.9 1.2 0.6 0.5 1.5 0.5 0.9 0 1.6-0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m369.3 167.2h-2.3l3.2-5-3.2-5h2.3l2.4 3.7 2.4-3.7h2.3l-3.3 5 3.3 5h-2.3l-2.4-3.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m384.2 157.5q0.7 0.5 1.1 1.2h0.2v-1.5h2.1v10h-2.1v-1.5h-0.2q-0.4 0.7-1.1 1.2-0.8 0.5-2 0.5-1.5 0-2.5-0.7-1-0.8-1.5-2-0.5-1.2-0.5-2.5 0-1.4 0.5-2.6 0.5-1.2 1.5-1.9 1-0.7 2.5-0.7 1.2 0 2 0.5zm-3.1 1.8q-0.6 0.4-0.9 1.2-0.4 0.8-0.4 1.7 0 0.9 0.4 1.7 0.3 0.7 0.9 1.2 0.7 0.5 1.6 0.5 0.9 0 1.5-0.5 0.6-0.5 0.9-1.2 0.3-0.8 0.4-1.7-0.1-0.9-0.4-1.7-0.3-0.8-0.9-1.2-0.6-0.5-1.5-0.5-0.9 0-1.6 0.5z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m389.5 167.2v-10h2.2v1.4h0.1q0.3-0.6 1-1.1 0.7-0.5 1.8-0.5 1.1 0 1.9 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.7 0.8-0.5 0.8-0.5 1.9v5.7z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m400.2 167.2v-14.4h2.1v5.8h0.2q0.3-0.6 0.9-1.1 0.7-0.5 1.9-0.5 1.1 0 1.8 0.5 0.8 0.5 1.2 1.3 0.4 0.9 0.4 1.9v6.5h-2.2v-6.2q0-1-0.5-1.6-0.5-0.6-1.5-0.6-1.1 0-1.6 0.8-0.6 0.8-0.6 1.9v5.7z"
+                                ></path>
+                                <path class="path-white" d="m90.6 43.7v12h20.4v-12z"></path>
+                                <path
+                                    class="path-white"
+                                    d="m15.9 13.7h15.4v37l34.5-37h18.6l-26 29.4 34.5 39.9h-17.3l-26-29.9-18.3 19v10.9h-15.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m123.5 13.7h15.4l0.1 30h30.9l-0.1-30h15.4v69.3h-15.3v-27.3h-30.9v27.3h-15.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    fill-rule="evenodd"
+                                    d="m192.6 48.9c0-20 15.6-35.1 36.2-35.1 20.7 0 36 15.4 36 35.1 0 19.8-15.3 34.9-36 35.1-20.6 0.2-36.2-15.2-36.2-35.1zm36 23.1c13.5-0.1 20.9-10.9 20.9-23.1 0-12.2-7.4-23.2-20.9-23.2-12.9 0-20.6 10.9-20.6 23.3 0 12.3 7.7 23.1 20.6 23z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m272.5 13.7h14.5l24.9 29.3 20.9-29.3h14.7v69.3h-15.3v-46l-20.3 27.5-24-27.5v46h-15.4z"
+                                ></path>
+                                <path
+                                    class="path-white"
+                                    d="m355 13.7h53.3v13.8h-37.5v15.6h30.4v12.2h-30.4v13.8h37.5v13.9h-53.3z"
+                                ></path>
+                                <path
+                                    class="path-secondary"
+                                    d="m77.4 98.5h3.9l25.5 27.9v-27.9h4.3v34.6h-3.9l-25.5-27.8v27.8h-4.3z"
+                                ></path>
+                                <path
+                                    class="path-secondary"
+                                    d="m115 98.5h27.1v3.9h-22.8v12.1h18.9v3.5h-18.9v11.1h22.8v4h-27.1z"
+                                ></path>
+                                <path
+                                    class="path-secondary"
+                                    d="m145.9 98.5h4.4l12.3 28.8 12.2-28.8h3.8l11.8 28.8 12.6-28.8h4.5l-15.2 34.6h-3.8l-11.9-28.4-12 28.4h-3.9z"
+                                ></path>
+                                <path
+                                    class="path-secondary"
+                                    d="m221.4 115.8c0-10 7.7-17.9 18.5-17.8 9.1 0 15.5 5.2 17.7 12.6h-4.5c-1.8-5.3-6.3-9-13.3-9.1-8.6-0.1-14 6.5-14 14.3 0 7.9 5.4 14.3 14 14.3 7-0.1 11.6-3.9 13.4-9.3h4.5c-2.1 7.5-8.6 12.7-17.8 12.8-10.8 0.1-18.5-7.8-18.5-17.8z"
+                                ></path>
+                                <path class="path-secondary" d="m261.5 98.5h4.4v34.6h-4.4z"></path>
+                                <path class="path-secondary" d="m284.5 102h-14.8v-3.5h34v3.5h-14.8v31.1h-4.4z"></path>
+                                <path
+                                    class="path-secondary"
+                                    d="m325.6 118.4l-18-19.9h4.8l15.3 16.7 14.3-16.7h4.8l-16.8 19.9v14.7h-4.4z"
+                                ></path>
+                                <path class="path-secondary" d="m15.9 115.8h55.1"></path>
+                                <path class="path-secondary" d="m71 116.3h-55.1v-4.4h55.1z"></path>
+                                <path class="path-secondary" d="m350.5 112.4h57.8"></path>
+                                <path class="path-secondary" d="m408.3 116.3h-57.8v-4.4h57.8z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MENU LEFT -->
+
+            <!-- ============================ END HEADER ============================ -->
+
+            <!-- ============================ START CONTENT ============================ -->
+
+            <div id="detail-page">
+                <div class="single-post-wrap">
+                    <section class="post-title-group">
+                        <div class="grid-container">
+                            <div class="text-center">
+                                <div class="text-center text-uppercase text-secondary fs-20 lh-28 fw700">
+                                    Tin dự án
+                                </div>
+                                <h1 class="sec-title text-primary text-uppercase">
+                                    ‘Chuẩn Singapore’ định hình giá trị căn hộ K-Home Apartment
+                                </h1>
+                            </div>
+                            <div class="flex-box al-center jus-center post-date-share">
+                                <div class="date flex-box al-center fs-16 lh-24 fw400 text-6">
+                                    <svg
+                                        width="25"
+                                        height="24"
+                                        viewBox="0 0 25 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M8.5 7V3M16.5 7V3M7.5 11H17.5M5.5 21H19.5C20.6046 21 21.5 20.1046 21.5 19V7C21.5 5.89543 20.6046 5 19.5 5H5.5C4.39543 5 3.5 5.89543 3.5 7V19C3.5 20.1046 4.39543 21 5.5 21Z"
+                                            stroke="#666666"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        ></path>
+                                    </svg>
+                                    29/07/2025
+                                </div>
+                                <div class="share flex-box al-center">
+                                    <span class="fs-16 lh-24 fw400">Chia sẻ:</span>
+                                    <a
+                                        class="hover-zoom-img flex-box"
+                                        href="http://www.facebook.com/sharer.php?u=https://k-homenewcity.vn/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment/"
+                                        target="_blank"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="244"
+                                            viewBox="0 0 19 18"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <g clip-path="url(#clip0_3311_10484)">
+                                                <path
+                                                    d="M18.5 9C18.5 4.02943 14.4706 0 9.5 0C4.52943 0 0.5 4.02943 0.5 9C0.5 13.4921 3.79115 17.2155 8.09375 17.8907V11.6016H5.80859V9H8.09375V7.01719C8.09375 4.76156 9.43742 3.51562 11.4932 3.51562C12.4776 3.51562 13.5078 3.69141 13.5078 3.69141V5.90625H12.373C11.255 5.90625 10.9062 6.60006 10.9062 7.3125V9H13.4023L13.0033 11.6016H10.9062V17.8907C15.2088 17.2155 18.5 13.4921 18.5 9Z"
+                                                    fill="#666666"
+                                                ></path>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_3311_10484">
+                                                    <rect
+                                                        width="18"
+                                                        height="18"
+                                                        fill="white"
+                                                        transform="translate(0.5)"
+                                                    ></rect>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </a>
+                                    <div
+                                        class="hover-zoom-img flex-box click-copy"
+                                        data-copy="https://k-homenewcity.vn/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment/"
+                                    >
+                                        <svg
+                                            width="28"
+                                            height="28"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M11.4698 6.6968L13.326 4.84065C13.7089 4.45731 14.1637 4.15319 14.6642 3.94565C15.1648 3.73811 15.7013 3.63123 16.2432 3.6311C16.785 3.63098 17.3216 3.73761 17.8223 3.94492C18.3229 4.15222 18.7778 4.45613 19.161 4.83929C19.5441 5.22244 19.848 5.67734 20.0553 6.17798C20.2626 6.67862 20.3693 7.2152 20.3691 7.75706C20.369 8.29893 20.2621 8.83546 20.0546 9.336C19.8471 9.83655 19.5429 10.2913 19.1596 10.6743L16.5079 13.3259C16.1249 13.709 15.6702 14.0128 15.1697 14.2201C14.6692 14.4274 14.1328 14.5341 13.5911 14.5341C13.0494 14.5341 12.513 14.4274 12.0126 14.2201C11.5121 14.0128 11.0574 13.709 10.6743 13.3259"
+                                                stroke="#272D35"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                            <path
+                                                d="M12.5302 17.3034L10.674 19.1595C10.2911 19.5429 9.8363 19.847 9.33576 20.0545C8.83521 20.2621 8.29868 20.3689 7.75682 20.3691C7.21496 20.3692 6.67838 20.2626 6.17773 20.0553C5.67709 19.848 5.2222 19.544 4.83904 19.1609C4.45589 18.7777 4.15198 18.3228 3.94467 17.8222C3.73737 17.3216 3.63073 16.785 3.63086 16.2431C3.63099 15.7012 3.73787 15.1647 3.94541 14.6642C4.15295 14.1636 4.45707 13.7089 4.8404 13.3259L7.49205 10.6742C7.87509 10.2912 8.32983 9.98736 8.8303 9.78006C9.33077 9.57276 9.86717 9.46606 10.4089 9.46606C10.9506 9.46606 11.487 9.57276 11.9874 9.78006C12.4879 9.98736 12.9426 10.2912 13.3257 10.6742"
+                                                stroke="#272D35"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="zalo-share-button"
+                                        data-href=""
+                                        data-oaid="3783004274492024975"
+                                        data-layout="4"
+                                        data-color="white"
+                                        data-customize="false"
+                                        style="position: relative; display: inline-block; width: 40px; height: 40px"
+                                        ><iframe
+                                            id="c4c923ca-25cf-4cba-88e0-69ee2a0d7c35"
+                                            name="c4c923ca-25cf-4cba-88e0-69ee2a0d7c35"
+                                            frameborder="0"
+                                            allowfullscreen=""
+                                            scrolling="no"
+                                            width="40px"
+                                            height="40px"
+                                            src="https://button-share.zalo.me/share_inline?id=c4c923ca-25cf-4cba-88e0-69ee2a0d7c35&amp;layout=4&amp;color=white&amp;customize=false&amp;width=40&amp;height=40&amp;isDesktop=true&amp;url=https%3A%2F%2Fk-homenewcity.vn%2Fchuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment%2F&amp;d=eyJ1cmwiOiJodHRwczovL2staG9tZW5ld2NpdHkudm4vY2h1YW4tc2luZ2Fwb3JlLWRpbmgtaGluaC1naWEtdHJpLWNhbi1oby1rLWhvbWUtYXBhcnRtZW50LyJ9&amp;shareType=0"
+                                            style="position: absolute; z-index: 99; top: 0px; left: 0px"
+                                        ></iframe
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="normal-post">
+                        <div class="grid-container">
+                            <div class="content-post">
+                                <div class="content-wrapper">
+                                    <p class="detail-sapo" data-role="sapo"
+                                        ><strong
+                                            >Với sự đồng hành của Surbana Jurong (Singapore), Kim Oanh Land (thành viên
+                                            Kim Oanh Group) đã phát triển bộ tiêu chuẩn Singapore áp dụng cho dự án
+                                            K-Home New City – Đô thị nhà ở xã hội chuẩn Singapore đầu tiên tại Việt
+                                            Nam.</strong
+                                        ></p
+                                    >
+                                    <div class="detail-cmain">
+                                        <div
+                                            class="detail-content afcbc-body"
+                                            data-role="content"
+                                            data-io-article-url="https://thanhnien.vn/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-185250729091649404.htm"
+                                        >
+                                            <p
+                                                >Trong đó, bên cạnh các phân khu thấp tầng đã được đông đảo khách hàng
+                                                đón nhận trong thời gian vừa qua, khu căn hộ K-Home Apartment là mảnh
+                                                ghép cuối tạo nên bức tranh của một cộng đồng hiện đại và bền vững.</p
+                                            >
+                                            <h2>Dự án “chuẩn Singapore” có gì hấp dẫn?</h2>
+                                            <p
+                                                >Surbana Jurong là tập đoàn có kinh nghiệm triển khai hơn 80% nhà ở xã
+                                                hội tại Singapore. Các dự án nhà ở xã hội của Surbana Jurong phát triển
+                                                không chỉ đáp ứng tốt các yêu cầu về quy hoạch, thiết kế hiện đại mà còn
+                                                mang nhiều giá trị nhân văn và hướng đến kiến tạo môi trường sống bền
+                                                vững cho cộng đồng.</p
+                                            >
+                                            <p
+                                                >Đồng hành với Kim Oanh Land, Surbana Jurong đã dành nhiều tâm huyết
+                                                nghiên cứu và điều chỉnh từ nguyên lý thiết kế nhà ở xã hội tại
+                                                Singapore cho phù hợp với điều kiện khí hậu, văn hóa và thói quen sinh
+                                                hoạt của người Việt, từ đó phát triển thành bộ 6 tiêu chuẩn Singapore để
+                                                áp dụng vào dự án K-Home New City với quy mô lên đến 26,69ha. Các tiêu
+                                                chuẩn này bao gồm: vị trí chiến lược, giao thông kết nối, nhiều hành
+                                                lang xanh, thiết kế thông minh, quy hoạch chuẩn chỉnh và hệ tiện ích
+                                                “All in One”.</p
+                                            >
+                                            <figure
+                                                id="attachment_2704"
+                                                aria-describedby="caption-attachment-2704"
+                                                style="width: 1920px"
+                                                class="wp-caption aligncenter"
+                                                ><img
+                                                    fetchpriority="high"
+                                                    decoding="async"
+                                                    class="wp-image-2704 size-full lazyloaded"
+                                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3.jpg"
+                                                    alt=""
+                                                    width="1920"
+                                                    height="1080"
+                                                    sizes="(max-width: 1920px) 100vw, 1920px"
+                                                    srcset="
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3.jpg          1920w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-711x400.jpg   711w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-1400x788.jpg 1400w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-768x432.jpg   768w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-1536x864.jpg 1536w
+                                                    "
+                                                    data-ll-status="loaded"
+                                                /><noscript
+                                                    ><img
+                                                        fetchpriority="high"
+                                                        decoding="async"
+                                                        class="wp-image-2704 size-full"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3.jpg"
+                                                        alt=""
+                                                        width="1920"
+                                                        height="1080"
+                                                        srcset="
+                                                            https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3.jpg          1920w,
+                                                            https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-711x400.jpg   711w,
+                                                            https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-1400x788.jpg 1400w,
+                                                            https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-768x432.jpg   768w,
+                                                            https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-3-1536x864.jpg 1536w
+                                                        "
+                                                        sizes="(max-width: 1920px) 100vw, 1920px" /></noscript
+                                                ><figcaption id="caption-attachment-2704" class="wp-caption-text"
+                                                    >Phối cảnh tổng thể dự án K-Home New City ngay lõi trung tâm thành
+                                                    phố mới Bình Dương</figcaption
+                                                ></figure
+                                            >
+                                            <p
+                                                >Thực tế, K-Home New City sở hữu vị trí chiến lược ngay lõi trung tâm
+                                                thành phố mới Bình Dương. Dự án tiếp giáp các mặt tiền đường lớn gồm Lê
+                                                Lai, Lê Lợi, Nguyễn Văn Linh và đường số 8 KCN VSIP2, kết nối trực tiếp
+                                                với hàng loạt trục giao thông huyết mạch như ĐT741, ĐT742, đại lộ Mỹ
+                                                Phước – Tân Vạn, Vành đai 3, Vành đai 4, cao tốc TP.HCM – Thủ Dầu Một –
+                                                Chơn Thành, depot metro thành phố mới Bình Dương – Suối Tiên – Bến
+                                                Thành…</p
+                                            >
+                                            <p
+                                                >Nhờ đó, cư dân có thể dễ dàng kết nối đến các tiện ích lân cận như tòa
+                                                tháp đôi trung tâm hành chính Bình Dương, công viên 75ha, AEON Mall, WTC
+                                                Gateway, Đại học Quốc tế miền Đông… Ngoài ra, K-Home New City còn tọa
+                                                lạc tại khu vực có nhiều khu công nghiệp lớn, mang đến sự thuận tiện cho
+                                                công việc hằng ngày của cư dân.</p
+                                            >
+                                            <p
+                                                >Một ưu điểm nổi bật khác của K-Home New City được chú trọng đầu tư
+                                                7,1ha mảng xanh phân bố xuyên suốt dự án. Nổi bật là 10 công viên chủ đề
+                                                tạo thành hành lang xanh bao quanh dự án như những “lá chắn sinh thái”
+                                                giúp thanh lọc không khí, giảm tiếng ồn, giúp cải thiện chất lượng sống
+                                                cho cư dân. Ngoài ra, dự án được phát triển theo tiêu chuẩn công trình
+                                                xanh EDGE giúp tiết kiệm 20% lượng điện, nước tiêu thụ và giảm 20% hàm
+                                                lượng carbon trong vật liệu, hướng đến phát triển bền vững và thân thiện
+                                                với môi trường.</p
+                                            >
+                                            <p
+                                                >Không chỉ nhà phố mà các căn hộ K-Home Apartment cũng được Surbana
+                                                Jurong thiết kế tỉ mỉ, tinh tế, tối ưu công năng sử dụng cũng như đảm
+                                                bảo đón ánh sáng và gió tự nhiên tốt nhất. Nội thất căn hộ được bố trí
+                                                gọn gàng, phân tách rõ ràng theo từng chức năng sử dụng, giúp thuận tiện
+                                                trong sinh hoạt và phát huy hiệu quả nhất từng không gian chức năng.</p
+                                            >
+                                            <figure
+                                                id="attachment_2705"
+                                                aria-describedby="caption-attachment-2705"
+                                                style="width: 1920px"
+                                                class="wp-caption aligncenter"
+                                                ><img
+                                                    decoding="async"
+                                                    class="wp-image-2705 size-full lazy-load-active"
+                                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4.jpg"
+                                                    data-src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4.jpg"
+                                                    alt=""
+                                                    width="1920"
+                                                    height="1067"
+                                                    srcset="
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4.jpg          1920w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-720x400.jpg   720w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-1400x778.jpg 1400w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-768x427.jpg   768w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-1536x854.jpg 1536w
+                                                    "
+                                                    data-srcset="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4.jpg 1920w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-720x400.jpg 720w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-1400x778.jpg 1400w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-768x427.jpg 768w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-4-1536x854.jpg 1536w"
+                                                    sizes="(max-width: 1920px) 100vw, 1920px"
+                                                /><figcaption id="caption-attachment-2705" class="wp-caption-text"
+                                                    >Căn hộ K-Home Apartment được thiết kế tối ưu công năng sử dụng,
+                                                    luôn thoáng mát và ngập tràn ánh sáng tự nhiên</figcaption
+                                                ></figure
+                                            >
+                                            <p
+                                                >Đặc biệt, K-Home New City mang đến cho cư dân hệ tiện ích “All in One”
+                                                hiện đại gồm 10 công viên, 4 hồ bơi, trường mầm non, trường liên cấp
+                                                chuẩn quốc tế Elite School, khu vui chơi trẻ em, tổ hợp thể thao ngoài
+                                                trời (sân pickleball, sân tennis, sân bóng đá), clubhouse, phố thương
+                                                mại – ẩm thực, trung tâm y tế – văn hóa, khu BBQ, vườn thiền… Tất cả đáp
+                                                ứng mọi nhu cầu sống hằng ngày của từng nhóm cư dân khác nhau.</p
+                                            >
+                                            <figure
+                                                id="attachment_2706"
+                                                aria-describedby="caption-attachment-2706"
+                                                style="width: 1920px"
+                                                class="wp-caption aligncenter"
+                                                ><img
+                                                    decoding="async"
+                                                    class="wp-image-2706 size-full lazy-load-active"
+                                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2.jpg"
+                                                    data-src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2.jpg"
+                                                    alt=""
+                                                    width="1920"
+                                                    height="1080"
+                                                    srcset="
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2.jpg          1920w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-711x400.jpg   711w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-1400x788.jpg 1400w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-768x432.jpg   768w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-1536x864.jpg 1536w
+                                                    "
+                                                    data-srcset="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2.jpg 1920w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-711x400.jpg 711w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-1400x788.jpg 1400w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-768x432.jpg 768w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-2-1536x864.jpg 1536w"
+                                                    sizes="(max-width: 1920px) 100vw, 1920px"
+                                                /><figcaption id="caption-attachment-2706" class="wp-caption-text"
+                                                    >Tổ hợp thể thao ngoài trời kết hợp clubhouse, quán cà phê tại
+                                                    K-Home New City</figcaption
+                                                ></figure
+                                            >
+                                            <h2>Chất lượng được bảo chứng bởi những thương hiệu hàng đầu</h2>
+                                            <p
+                                                >Không chỉ được đầu tư bài bản về mặt quy hoạch, thiết kế, K-Home New
+                                                City còn đảm bảo tiến độ và chất lượng xây dựng bởi các nhà thầu hàng
+                                                đầu thị trường như Coteccons, Handong, COSACO, An Phong, An Phước Bình
+                                                Dương… Dự kiến, các phân khu thấp tầng sẽ bắt đầu bàn giao từ cuối năm
+                                                2025.</p
+                                            >
+                                            <p
+                                                >Riêng khu căn hộ K-Home Apartment do Coteccons làm tổng thầu được sử
+                                                dụng những công nghệ xây dựng tiên tiến nhất hiện nay. Đây là minh chứng
+                                                rõ nét cho năng lực triển khai và cam kết của Kim Oanh Land, đồng thời
+                                                cũng là nền tảng vững chắc đảm bảo K-Home Apartment sẽ về đích và bắt
+                                                đầu bàn giao căn hộ cho khách hàng từ quý 2/2027.</p
+                                            >
+                                            <figure
+                                                id="attachment_2707"
+                                                aria-describedby="caption-attachment-2707"
+                                                style="width: 1430px"
+                                                class="wp-caption aligncenter"
+                                                ><img
+                                                    decoding="async"
+                                                    class="wp-image-2707 size-full lazy-load-active"
+                                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1.jpg"
+                                                    data-src="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1.jpg"
+                                                    alt=""
+                                                    width="1430"
+                                                    height="804"
+                                                    srcset="
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1.jpg          1430w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-711x400.jpg   711w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-1400x787.jpg 1400w,
+                                                        https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-768x432.jpg   768w
+                                                    "
+                                                    data-srcset="https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1.jpg 1430w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-711x400.jpg 711w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-1400x787.jpg 1400w, https://k-homenewcity.vn/wp-content/uploads/2025/07/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment-1-768x432.jpg 768w"
+                                                    sizes="(max-width: 1430px) 100vw, 1430px"
+                                                /><figcaption id="caption-attachment-2707" class="wp-caption-text"
+                                                    >Tiện ích hồ bơi tại công viên Vườn Nhiệt Đới và trường liên cấp
+                                                    chuẩn quốc tế Elite School đã hoàn thiện, sẵn sàng phục vụ cư dân
+                                                    ngay khi bàn giao sản phẩm thấp tầng vào cuối năm 2025</figcaption
+                                                ></figure
+                                            >
+                                            <p
+                                                >Đại diện Kim Oanh Land còn cho biết, dù chính sách giá bán ưu đãi hỗ
+                                                trợ người lao động an cư chỉ từ 778 triệu đồng/căn (bao gồm nội thất)
+                                                nhưng danh mục vật liệu xây dựng và nội thất bàn giao của K-Home
+                                                Apartment được công ty chọn lựa từ những thương hiệu danh tiếng như An
+                                                Cường, Hảo Cảnh, Poli-FSL, Varmora Granito, J.Lilen… mang đến những căn
+                                                hộ chất lượng, đúng chuẩn phong cách xanh Singapore.</p
+                                            >
+                                            <p
+                                                >Giới kinh doanh bất động sản nhận xét, sự xuất hiện của dự án đô thị
+                                                K-Home New City nói chung, khu căn hộ K-Home Apartment nói riêng đã thổi
+                                                một luồng gió mới cho thị trường. Bởi từ trước đến nay, các dự án nhà ở
+                                                xã hội trong mắt nhiều người thường nằm ở những khu vực ít cư dân sinh
+                                                sống, giao thông thiếu kết nối, thiết kế chưa được chăm chút và đặc biệt
+                                                là tiện ích nội khu rất hạn chế. Trong khi đó, không chỉ sở hữu vị trí
+                                                “vàng”, K-Home New City cũng như K-Home Apartment còn được kiến tạo từ
+                                                sự tổng hòa giữa các yếu tố về quy hoạch, thiết kế chuẩn Singapore, hệ
+                                                tiện ích “All in One” theo hướng phát triển bền vững cùng với chất lượng
+                                                thi công vượt trội.</p
+                                            >
+                                            <p
+                                                >Đó cũng là lý do chính mà chỉ sau một thời gian ngắn, gần như toàn bộ
+                                                sản phẩm thấp tầng của dự án đã tìm được chủ sở hữu. Riêng căn hộ K-Home
+                                                Apartment đã được hơn 500 khách hàng đặt chỗ thành công chỉ sau một
+                                                tháng giới thiệu ra thị trường.</p
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-box al-center jus-between flex-wrap">
+                                    <div class="share-btn flex-box al-center jus-end mobile-col-12 mobile-jus-start">
+                                        <span class="fs-16 lh-24 fw400">Chia sẻ:</span>
+                                        <a
+                                            class="hover-zoom-img flex-box"
+                                            href="http://www.facebook.com/sharer.php?u=https://k-homenewcity.vn/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment/"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                width="29"
+                                                height="28"
+                                                viewBox="0 0 25 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M12.5 21C17.4706 21 21.5 16.9706 21.5 12C21.5 7.02944 17.4706 3 12.5 3C7.52944 3 3.5 7.02944 3.5 12C3.5 16.9706 7.52944 21 12.5 21Z"
+                                                    stroke="#272D35"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                                <path
+                                                    d="M16.25 8.25012H14.75C14.1533 8.25012 13.581 8.48718 13.159 8.90913C12.7371 9.33109 12.5 9.90338 12.5 10.5001V21.0001"
+                                                    stroke="#272D35"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                                <path
+                                                    d="M9.5 13.5001H15.5"
+                                                    stroke="#272D35"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                        <div
+                                            class="hover-zoom-img flex-box click-copy"
+                                            data-copy="https://k-homenewcity.vn/chuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment/"
+                                        >
+                                            <svg
+                                                width="28"
+                                                height="28"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M11.4698 6.6968L13.326 4.84065C13.7089 4.45731 14.1637 4.15319 14.6642 3.94565C15.1648 3.73811 15.7013 3.63123 16.2432 3.6311C16.785 3.63098 17.3216 3.73761 17.8223 3.94492C18.3229 4.15222 18.7778 4.45613 19.161 4.83929C19.5441 5.22244 19.848 5.67734 20.0553 6.17798C20.2626 6.67862 20.3693 7.2152 20.3691 7.75706C20.369 8.29893 20.2621 8.83546 20.0546 9.336C19.8471 9.83655 19.5429 10.2913 19.1596 10.6743L16.5079 13.3259C16.1249 13.709 15.6702 14.0128 15.1697 14.2201C14.6692 14.4274 14.1328 14.5341 13.5911 14.5341C13.0494 14.5341 12.513 14.4274 12.0126 14.2201C11.5121 14.0128 11.0574 13.709 10.6743 13.3259"
+                                                    stroke="#272D35"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                                <path
+                                                    d="M12.5302 17.3034L10.674 19.1595C10.2911 19.5429 9.8363 19.847 9.33576 20.0545C8.83521 20.2621 8.29868 20.3689 7.75682 20.3691C7.21496 20.3692 6.67838 20.2626 6.17773 20.0553C5.67709 19.848 5.2222 19.544 4.83904 19.1609C4.45589 18.7777 4.15198 18.3228 3.94467 17.8222C3.73737 17.3216 3.63073 16.785 3.63086 16.2431C3.63099 15.7012 3.73787 15.1647 3.94541 14.6642C4.15295 14.1636 4.45707 13.7089 4.8404 13.3259L7.49205 10.6742C7.87509 10.2912 8.32983 9.98736 8.8303 9.78006C9.33077 9.57276 9.86717 9.46606 10.4089 9.46606C10.9506 9.46606 11.487 9.57276 11.9874 9.78006C12.4879 9.98736 12.9426 10.2912 13.3257 10.6742"
+                                                    stroke="#272D35"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="zalo-share-button"
+                                            data-href=""
+                                            data-oaid="3783004274492024975"
+                                            data-layout="4"
+                                            data-color="white"
+                                            data-customize="false"
+                                            style="position: relative; display: inline-block; width: 40px; height: 40px"
+                                            ><iframe
+                                                id="92642ca7-26c4-4561-97d2-357a5515546d"
+                                                name="92642ca7-26c4-4561-97d2-357a5515546d"
+                                                frameborder="0"
+                                                allowfullscreen=""
+                                                scrolling="no"
+                                                width="40px"
+                                                height="40px"
+                                                src="https://button-share.zalo.me/share_inline?id=92642ca7-26c4-4561-97d2-357a5515546d&amp;layout=4&amp;color=white&amp;customize=false&amp;width=40&amp;height=40&amp;isDesktop=true&amp;url=https%3A%2F%2Fk-homenewcity.vn%2Fchuan-singapore-dinh-hinh-gia-tri-can-ho-k-home-apartment%2F&amp;d=eyJ1cmwiOiJodHRwczovL2staG9tZW5ld2NpdHkudm4vY2h1YW4tc2luZ2Fwb3JlLWRpbmgtaGluaC1naWEtdHJpLWNhbi1oby1rLWhvbWUtYXBhcnRtZW50LyJ9&amp;shareType=0"
+                                                style="position: absolute; z-index: 99; top: 0px; left: 0px"
+                                            ></iframe
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section
+                        id="footer"
+                        class="section footer-wrapper section-light add-pt relative site-footer fp-section fp-table"
+                        data-title="Liên hệ"
+                        data-anchors="lien-he"
+                        data-anchor="lien-he"
+                    >
+                        <div class="fp-tableCell">
+                            <div class="grid-container add-pt">
+                                <div class="sec-title text-primary"> <span>LIÊN HỆ</span> CHÚNG TÔI </div>
+
+                                <div class="flex-box flex-wrap">
+                                    <div class="col-4 tablet-col-6 mobile-col-12">
+                                        <div class="group-content">
+                                            <div class="footer-title text-primary fs-20 lh-28 fw700">
+                                                SALES GALLERY
+                                            </div>
+                                            <div class="footer-content">
+                                                <div class="flex-box al-start">
+                                                    <img
+                                                        width="21"
+                                                        height="21"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/MapPin.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                    <span class="text"
+                                                        >Khu đô thị K-Home New City, đường Lê Lai, phường Bình Dương,
+                                                        TP.HCM</span
+                                                    >
+                                                </div>
+                                                <div class="flex-box al-start">
+                                                    <img
+                                                        width="21"
+                                                        height="21"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Phone.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    /><noscript
+                                                        ><img
+                                                            width="21"
+                                                            height="21"
+                                                            src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Phone.svg"
+                                                            class=""
+                                                            alt=""
+                                                            decoding="async"
+                                                            loading="lazy"
+                                                    /></noscript>
+                                                    <span class="text">1900.633.968 – 09.222.222.56</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="group-content">
+                                            <div class="footer-title text-primary fs-20 lh-28 fw700">
+                                                Phát triển dự án KIM OANH LAND (Thành viên Kim Oanh Group)
+                                            </div>
+                                            <div class="footer-content">
+                                                <div class="flex-box al-start">
+                                                    <img
+                                                        width="21"
+                                                        height="21"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/MapPin.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                    <span class="text"
+                                                        >219 - 221 Xô Viết Nghệ Tĩnh, P. 17, Quận Bình Thạnh, TP.
+                                                        HCM</span
+                                                    >
+                                                </div>
+                                                <div class="flex-box al-start">
+                                                    <img
+                                                        width="21"
+                                                        height="21"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Phone.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                    <span class="text">1900.633.968 – 0988.12.12.12</span>
+                                                </div>
+                                                <div class="flex-box al-start">
+                                                    <img
+                                                        width="21"
+                                                        height="21"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Envelope.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                    <span class="text">info@kimoanhgroup.vn</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="group-content google-map-button">
+                                            <a
+                                                class="text-primary"
+                                                href="https://maps.app.goo.gl/6LdpPsMHrD9DF6Qt8"
+                                                target="_blank"
+                                                title="Xem bản đồ"
+                                            >
+                                                <span class="text">Xem bản đồ</span>
+                                                <svg
+                                                    width="19"
+                                                    height="18"
+                                                    viewBox="0 0 19 18"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M15.8014 6.21801L3.89731 2.09731C3.6978 2.02824 3.48288 2.0167 3.27713 2.06402C3.07137 2.11134 2.88308 2.21561 2.73379 2.3649C2.5845 2.51419 2.48024 2.70247 2.43292 2.90823C2.3856 3.11399 2.39713 3.32891 2.46621 3.52842L6.58683 15.4326C6.66103 15.6548 6.80377 15.8478 6.99453 15.9838C7.18529 16.1198 7.41426 16.1918 7.64853 16.1895C7.65546 16.1895 7.66253 16.1895 7.66947 16.1893C7.90734 16.1878 8.13841 16.1098 8.32852 15.9668C8.51863 15.8238 8.65771 15.6235 8.72519 15.3954L10.3814 10.0126L15.7643 8.35636C15.9911 8.28657 16.19 8.14689 16.3325 7.95727C16.4751 7.76766 16.5541 7.53783 16.5582 7.30063C16.5623 7.06342 16.4914 6.83099 16.3554 6.63655C16.2195 6.44211 16.0256 6.29562 15.8014 6.21801H15.8014Z"
+                                                        fill="#326768"
+                                                    ></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="group-content">
+                                            <div class="footer-title text-primary fs-20 lh-28 fw700">
+                                                THEO DÕI CHÚNG TÔI
+                                            </div>
+                                            <div class="footer-socials flex-box al-center flex-wrap">
+                                                <a
+                                                    href="https://www.facebook.com/khomenewcityofficial"
+                                                    target="_blank"
+                                                    title="Facebook"
+                                                    class="flex-box"
+                                                >
+                                                    <img
+                                                        width="38"
+                                                        height="39"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Facebook.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                </a>
+                                                <a
+                                                    href="https://zalo.me/3783004274492024975"
+                                                    target="_blank"
+                                                    title="Zalo"
+                                                    class="flex-box"
+                                                >
+                                                    <img
+                                                        width="38"
+                                                        height="39"
+                                                        src="https://k-homenewcity.vn/wp-content/uploads/2024/10/Instagram.svg"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                </a>
+                                                <a
+                                                    href="https://www.tiktok.com/@thelinkcity.net"
+                                                    target="_blank"
+                                                    title="Youtube"
+                                                    class="flex-box"
+                                                >
+                                                    <img
+                                                        width="39"
+                                                        height="39"
+                                                        src="./assets/tiktok-circel.png"
+                                                        class="lazyloaded"
+                                                        alt=""
+                                                        decoding="async"
+                                                        data-ll-status="loaded"
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="copyright fs-12 lh-20 fw400 text-3">
+                                            Copyright © 2024 K-Home New City.
+                                        </div>
+                                    </div>
+                                    <div class="col-3 tablet-col-6 mobile-col-12">
+                                        <div class="footer-title text-primary fs-20 lh-28 fw700">
+                                            ĐĂNG KÍ NHẬN THÔNG TIN
+                                        </div>
+
+                                        <div
+                                            class="wpcf7 js"
+                                            id="wpcf7-f552-o1"
+                                            lang="vi"
+                                            dir="ltr"
+                                            data-wpcf7-id="552"
+                                        >
+                                            <div class="screen-reader-response">
+                                                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                                <ul></ul>
+                                            </div>
+                                            <form
+                                                action="/#wpcf7-f552-o1"
+                                                method="post"
+                                                class="form-lienhe init"
+                                                aria-label="Form liên hệ"
+                                                novalidate="novalidate"
+                                                data-status="init"
+                                            >
+                                                <fieldset class="hidden-fields-container">
+                                                    <input type="hidden" name="_wpcf7" value="552" /><input
+                                                        type="hidden"
+                                                        name="_wpcf7_version"
+                                                        value="6.1"
+                                                    /><input type="hidden" name="_wpcf7_locale" value="vi" /><input
+                                                        type="hidden"
+                                                        name="_wpcf7_unit_tag"
+                                                        value="wpcf7-f552-o1"
+                                                    /><input
+                                                        type="hidden"
+                                                        name="_wpcf7_container_post"
+                                                        value="0"
+                                                    /><input
+                                                        type="hidden"
+                                                        name="_wpcf7_posted_data_hash"
+                                                        value=""
+                                                    /><input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+                                                </fieldset>
+                                                <div style="display: none">
+                                                    <p>
+                                                        <span class="wpcf7-form-control-wrap" data-name="devtt"
+                                                            ><input
+                                                                size="40"
+                                                                class="wpcf7-form-control wpcf7-text"
+                                                                aria-invalid="false"
+                                                                value=""
+                                                                type="text"
+                                                                name="devtt"
+                                                        /></span>
+                                                    </p>
+                                                </div>
+                                                <div class="form-wrap flex-box flex-wrap al-center jus-between">
+                                                    <div class="form-group col-12">
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-name"
+                                                            ><input
+                                                                size="40"
+                                                                maxlength="400"
+                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                id="your-name"
+                                                                aria-required="true"
+                                                                aria-invalid="false"
+                                                                placeholder="Họ và tên"
+                                                                value=""
+                                                                type="text"
+                                                                name="your-name"
+                                                        /></span>
+                                                    </div>
+                                                    <div class="form-group col-12">
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-email"
+                                                            ><input
+                                                                size="40"
+                                                                maxlength="400"
+                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                                id="your-email"
+                                                                aria-required="true"
+                                                                aria-invalid="false"
+                                                                placeholder="E-mail"
+                                                                value=""
+                                                                type="email"
+                                                                name="your-email"
+                                                        /></span>
+                                                    </div>
+                                                    <div class="form-group col-12">
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-tel"
+                                                            ><input
+                                                                size="40"
+                                                                maxlength="400"
+                                                                class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
+                                                                id="your-tel"
+                                                                aria-required="true"
+                                                                aria-invalid="false"
+                                                                placeholder="Số điện thoại"
+                                                                value=""
+                                                                type="tel"
+                                                                name="your-tel"
+                                                        /></span>
+                                                    </div>
+                                                    <div class="form-group col-12">
+                                                        <span class="wpcf7-form-control-wrap" data-name="your-message">
+                                                            <textarea
+                                                                cols="40"
+                                                                rows="10"
+                                                                maxlength="2000"
+                                                                class="wpcf7-form-control wpcf7-textarea"
+                                                                id="your-message"
+                                                                aria-invalid="false"
+                                                                placeholder="Nội dung..."
+                                                                name="your-message"
+                                                            ></textarea>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group col-12 form-recaptcha">
+                                                        <span
+                                                            class="wpcf7-form-control-wrap recaptcha"
+                                                            data-name="recaptcha"
+                                                            ><span
+                                                                data-sitekey="6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE"
+                                                                class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"
+                                                                ><div style="width: 304px; height: 78px">
+                                                                    <div>
+                                                                        <iframe
+                                                                            title="reCAPTCHA"
+                                                                            width="304"
+                                                                            height="78"
+                                                                            role="presentation"
+                                                                            name="a-ofm4l8cl0c1e"
+                                                                            frameborder="0"
+                                                                            scrolling="no"
+                                                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE&amp;co=aHR0cHM6Ly9rLWhvbWVuZXdjaXR5LnZuOjQ0Mw..&amp;hl=vi&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=lck3xqvnf86y"
+                                                                        ></iframe>
+                                                                    </div>
+                                                                    <textarea
+                                                                        id="g-recaptcha-response"
+                                                                        name="g-recaptcha-response"
+                                                                        class="g-recaptcha-response"
+                                                                        style="
+                                                                            width: 250px;
+                                                                            height: 40px;
+                                                                            border: 1px solid rgb(193, 193, 193);
+                                                                            margin: 10px 25px;
+                                                                            padding: 0px;
+                                                                            resize: none;
+                                                                            display: none;
+                                                                        "
+                                                                    ></textarea>
+                                                                </div>
+                                                                <iframe style="display: none"></iframe
+                                                            ></span>
+                                                            <noscript>
+                                                                <div class="grecaptcha-noscript">
+                                                                    <iframe
+                                                                        src="https://www.google.com/recaptcha/api/fallback?k=6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE"
+                                                                        frameborder="0"
+                                                                        scrolling="no"
+                                                                        width="310"
+                                                                        height="430"
+                                                                    >
+                                                                    </iframe>
+                                                                    <textarea
+                                                                        name="g-recaptcha-response"
+                                                                        rows="3"
+                                                                        cols="40"
+                                                                        placeholder="reCaptcha Response Here"
+                                                                    >
+                                                                    </textarea>
+                                                                </div>
+                                                            </noscript>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                            </form>
+                                        </div>
+                                        <div class="fs-12 lh-20 fw400 text-3">
+                                            (*) Chúng tôi đặc biệt cẩn trọng trong việc chuẩn bị nội dung trên website
+                                            này. Các thông tin/ hình ảnh/ bản vẽ chỉ thể hiện thông số kỹ thuật, tính
+                                            thẩm mỹ và sự sáng tạo tại thời điểm được đăng tải và mang tính chất tham
+                                            khảo, không đại diện chính xác cho điều kiện xây dựng thực tế và không mang
+                                            tính đại diện hay là một phần của hợp đồng.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- ============================ END CONTENT ============================ -->
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js"
+            integrity="sha512-zbZlsKnZf770P3zXuskyNgxhmdrrumJI5SRBmRVR01BRlEtTIZV63bdvmQhncu1BLD/jgFuRxH5apfFIwZ2Jhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script src="app.js"></script>
+        <div id="active-fullpage"></div>
+    </body>
+</html>
