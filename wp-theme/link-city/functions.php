@@ -371,6 +371,19 @@ function link_city_single_body_class($classes)
 add_filter('body_class', 'link_city_single_body_class');
 
 /**
+ * Ensure light section style for archive pages as well.
+ */
+function link_city_archive_body_class($classes)
+{
+    if (is_archive()) {
+        $classes[] = 'is-light-section';
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'link_city_archive_body_class');
+
+/**
  * Copy sample HTML file into theme and create a sample post on activation.
  * Ensures only one sample post exists by checking the unique slug.
  */

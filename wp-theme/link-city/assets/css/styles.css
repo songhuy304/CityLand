@@ -3554,7 +3554,7 @@ ul {
 }
 
 .single-post-wrap {
-    background-image: url(../assets/bg-news-single.jpg);
+    background-image: url(/wp-content/themes/link-city/assets/images/bg-news-single.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -3706,7 +3706,7 @@ section.default-page {
 }
 
 section.post-category-page {
-    background-image: url(../assets/bg-news-single.jpg);
+    background-image: url(/wp-content/themes/link-city/assets/images/bg-news.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;

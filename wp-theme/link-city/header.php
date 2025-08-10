@@ -135,7 +135,7 @@
                                 <a href="/#tien-do">Tiến độ dự án</a>
                             </li>
                             <li id="menu-item-2674" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2674">
-                                <a href="/#tin-tuc">Tin tức</a>
+                                <a href="/category/tin-du-an">Tin tức</a>
                             </li>
                             <li id="menu-item-1164" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1164">
                                 <a href="/#doi-tac" aria-current="page">Đối tác</a>
