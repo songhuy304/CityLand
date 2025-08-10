@@ -44,9 +44,9 @@
                 </div>
 
                 <div class="group-content google-map-button">
-                    <a class="text-primary" href="<?php echo esc_url(get_theme_mod('google_map_link', 'https://maps.app.goo.gl/nHH9dRpE6nq9rAGz9')); ?>" target="_blank" title="Xem bản đồ">
-                        <span class="text">Xem bản đồ</span>
-                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a class="text-primary" href="<?php echo esc_url(get_theme_mod('google_map_link', 'https://maps.app.goo.gl/nHH9dRpE6nq9rAGz9')); ?>" target="_blank" title="Bấm vào để xem bản đồ">
+                        <span class="text">Bấm vào để xem bản đồ</span>
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" class="map-icon" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.8014 6.21801L3.89731 2.09731C3.6978 2.02824 3.48288 2.0167 3.27713 2.06402C3.07137 2.11134 2.88308 2.21561 2.73379 2.3649C2.5845 2.51419 2.48024 2.70247 2.43292 2.90823C2.3856 3.11399 2.39713 3.32891 2.46621 3.52842L6.58683 15.4326C6.66103 15.6548 6.80377 15.8478 6.99453 15.9838C7.18529 16.1198 7.41426 16.1918 7.64853 16.1895C7.65546 16.1895 7.66253 16.1895 7.66947 16.1893C7.90734 16.1878 8.13841 16.1098 8.32852 15.9668C8.51863 15.8238 8.65771 15.6235 8.72519 15.3954L10.3814 10.0126L15.7643 8.35636C15.9911 8.28657 16.19 8.14689 16.3325 7.95727C16.4751 7.76766 16.5541 7.53783 16.5582 7.30063C16.5623 7.06342 16.4914 6.83099 16.3554 6.63655C16.2195 6.44211 16.0256 6.29562 15.8014 6.21801H15.8014Z" fill="#326768"></path>
                         </svg>
                     </a>

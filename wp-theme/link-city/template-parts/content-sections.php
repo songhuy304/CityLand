@@ -35,24 +35,22 @@
                         <div class="swiper swiper-video">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="video-wrap"><video src="<?php echo get_template_directory_uri(); ?>/assets/images/mov_bbb.mp4" autoplay muted></video></div>
+                                    <div class="video-wrap"><video src="<?php echo get_template_directory_uri(); ?>/assets/images/mov_bbb.mp4" autoplay controls muted></video></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="video-wrap"><video src="https://media.w3.org/2010/05/video/movie_300.mp4" muted></video></div>
+                                    <div class="video-wrap"><video src="https://media.w3.org/2010/05/video/movie_300.mp4" controls muted></video></div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" muted></video>
+                                        <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" controls muted></video>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <video src="https://media.w3.org/2010/05/video/movie_300.mp4" muted></video>
+                                        <video src="https://media.w3.org/2010/05/video/movie_300.mp4" controls muted></video>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-video-button-next"></div>
-                            <div class="swiper-video-button-prev"></div>
                         </div>
                         <div thumbsSlider="" class="swiper swiper-video-thumb">
                             <div class="swiper-wrapper">
@@ -76,7 +74,60 @@
                                         <video src="https://media.w3.org/2010/05/video/movie_300.mp4" muted></video>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="video-wrap">
+                                        <video
+                                            src="https://media.w3.org/2010/05/video/movie_300.mp4"
+                                            muted
+                                        ></video>
+                                    </div>
+                                </div>
                             </div>
+                            <div
+                                            class="swiper-video-button-prev"
+                                            tabindex="0"
+                                            role="button"
+                                            aria-label="Previous slide"
+                                            aria-controls="swiper-wrapper-21551032a842d7ca3"
+                                        >
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M15 4.5L7.5 12L15 19.5"
+                                                    stroke="#fff"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="swiper-video-button-next"
+                                            tabindex="0"
+                                            role="button"
+                                            aria-label="Next slide"
+                                            aria-controls="swiper-wrapper-f322213b796b610a3"
+                                            ><svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9 4.5L16.5 12L9 19.5"
+                                                    stroke="#fff"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </div>
                         </div>
                     </div>
                 </div>
@@ -147,8 +198,8 @@
               class="text-white"
               href="https://maps.app.goo.gl/nHH9dRpE6nq9rAGz9"
               target="_blank"
-              title="Xem bản đồ">
-              <span class="text">Xem bản đồ</span>
+              title="Bấm vào để xem bản đồ">
+              <span class="text">Bấm vào để xem bản đồ</span>
               <svg
                 width="19"
                 height="18"
@@ -2012,9 +2063,9 @@ else: ?>
                             </div>
                         </div>
                         <div class="group-content google-map-button">
-                            <a class="text-primary" href="https://maps.app.goo.gl/6LdpPsMHrD9DF6Qt8" target="_blank" title="Xem bản đồ">
-                                <span class="text">Xem bản đồ</span>
-                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a class="text-primary" href="https://maps.app.goo.gl/6LdpPsMHrD9DF6Qt8" target="_blank" title="Bấm vào để xem bản đồ">
+                                <span class="text">Bấm vào để xem bản đồ</span>
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" class="map-icon" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15.8014 6.21801L3.89731 2.09731C3.6978 2.02824 3.48288 2.0167 3.27713 2.06402C3.07137 2.11134 2.88308 2.21561 2.73379 2.3649C2.5845 2.51419 2.48024 2.70247 2.43292 2.90823C2.3856 3.11399 2.39713 3.32891 2.46621 3.52842L6.58683 15.4326C6.66103 15.6548 6.80377 15.8478 6.99453 15.9838C7.18529 16.1198 7.41426 16.1918 7.64853 16.1895C7.65546 16.1895 7.66253 16.1895 7.66947 16.1893C7.90734 16.1878 8.13841 16.1098 8.32852 15.9668C8.51863 15.8238 8.65771 15.6235 8.72519 15.3954L10.3814 10.0126L15.7643 8.35636C15.9911 8.28657 16.19 8.14689 16.3325 7.95727C16.4751 7.76766 16.5541 7.53783 16.5582 7.30063C16.5623 7.06342 16.4914 6.83099 16.3554 6.63655C16.2195 6.44211 16.0256 6.29562 15.8014 6.21801H15.8014Z" fill="#326768"></path>
                                 </svg>
                             </a>
