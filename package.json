@@ -1,7 +1,7 @@
 {
     "name": "clone-khome-project",
     "version": "1.0.0",
-    "description": "K-Home New City WordPress project with custom theme",
+    "description": "The Link City WordPress project with custom theme",
     "main": "index.html",
     "scripts": {
         "format": "npm run format:web && npm run format:php",

@@ -2,7 +2,7 @@
 
 ## Mô tả
 
-Link City là một WordPress theme được thiết kế đặc biệt cho dự án K-Home New City. Theme này được xây dựng với các tính năng hiện đại và tối ưu hóa cho trải nghiệm người dùng.
+Link City là một WordPress theme được thiết kế đặc biệt cho dự án The Link City. Theme này được xây dựng với các tính năng hiện đại và tối ưu hóa cho trải nghiệm người dùng.
 
 ## Tính năng chính
 
@@ -143,7 +143,7 @@ link-city/
 
 Nếu bạn gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
 
-- Email: info@kimoanhgroup.vn
+- Email: vandaibds1410@gmail.com
 - Hotline: 09.222.222.56
 
 ## Phiên bản
@@ -154,4 +154,4 @@ Nếu bạn gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
 
 ## License
 
-© 2024 K-Home New City. All rights reserved.
+© 2024 The Link City. All rights reserved.

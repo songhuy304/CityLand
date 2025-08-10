@@ -16,7 +16,7 @@
                     <div class="footer-content">
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/MapPin.svg" alt="" />
-                            <span class="text">Khu đô thị K-Home New City, đường Lê Lai, phường Bình Dương, TP.HCM</span>
+                            <span class="text">Khu đô thị Dầu Giây - The Link City , QL 1A, Dầu Giây, Tỉnh Đồng Nai.</span>
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" alt="" />
@@ -30,7 +30,7 @@
                     <div class="footer-content">
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/MapPin.svg" alt="" />
-                            <span class="text">219 - 221 Xô Viết Nghệ Tĩnh, P. 17, Quận Bình Thạnh, TP. HCM</span>
+                            <span class="text">268a, Đường Phan Trung, Phường Tam Hiệp , Đồng Nai.</span>
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" alt="" />
@@ -38,7 +38,7 @@
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Envelope.svg" alt="" />
-                            <span class="text"><?php echo esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')); ?></span>
+                            <span class="text"><?php echo esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="copyright fs-12 lh-20 fw400 text-3">
-                    <?php echo esc_html(get_theme_mod('copyright_text', '© 2024 K-Home New City. All rights reserved.')); ?>
+                    <?php echo esc_html(get_theme_mod('copyright_text', '© 2024 The Link City. All rights reserved.')); ?>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@
                             echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
                             echo '<div class="contact-info">';
                             echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
                             echo '</div>';
                             echo '</div>';
                         }
@@ -118,7 +118,7 @@
                     echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
                     echo '<div class="contact-info">';
                     echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
                     echo '</div>';
                     echo '</div>';
                 }

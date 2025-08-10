@@ -1,8 +1,8 @@
-# Clone K-Home New City Project
+# Clone The Link City Project
 
 ## 📋 Mô tả
 
-Dự án clone website K-Home New City với WordPress theme tùy chỉnh. Project này bao gồm cả static HTML và WordPress theme hoàn chỉnh.
+Dự án clone website The Link City với WordPress theme tùy chỉnh. Project này bao gồm cả static HTML và WordPress theme hoàn chỉnh.
 
 ## 🏗️ Cấu trúc dự án
 
@@ -200,7 +200,7 @@ Theme có 10+ options có thể tùy chỉnh qua WordPress Customizer:
 
 Nếu bạn gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
 
-- Email: info@kimoanhgroup.vn
+- Email: vandaibds1410@gmail.com
 - Hotline: 09.222.222.56
 
 ## 📄 Phiên bản
@@ -211,4 +211,4 @@ Nếu bạn gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
 
 ## 📜 License
 
-© 2024 K-Home New City. All rights reserved.
+© 2024 The Link City. All rights reserved.

@@ -124,7 +124,7 @@
              </form>
          </div>
          <div class="search-keywords">
-             <a href="<?php echo home_url(); ?>/?s=K-Home New City">K-Home New City</a>
+             <a href="<?php echo home_url(); ?>/?s=The Link City">The Link City</a>
              <a href="<?php echo home_url(); ?>/?s=Tiện ích">Tiện ích</a>
              <a href="<?php echo home_url(); ?>/?s=Hình ảnh dự án">Hình ảnh dự án</a>
              <a href="<?php echo home_url(); ?>/?s=Tiến độ">Tiến độ</a>

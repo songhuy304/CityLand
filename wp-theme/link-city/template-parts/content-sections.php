@@ -15,21 +15,17 @@
     </section>
 
     <!-- // section 2 -->
-    <section class="section section-dark section-home-1 fp-section fp-table" data-title="Thiết kế" data-anchors="thiet-ke" data-anchor="thiet-ke">
+    <section class="section section-dark section-home-1 fp-section fp-table" data-title="Video dự án" data-anchors="thiet-ke" data-anchor="thiet-ke">
         <div class="fp-tableCell">
             <div style="gap: 80px" class="grid-container add-pt z-5 relative flex-box jus-between">
                 <div class="col-4 mobile-col-12 mobile-text-center tablet-col-6">
                     <h2 class="sec-title text-white" data-aos="fade-right" data-aos-delay="100">
-                        ĐÔ THỊ NHÀ Ở XÃ HỘI<br />
-                        <span>CHUẨN SINGAPORE</span>
+                        THE LINK CITY<br />
+                        <span>KHU ĐÔ THỊ DẦU GIÂY</span>
                     </h2>
                     <div class="content-wrapper text-white" data-aos="fade-right" data-aos-delay="300">
                         <p>
-                            Mang trong mình khát vọng nhân sinh, Kim Oanh Land – thành viên Kim Oanh Group,
-                            cùng đối tác chiến lược Surbana Jurong (Singapore) đã dành nhiều tâm huyết phát
-                            triển K-Home New City trở thành Đô thị nhà ở xã hội chuẩn Singapore đầu tiên tại
-                            Việt Nam và là dự án nhà ở xã hội đầu tiên tại Bình Dương được phát triển theo
-                            tiêu chuẩn công trình xanh EDGE.
+                            Đỉnh cao giao thương, nơi tương lai thăng hoa! Với vị trí vàng mặt tiền quốc lộ 1, kết nối cao tốc TP.HCM – Long Thành – Dầu Giây- Liên Khương và sân bay Quốc Tế Long Thành, dự án The link city chính là nơi bứt phá giá trị, mang đến cơ hội đầu tư đỉnh cao và không gian sống đẳng cấp cho quý cư dân.
                         </p>
                     </div>
                 </div>
@@ -95,32 +91,27 @@
             <div class="flex-box jus-center al-center h-full add-pt">
                 <div class="col-6 text-center tablet-col-10 mobile-col-12" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                     <h2 class="sec-title text-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                        THÔNG TIN <br /><span>TỔNG QUAN</span>
+                        TỔNG QUAN DỰ ÁN<br /><span>Dầu Giây Center City 2</span>
                     </h2>
                     <div class="content-wrapper text-white cont-style-li aos-init aos-animate" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
                         <ul>
                             <li>
-                                <strong>Vị trí</strong>: Ba mặt tiền đường Lê Lai – Nguyễn
-                                Văn Linh – đường số 8 KCN VSIP 2, phường Bình Dương,
-                                TP.HCM
+                                <strong>Vị trí</strong>: Mặt tiền quốc lộ 1A, ngay nút giao Quốc lộ 1- quốc lộ 20 và cao tốc TP.HCM – Long Thành – Dầu Giây, Thống Nhất, Đồng Nai
                             </li>
                             <li>
-                                <strong>Phát triển dự án</strong>: Kim Oanh Land (thành
-                                viên Kim Oanh Group)
+                                <strong>Đơn vị phát triển</strong>: Công ty TNHH Đầu tư Phú Việt Tín và Kim Oanh Land ( Thành Viên Kim Oanh Group) đơn vị uy tín trong lĩnh vực bất động sản.
                             </li>
                             <li>
-                                <strong>Tư vấn thiết kế</strong>: Surbana Jurong
-                                (Singapore)
+                                <strong>Quy mô</strong>: Thuộc khu đô thị Dầu Giây 149 ha, với quy hoạch khu đô trị thương mại độc quyền và tiện ích đa dạng, phục vụ hơn 10.000 cư dân.
                             </li>
                             <li>
-                                <strong>Quy mô:</strong> 26,69ha gồm 5 phân khu Bằng Lăng,
-                                Lát Hoa, Ngọc Lan, Hoàng Lan, Giáng Hương
+                                <strong>Tiềm năng:</strong> Kết nối giao thông huyết mạch khu vực miền nam và tiện ích hiện đại (bệnh viện, trường học các cấp , chợ đầu mối, ga hàng hóa...), khu đô thị The Link City sẽ gia tăng giá trị vượt bậc, trở thành điểm đầu tư hấp dẫn năm 2025.
                             </li>
-                            <li><strong>Tổng số sản phẩm</strong>: 3.310 sản phẩm</li>
+                            <!-- <li><strong>Tổng số sản phẩm</strong>: 3.310 sản phẩm</li>
                             <li>
                                 <strong> Loại hình sản phẩm</strong>: nhà ở thương mại,
                                 nhà ở xã hội liên kế, căn hộ cao tầng
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -143,7 +134,7 @@
 
           <div class="content-wrapper text-white overflow-y">
             <p>
-              <span style="font-weight: 400">K-Home New City xứng tầm trở thành tâm điểm giao thương
+              <span style="font-weight: 400">The Link City xứng tầm trở thành tâm điểm giao thương
                 khi tọa lạc ngay lõi trung tâm thành phố mới Bình Dương,
                 đồng thời sở hữu hệ thống giao thông hiện đại kết nối
                 thông suốt đến các thành phố lớn của miền Nam như TPHCM,
@@ -200,7 +191,7 @@
                     </h2>
                     <div class="content-wrapper aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
                         <p>
-                            K-Home New City mang đến sự cân bằng hoàn hảo cho cuộc sống
+                            The Link City mang đến sự cân bằng hoàn hảo cho cuộc sống
                             hiện đại khi chỉ một bước chân là chạm đến khu lõi trung tâm
                             sôi động và một bước chân để trở về tổ ấm an yên cùng những
                             người thân yêu.
@@ -393,7 +384,7 @@
                         <span>TIN TỨC</span> - SỰ KIỆN
                     </h2>
                     <div class="content-wrapper aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
-                        <p>Theo dõi tin tức mới nhất từ K-Home New City.</p>
+                        <p>Theo dõi tin tức mới nhất từ The Link City.</p>
                     </div>
                 </div>
 
@@ -471,8 +462,7 @@ else: ?>
                         </h2>
                         <div class="content-wrapper">
                             <p>
-                                Cập nhật tiến độ thực tế mới nhất của dự án<br />
-                                K-Home New City.
+                                Cập nhật tiến độ thực tế mới nhất dự án khu đô thị Dầu Giây The Link City.
                             </p>
                         </div>
                         <div class="button-wrapper">
@@ -487,9 +477,9 @@ else: ?>
                     <div class="col-8 tablet-col-12" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
                         <div class="select">
                             <select id="" class="custom-sl select-hidden" style="display: none">
-                                <option value="0">Tháng 7 - 2025</option>
-                                <option value="1">Tháng 06 - 2025</option>
-                                <option value="2">Tháng 04 - 2025</option>
+                                <option value="0">Tháng 09 - 2025</option>
+                                <option value="1">Tháng 10 - 2025</option>
+                                <option value="2">Tháng 11 - 2025</option>
                             </select>
                         </div>
                         <div class="tab-gallery tab-0 active">
@@ -1994,8 +1984,7 @@ else: ?>
                             <div class="footer-content">
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/MapPin.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">Khu đô thị K-Home New City, đường Lê Lai, phường Bình
-                                        Dương, TP.HCM</span>
+                                    <span class="text">Khu đô thị Dầu Giây - The Link City , QL 1A, Dầu Giây, Tỉnh Đồng Nai.</span>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" /><noscript><img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="" alt="" decoding="async" loading="lazy" /></noscript>
@@ -2005,21 +1994,20 @@ else: ?>
                         </div>
                         <div class="group-content">
                             <div class="footer-title text-primary fs-20 lh-28 fw700">
-                                Phát triển dự án KIM OANH LAND (Thành viên Kim Oanh Group)
+                                Phòng Kinh Doanh ( Quản Lý Sản Phẩm)
                             </div>
                             <div class="footer-content">
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/MapPin.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">219 - 221 Xô Viết Nghệ Tĩnh, P. 17, Quận Bình Thạnh,
-                                        TP. HCM</span>
+                                    <span class="text">268a, Đường Phan Trung, Phường Tam Hiệp , Đồng Nai.</span>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">1900.633.968 – 0988.12.12.12</span>
+                                    <span class="text">0933.355.189 - 09.222.222.56</span>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Envelope.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">info@kimoanhgroup.vn</span>
+                                    <span class="text">vandaibds1410@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -2049,7 +2037,7 @@ else: ?>
                         </div>
 
                         <div class="copyright fs-12 lh-20 fw400 text-3">
-                            Copyright © 2024 K-Home New City.
+                            Copyright © 2024 The Link City.
                         </div>
                     </div>
                     <div class="col-3 tablet-col-6 mobile-col-12">
@@ -2058,53 +2046,53 @@ else: ?>
                         </div>
 
                         <?php
-            // Display Contact Form 7 form if available
-            if (function_exists('wpcf7_contact_form')) {
-                // Use WP_Query instead of deprecated get_page_by_title
-                $form_query = new WP_Query([
-                    'post_type' => 'wpcf7_contact_form',
-                    'title' => 'Liên hệ mặc định',
-                    'post_status' => 'publish',
-                    'posts_per_page' => 1,
-                ]);
+    // Display Contact Form 7 form if available
+    if (function_exists('wpcf7_contact_form')) {
+        // Use WP_Query instead of deprecated get_page_by_title
+        $form_query = new WP_Query([
+            'post_type' => 'wpcf7_contact_form',
+            'title' => 'Liên hệ mặc định',
+            'post_status' => 'publish',
+            'posts_per_page' => 1,
+        ]);
 
-                if ($form_query->have_posts()) {
-                    $form_query->the_post();
-                    echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
-                    wp_reset_postdata();
-                } else {
-                    // Fallback to any available Contact Form 7 form
-                    $forms_query = new WP_Query([
-                        'post_type' => 'wpcf7_contact_form',
-                        'post_status' => 'publish',
-                        'posts_per_page' => 1,
-                    ]);
+        if ($form_query->have_posts()) {
+            $form_query->the_post();
+            echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
+            wp_reset_postdata();
+        } else {
+            // Fallback to any available Contact Form 7 form
+            $forms_query = new WP_Query([
+                'post_type' => 'wpcf7_contact_form',
+                'post_status' => 'publish',
+                'posts_per_page' => 1,
+            ]);
 
-                    if ($forms_query->have_posts()) {
-                        $forms_query->the_post();
-                        echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
-                        wp_reset_postdata();
-                    } else {
-                        // Fallback if no forms available
-                        echo '<div class="contact-form-fallback">';
-                        echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
-                        echo '<div class="contact-info">';
-                        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                }
+            if ($forms_query->have_posts()) {
+                $forms_query->the_post();
+                echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
+                wp_reset_postdata();
             } else {
-                // Fallback if Contact Form 7 is not available
+                // Fallback if no forms available
                 echo '<div class="contact-form-fallback">';
                 echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
                 echo '<div class="contact-info">';
                 echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
                 echo '</div>';
                 echo '</div>';
             }
+        }
+    } else {
+        // Fallback if Contact Form 7 is not available
+        echo '<div class="contact-form-fallback">';
+        echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+        echo '<div class="contact-info">';
+        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+        echo '</div>';
+        echo '</div>';
+    }
 ?>
 
                         <div class="fs-12 lh-20 fw400 text-3">

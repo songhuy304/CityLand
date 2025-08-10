@@ -114,7 +114,7 @@ if ($related_query->have_posts()) : ?>
                         <span>BÀI VIẾT</span> LIÊN QUAN
                     </h2>
                     <div class="content-wrapper" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
-                        <p><?php esc_html_e('Khám phá thêm các bài viết mới nhất từ K-Home New City.', 'link-city'); ?></p>
+                        <p><?php esc_html_e('Khám phá thêm các bài viết mới nhất từ The Link City.', 'link-city'); ?></p>
                     </div>
                 </div>
 
