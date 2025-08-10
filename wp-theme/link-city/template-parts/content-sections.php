@@ -17,7 +17,7 @@
     <!-- // section 2 -->
     <section class="section section-dark section-home-1 fp-section fp-table" data-title="Video dự án" data-anchors="thiet-ke" data-anchor="thiet-ke">
         <div class="fp-tableCell">
-            <div style="gap: 80px" class="grid-container add-pt z-5 relative flex-box jus-between">
+            <div style="gap: 40px" class="grid-container add-pt z-5 relative flex-box jus-between">
                 <div class="col-4 mobile-col-12 mobile-text-center tablet-col-6">
                     <h2 class="sec-title text-white" data-aos="fade-right" data-aos-delay="100">
                         THE LINK CITY<br />
@@ -76,58 +76,19 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <video
-                                            src="https://media.w3.org/2010/05/video/movie_300.mp4"
-                                            muted
-                                        ></video>
+                                        <video src="https://media.w3.org/2010/05/video/movie_300.mp4" muted></video>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                            class="swiper-video-button-prev"
-                                            tabindex="0"
-                                            role="button"
-                                            aria-label="Previous slide"
-                                            aria-controls="swiper-wrapper-21551032a842d7ca3"
-                                        >
-                                            <svg
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M15 4.5L7.5 12L15 19.5"
-                                                    stroke="#fff"
-                                                    stroke-width="1.5"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <div
-                                            class="swiper-video-button-next"
-                                            tabindex="0"
-                                            role="button"
-                                            aria-label="Next slide"
-                                            aria-controls="swiper-wrapper-f322213b796b610a3"
-                                            ><svg
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M9 4.5L16.5 12L9 19.5"
-                                                    stroke="#fff"
-                                                    stroke-width="1.5"
-                                                    stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                ></path>
-                                            </svg>
-                                        </div>
+                            <div class="swiper-video-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21551032a842d7ca3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 4.5L7.5 12L15 19.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+                            <div class="swiper-video-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f322213b796b610a3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 4.5L16.5 12L9 19.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2097,53 +2058,53 @@ else: ?>
                         </div>
 
                         <?php
-    // Display Contact Form 7 form if available
-    if (function_exists('wpcf7_contact_form')) {
-        // Use WP_Query instead of deprecated get_page_by_title
-        $form_query = new WP_Query([
+// Display Contact Form 7 form if available
+if (function_exists('wpcf7_contact_form')) {
+    // Use WP_Query instead of deprecated get_page_by_title
+    $form_query = new WP_Query([
+        'post_type' => 'wpcf7_contact_form',
+        'title' => 'Liên hệ mặc định',
+        'post_status' => 'publish',
+        'posts_per_page' => 1,
+    ]);
+
+    if ($form_query->have_posts()) {
+        $form_query->the_post();
+        echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
+        wp_reset_postdata();
+    } else {
+        // Fallback to any available Contact Form 7 form
+        $forms_query = new WP_Query([
             'post_type' => 'wpcf7_contact_form',
-            'title' => 'Liên hệ mặc định',
             'post_status' => 'publish',
             'posts_per_page' => 1,
         ]);
 
-        if ($form_query->have_posts()) {
-            $form_query->the_post();
-            echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
+        if ($forms_query->have_posts()) {
+            $forms_query->the_post();
+            echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
             wp_reset_postdata();
         } else {
-            // Fallback to any available Contact Form 7 form
-            $forms_query = new WP_Query([
-                'post_type' => 'wpcf7_contact_form',
-                'post_status' => 'publish',
-                'posts_per_page' => 1,
-            ]);
-
-            if ($forms_query->have_posts()) {
-                $forms_query->the_post();
-                echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
-                wp_reset_postdata();
-            } else {
-                // Fallback if no forms available
-                echo '<div class="contact-form-fallback">';
-                echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
-                echo '<div class="contact-info">';
-                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
-                echo '</div>';
-                echo '</div>';
-            }
+            // Fallback if no forms available
+            echo '<div class="contact-form-fallback">';
+            echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+            echo '<div class="contact-info">';
+            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+            echo '</div>';
+            echo '</div>';
         }
-    } else {
-        // Fallback if Contact Form 7 is not available
-        echo '<div class="contact-form-fallback">';
-        echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
-        echo '<div class="contact-info">';
-        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
-        echo '</div>';
-        echo '</div>';
     }
+} else {
+    // Fallback if Contact Form 7 is not available
+    echo '<div class="contact-form-fallback">';
+    echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+    echo '<div class="contact-info">';
+    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+    echo '</div>';
+    echo '</div>';
+}
 ?>
 
                         <div class="fs-12 lh-20 fw400 text-3">

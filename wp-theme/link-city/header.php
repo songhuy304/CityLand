@@ -17,7 +17,7 @@
 
         <!-- Them class="header-mobile" o trang chi tiet -->
 
-        <header id="header" <?php echo !is_front_page() ? ' class="header-mobile"' : ''; ?>>
+        <header id="header" <?php echo !is_front_page() ? ' class="header-single"' : ''; ?>>
             <div class="header-wrapper">
                 <div id="masthead" class="header-main">
                     <div class="header-left">
@@ -33,8 +33,8 @@
                     </div>
                     <div class="logo-wrapper">
                         <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Layer_1.svg" class="header_logo header-logo" alt="<?php bloginfo('name'); ?>" />
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-light.svg" class="header_logo header-logo-dark" alt="<?php bloginfo('name'); ?>" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-light.svg" class="header_logo header-logo" alt="<?php bloginfo('name'); ?>" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-dark.svg" class="header_logo header-logo-dark" alt="<?php bloginfo('name'); ?>" />
                         </a>
                     </div>
 

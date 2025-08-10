@@ -103,6 +103,9 @@ function MenuOpen() {
 }
 
 function addFullpage() {
+    if (!jQuery("#fullpage").length) {
+        return;
+    }
     if (screen.width > 1024) {
         let listTitle = [],
             listAnchor = [];

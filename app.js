@@ -82,6 +82,9 @@ function AOSInit() {
 
 function MenuOpen() {
     $(".header-nav-icon").on("click", function () {
+        if ($("#header").hasClass("header-single")) {
+            $("#header").removeClass("header-single");
+        }
         $(".header-nav-icon").toggleClass("is-showing");
         $("#nk-main-menu").toggleClass("active");
 
@@ -98,11 +101,17 @@ function MenuOpen() {
         } else {
             $("#menu-main li").css("transition-delay", "");
             $("body").removeClass("is-dark-section").addClass("is-light-section");
+            if (! $("#header").hasClass("header-single")) {
+                $("#header").addClass("header-single");
+            }
         }
     });
 }
 
 function addFullpage() {
+    if (!jQuery("#fullpage").length) {
+        return;
+    }
     if (screen.width > 1024) {
         let listTitle = [],
             listAnchor = [];
