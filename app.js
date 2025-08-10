@@ -750,7 +750,11 @@ function swiper() {
         slidesPerView: 4,
         speed: 600,
         spaceBetween: 20,
-        slideToClickedSlide: true,
+
+        navigation: {
+            nextEl: ".swiper-video-button-next",
+            prevEl: ".swiper-video-button-prev",
+        },
 
         breakpoints: {
             1024: {
@@ -769,10 +773,7 @@ function swiper() {
         spaceBetween: 20,
 
         speed: 600,
-        navigation: {
-            nextEl: ".swiper-video-button-next",
-            prevEl: ".swiper-video-button-prev",
-        },
+
         thumbs: {
             swiper: swiperThietket,
         },

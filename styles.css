@@ -1422,6 +1422,10 @@ section .section-bg {
     justify-content: space-between;
 }
 
+.section-home-1 .sec-title > span {
+    font-size: 2.1rem;
+}
+
 /*  section 2 */
 
 section.section-home-1 .swiper-video-wrapper {
@@ -1452,6 +1456,37 @@ section.section-home-1 .swiper-video-thumb .swiper-slide .video-wrap {
 }
 section.section-home-1 .swiper-video-thumb .swiper-slide-thumb-active .video-wrap {
     border-color: var(--sub-cl);
+}
+
+.swiper-video-button-prev,
+.swiper-video-button-next {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.292rem;
+    height: 2.292rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.swiper-video-button-prev:hover,
+.swiper-video-button-next:hover {
+    background-color: black;
+}
+
+.swiper-video-button-prev {
+    left: 8px;
+}
+.swiper-video-button-next {
+    right: 10px;
 }
 
 .swiper-slide video {
@@ -2510,10 +2545,30 @@ section.progress-page .progress-thumb .arrow:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.833rem;
+    font-size: 1.1rem;
     line-height: 1.25rem;
     text-decoration: underline;
     width: max-content;
+}
+
+.google-map-button:hover a {
+    opacity: 0.8;
+    transition: all 0.4s ease-in-out;
+}
+
+.google-map-button svg {
+    transform-origin: left center; /* Hoặc điểm neo phù hợp */
+    animation: float-map 1s ease-in-out infinite alternate;
+    transition: all 0.4s ease-in-out;
+}
+
+@keyframes float-map {
+    0% {
+        transform: translateX(5px) translateY(6px) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(20px) translateY(6px) rotate(-45deg);
+    }
 }
 
 #footer .footer-socials {
@@ -2968,6 +3023,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 }
 
 @media only screen and (max-width: 1024px) {
+    :root {
+        --container-w: 59.375rem;
+    }
+
     .grid-container {
         padding-right: 15px;
         padding-left: 15px;
@@ -3001,6 +3060,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
     .fp-tableCell {
         height: 100% !important;
+    }
+
+    .section-home-1 .swiper-video-wrapper {
+        margin: auto;
     }
 }
 
@@ -3435,7 +3498,7 @@ section.default-page {
 .content-wrapper,
 .content-wrapper p,
 .content-wrapper li {
-    font-size: 0.833rem;
+    font-size: 1rem;
     line-height: 1.25rem;
 }
 .content-wrapper h2 {
