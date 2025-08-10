@@ -20,7 +20,7 @@
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" alt="" />
-                            <span class="text"><?php echo esc_html(get_theme_mod('phone_number', '0937961212')); ?> – 09.222.222.56</span>
+                            <span class="text"><?php echo esc_html(get_theme_mod('phone_number', '09.222.222.56')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -34,11 +34,11 @@
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" alt="" />
-                            <span class="text"><?php echo esc_html(get_theme_mod('phone_number', '0937961212')); ?> – 0988.12.12.12</span>
+                            <span class="text"><?php echo esc_html(get_theme_mod('phone_number', '09.222.222.56')); ?></span>
                         </div>
                         <div class="flex-box al-start">
                             <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Envelope.svg" alt="" />
-                            <span class="text"><?php echo esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')); ?></span>
+                            <span class="text"><?php echo esc_html(get_theme_mod('email_address', 'thelinkcitykimoanh@gmail.com')); ?></span>
                         </div>
                     </div>
                 </div>
@@ -55,10 +55,10 @@
                 <div class="group-content">
                     <div class="footer-title text-primary fs-20 lh-28 fw700">THEO DÕI CHÚNG TÔI</div>
                     <div class="footer-socials flex-box al-center flex-wrap">
-                        <a href="<?php echo esc_url(get_theme_mod('messenger_link', 'https://www.facebook.com/khomenewcityofficial')); ?>" target="_blank" title="Facebook" class="flex-box">
+                        <a href="<?php echo esc_url(get_theme_mod('messenger_link', 'https://www.facebook.com/vandaibds1410')); ?>" target="_blank" title="Facebook" class="flex-box">
                             <img width="38" height="39" src="<?php echo get_template_directory_uri(); ?>/assets/images/Facebook.svg" alt="Facebook" />
                         </a>
-                        <a href="<?php echo esc_url(get_theme_mod('zalo_link', 'https://zalo.me/3783004274492024975')); ?>" target="_blank" title="Zalo" class="flex-box">
+                        <a href="<?php echo esc_url(get_theme_mod('zalo_link', 'https://zalo.me/0922222256')); ?>" target="_blank" title="Zalo" class="flex-box">
                             <img width="38" height="39" src="<?php echo get_template_directory_uri(); ?>/assets/images/Instagram.svg" alt="Zalo" />
                         </a>
                         <a href="<?php echo esc_url(get_theme_mod('tiktok_link', 'https://www.tiktok.com/@thelinkcity.net')); ?>" target="_blank" title="Tiktok" class="flex-box">
@@ -107,7 +107,7 @@
                             echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
                             echo '<div class="contact-info">';
                             echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'thelinkcitykimoanh@gmail.com')) . '</p>';
                             echo '</div>';
                             echo '</div>';
                         }
@@ -118,7 +118,7 @@
                     echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
                     echo '<div class="contact-info">';
                     echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'thelinkcitykimoanh@gmail.com')) . '</p>';
                     echo '</div>';
                     echo '</div>';
                 }

@@ -200,7 +200,7 @@ Theme có 10+ options có thể tùy chỉnh qua WordPress Customizer:
 
 Nếu bạn gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
 
-- Email: vandaibds1410@gmail.com
+- Email: thelinkcitykimoanh@gmail.com
 - Hotline: 09.222.222.56
 
 ## 📄 Phiên bản

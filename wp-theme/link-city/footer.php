@@ -1,3 +1,17 @@
+<?php if (!is_front_page()) { ?>
+    <!-- load intro -->
+    <div class="load_intro">
+        <div class="wrap">
+            <div class="may left">
+                <img data-skip-lazy="" src="<?php echo get_template_directory_uri(); ?>/assets/images/left_la.png" alt="" />
+            </div>
+            <div class="may right">
+                <img data-skip-lazy="" src="<?php echo get_template_directory_uri(); ?>/assets/images/right_la.png" alt="" />
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
  <!-- First modal -->
  <div class="modal-container" id="lepopup-form-13">
      <div class="modal-content lepopup-form-inner">
@@ -114,7 +128,7 @@
  <div class="fixed-buttons">
      <div class="item">
          <div class="item-inner">
-             <a href="tel:<?php echo get_theme_mod('phone_number', '0937961212'); ?>" title="Hotline">
+             <a href="tel:<?php echo get_theme_mod('phone_number', '0922222256'); ?>" title="Hotline">
                  <img width="22" height="22" src="<?php echo get_template_directory_uri(); ?>/assets/images/Mask-group.svg" alt="Hotline" />
                  <span>Hotline</span>
              </a>
@@ -123,7 +137,7 @@
 
      <div class="item">
          <div class="item-inner">
-             <a href="<?php echo get_theme_mod('zalo_link', 'https://zalo.me/3783004274492024975'); ?>" title="Liên hệ Zalo" target="_blank">
+             <a href="<?php echo get_theme_mod('zalo_link', 'https://zalo.me/0922222256'); ?>" title="Liên hệ Zalo" target="_blank">
                  <img width="37" height="16" src="<?php echo get_template_directory_uri(); ?>/assets/images/Group-18811.svg" alt="Liên hệ Zalo" />
                  <span>Liên hệ Zalo</span>
              </a>
@@ -132,7 +146,7 @@
 
      <div class="item">
          <div class="item-inner">
-             <a href="<?php echo get_theme_mod('messenger_link', 'https://www.facebook.com/khomenewcityofficial'); ?>" title="Messenger" target="_blank">
+             <a href="<?php echo get_theme_mod('messenger_link', 'https://www.facebook.com/vandaibds1410'); ?>" title="Messenger" target="_blank">
                  <img width="23" height="22" src="<?php echo get_template_directory_uri(); ?>/assets/images/Vector.svg" alt="Messenger" />
                  <span>Messenger</span>
              </a>

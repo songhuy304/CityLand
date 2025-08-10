@@ -100,7 +100,7 @@ function link_city_customize_register($wp_customize)
 
     // Zalo Link
     $wp_customize->add_setting('zalo_link', [
-        'default' => 'https://zalo.me/3783004274492024975',
+        'default' => 'https://zalo.me/0922222256',
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('zalo_link', [
@@ -122,7 +122,7 @@ function link_city_customize_register($wp_customize)
 
     // Messenger Link
     $wp_customize->add_setting('messenger_link', [
-        'default' => 'https://www.facebook.com/khomenewcityofficial',
+        'default' => 'https://www.facebook.com/vandaibds1410',
         'sanitize_callback' => 'esc_url_raw',
     ]);
     $wp_customize->add_control('messenger_link', [
@@ -144,7 +144,7 @@ function link_city_customize_register($wp_customize)
 
     // Email Address
     $wp_customize->add_setting('email_address', [
-        'default' => 'vandaibds1410@gmail.com',
+        'default' => 'thelinkcitykimoanh@gmail.com',
         'sanitize_callback' => 'sanitize_email',
     ]);
     $wp_customize->add_control('email_address', [

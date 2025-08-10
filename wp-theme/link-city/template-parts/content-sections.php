@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 tablet-col-12" data-aos="fade-left" data-aos-delay="500">
+                <div class="col-7 tablet-col-12" data-aos="fade-left" data-aos-delay="500">
                     <div class="swiper-video-wrapper">
                         <div class="swiper swiper-video">
                             <div class="swiper-wrapper">
@@ -103,7 +103,7 @@
             <div class="flex-box jus-center al-center h-full add-pt">
                 <div class="col-6 text-center tablet-col-10 mobile-col-12" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
                     <h2 class="sec-title text-white" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                        TỔNG QUAN DỰ ÁN<br /><span>Dầu Giây Center City 2</span>
+                        TỔNG QUAN DỰ ÁN<br /><span>THE LINK CITY</span>
                     </h2>
                     <div class="content-wrapper text-white cont-style-li aos-init aos-animate" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
                         <ul>
@@ -2000,7 +2000,7 @@ else: ?>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" /><noscript><img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="" alt="" decoding="async" loading="lazy" /></noscript>
-                                    <span class="text">1900.633.968 – 09.222.222.56</span>
+                                    <span class="text">09.222.222.56</span>
                                 </div>
                             </div>
                         </div>
@@ -2015,11 +2015,11 @@ else: ?>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Phone.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">0933.355.189 - 09.222.222.56</span>
+                                    <span class="text">09.222.222.56</span>
                                 </div>
                                 <div class="flex-box al-start">
                                     <img width="21" height="21" src="<?php echo get_template_directory_uri(); ?>/assets/images/Envelope.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
-                                    <span class="text">vandaibds1410@gmail.com</span>
+                                    <span class="text">thelinkcitykimoanh@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -2036,10 +2036,10 @@ else: ?>
                                 THEO DÕI CHÚNG TÔI
                             </div>
                             <div class="footer-socials flex-box al-center flex-wrap">
-                                <a href="https://www.facebook.com/khomenewcityofficial" target="_blank" title="Facebook" class="flex-box">
+                                <a href="https://www.facebook.com/vandaibds1410" target="_blank" title="Facebook" class="flex-box">
                                     <img width="38" height="39" src="<?php echo get_template_directory_uri(); ?>/assets/images/Facebook.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
                                 </a>
-                                <a href="https://zalo.me/3783004274492024975" target="_blank" title="Zalo" class="flex-box">
+                                <a href="https://zalo.me/0922222256" target="_blank" title="Zalo" class="flex-box">
                                     <img width="38" height="39" src="<?php echo get_template_directory_uri(); ?>/assets/images/Instagram.svg" class="lazyloaded" alt="" decoding="async" data-ll-status="loaded" />
                                 </a>
                                 <a href="https://www.tiktok.com/@thelinkcity.net" target="_blank" title="Youtube" class="flex-box">
@@ -2090,7 +2090,7 @@ if (function_exists('wpcf7_contact_form')) {
             echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
             echo '<div class="contact-info">';
             echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'thelinkcitykimoanh@gmail.com')) . '</p>';
             echo '</div>';
             echo '</div>';
         }
@@ -2101,7 +2101,7 @@ if (function_exists('wpcf7_contact_form')) {
     echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
     echo '<div class="contact-info">';
     echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
-    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'vandaibds1410@gmail.com')) . '</p>';
+    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'thelinkcitykimoanh@gmail.com')) . '</p>';
     echo '</div>';
     echo '</div>';
 }
