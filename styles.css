@@ -757,7 +757,7 @@ header#header #masthead {
 
 #masthead .header_logo {
     height: 46.69px;
-    width: 150px;
+    width: auto;
 }
 
 #masthead .logo-wrapper > a {
@@ -3188,7 +3188,7 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     }
 
     #masthead .header_logo {
-        width: 100px;
+        width: 120px;
         height: auto;
     }
 
