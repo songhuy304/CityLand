@@ -2612,6 +2612,9 @@ section.progress-page .progress-thumb .arrow:hover {
 
 #footer {
     background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/04/footer-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 #footer .fp-tableCell {
