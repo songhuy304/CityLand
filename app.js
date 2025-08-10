@@ -101,7 +101,7 @@ function MenuOpen() {
         } else {
             $("#menu-main li").css("transition-delay", "");
             $("body").removeClass("is-dark-section").addClass("is-light-section");
-            if (! $("#header").hasClass("header-single")) {
+            if (!$("#header").hasClass("header-single")) {
                 $("#header").addClass("header-single");
             }
         }
@@ -289,9 +289,10 @@ function addFullpage() {
 
 function fistPopUp() {
     $(document).ready(function () {
-        console.log("first");
         $("#lepopup-form-13").addClass("active");
-        $("body").css("overflow", "hidden");
+        if ($("#lepopup-form-13").hasClass("active")) {
+            $("body").css("overflow", "hidden");
+        }
     });
 
     $(document).on("click", "#lepopup-form-13 .lepopup-close", function () {
@@ -756,7 +757,7 @@ function swiper() {
 
     var swiperThietket = new Swiper(".swiper-video-thumb", {
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 3,
         speed: 600,
         spaceBetween: 20,
 
@@ -767,13 +768,13 @@ function swiper() {
 
         breakpoints: {
             1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
             },
             768: {
                 slidesPerView: 3,
             },
             300: {
-                slidesPerView: 2,
+                slidesPerView: 3,
             },
         },
     });
