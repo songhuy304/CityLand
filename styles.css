@@ -3127,6 +3127,12 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
         justify-content: center;
         margin-bottom: 1.5625rem;
     }
+
+    .section-home-1 .flex-box {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
 }
 
 @media (max-width: 849px) {
@@ -3159,12 +3165,6 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
     #nk-main-menu .main-menu {
         flex: 1;
-    }
-
-    .section-home-1 .flex-box {
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
     }
 
     section.section-home-1 .swiper-video-wrapper {
