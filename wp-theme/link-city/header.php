@@ -17,7 +17,7 @@
 
         <!-- Them class="header-mobile" o trang chi tiet -->
 
-        <header id="header">
+        <header id="header" <?php echo !is_front_page() ? ' class="header-mobile"' : ''; ?>>
             <div class="header-wrapper">
                 <div id="masthead" class="header-main">
                     <div class="header-left">

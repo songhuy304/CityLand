@@ -251,12 +251,36 @@ function link_city_create_default_cf7_form()
         $existing_form = get_page_by_title('Liên hệ mặc định', OBJECT, 'wpcf7_contact_form');
 
         if (!$existing_form) {
-            $form_content = '[contact-form-7 id="default" title="Liên hệ mặc định"]
-[text* your-name placeholder "Họ và tên *"]
-[email* your-email placeholder "Email *"]
-[tel your-phone placeholder "Số điện thoại"]
-[textarea your-message placeholder "Nội dung tin nhắn *"]
-[submit "Gửi tin nhắn"]';
+            $form_content = '
+                <div class="form-wrap flex-box flex-wrap al-center jus-between">
+                    <div class="form-group col-12">
+                        [text* your-name placeholder "Họ và tên *"]
+                    </div>
+                    <div class="form-group col-12">
+                        [email* your-email placeholder "Email *"]
+                    </div>
+                    <div class="form-group col-12">
+                        [tel your-phone placeholder "Số điện thoại"]
+                    </div>
+                    <div class="form-group col-12">
+                        [textarea your-message placeholder "Nội dung tin nhắn *"]
+                    </div>
+                    <div class="form-group col-12 submit-btn">
+                        [submit "Gửi tin nhắn"]
+                        <div class="btn btn-primary btn-icon-right">
+                            <span class="text">ĐĂNG KÝ</span>
+                            <span class="icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.25 12H20.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M14 5.25L20.75 12L14 18.75" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                ';
 
             $form_id = wp_insert_post([
                 'post_title' => 'Liên hệ mặc định',
@@ -267,6 +291,52 @@ function link_city_create_default_cf7_form()
 
             if ($form_id) {
                 update_post_meta($form_id, '_form', $form_content);
+
+                // Thêm các meta fields cần thiết cho Contact Form 7
+                update_post_meta($form_id, '_mail', [
+                    'subject' => 'Thông tin liên hệ từ website',
+                    'sender' => '[your-name] <[your-email]>',
+                    'body' => 'Từ: [your-name] <[your-email]>
+                    Số điện thoại: [your-tel]
+                    Nội dung: [your-message]',
+                    'recipient' => get_option('admin_email'),
+                    'use_html' => false,
+                    'exclude_blank' => false,
+                ]);
+
+                update_post_meta($form_id, '_mail_2', [
+                    'active' => false,
+                ]);
+
+                update_post_meta($form_id, '_messages', [
+                    'mail_sent_ok' => 'Tin nhắn của bạn đã được gửi thành công',
+                    'mail_sent_ng' => 'Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.',
+                    'validation_error' => 'Đã xảy ra lỗi xác thực. Vui lòng kiểm tra và thử lại.',
+                    'spam' => 'Tin nhắn bị coi là spam. Vui lòng thử lại sau.',
+                    'acceptance_missing' => 'Bạn phải chấp nhận các điều khoản trước khi gửi tin nhắn.',
+                    'invalid_required' => 'Vui lòng điền đầy đủ thông tin bắt buộc.',
+                    'invalid_too_long' => 'Thông tin nhập vào quá dài.',
+                    'invalid_too_short' => 'Thông tin nhập vào quá ngắn.',
+                    'upload_failed' => 'Có lỗi không xác định khi tải file lên.',
+                    'upload_file_type_invalid' => 'Bạn không được phép tải lên loại file này.',
+                    'upload_file_too_large' => 'File tải lên quá lớn.',
+                    'upload_failed_php_error' => 'Có lỗi khi tải file lên.',
+                    'invalid_date' => 'Vui lòng nhập ngày theo định dạng YYYY-MM-DD.',
+                    'date_too_early' => 'Ngày này quá sớm.',
+                    'date_too_late' => 'Ngày này quá muộn.',
+                    'invalid_number' => 'Vui lòng nhập một số.',
+                    'number_too_small' => 'Số này quá nhỏ.',
+                    'number_too_large' => 'Số này quá lớn.',
+                    'quiz_answer_not_correct' => 'Câu trả lời cho câu đố không đúng.',
+                    'invalid_email' => 'Vui lòng nhập địa chỉ email hợp lệ.',
+                    'invalid_url' => 'Vui lòng nhập URL hợp lệ.',
+                    'invalid_tel' => 'Vui lòng nhập số điện thoại hợp lệ.',
+                ]);
+
+                update_post_meta($form_id, '_additional_settings', '');
+                update_post_meta($form_id, '_locale', 'vi');
+                update_post_meta($form_id, '_config_errors', []);
+                update_post_meta($form_id, '_version', '5.7.7');
             }
         }
     }
@@ -367,3 +437,8 @@ HTML;
     wp_insert_post($postarr);
 }
 add_action('after_switch_theme', 'link_city_activate_sample_post');
+
+/*
+ * Disable Contact Form 7 auto paragraph wrapping
+ */
+add_filter('wpcf7_autop_or_not', '__return_false');

@@ -4,6 +4,7 @@
  */
 ?>
 
+<!-- section 12  -->
 <section id="footer" class="section footer-wrapper section-light add-pt relative site-footer">
     <div class="grid-container add-pt">
         <div class="sec-title text-primary"> <span>LIÊN HỆ</span> CHÚNG TÔI </div>
@@ -73,7 +74,56 @@
 
             <div class="col-3 tablet-col-6 mobile-col-12">
                 <div class="footer-title text-primary fs-20 lh-28 fw700">ĐĂNG KÍ NHẬN THÔNG TIN</div>
-                <!-- Placeholder for a contact form or newsletter subscription -->
+                <?php
+                // Display Contact Form 7 form if available
+                if (function_exists('wpcf7_contact_form')) {
+                    // Use WP_Query instead of deprecated get_page_by_title
+                    $form_query = new WP_Query([
+                        'post_type' => 'wpcf7_contact_form',
+                        'title' => 'Liên hệ mặc định',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 1,
+                    ]);
+
+                    if ($form_query->have_posts()) {
+                        $form_query->the_post();
+                        echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
+                        wp_reset_postdata();
+                    } else {
+                        // Fallback to any available Contact Form 7 form
+                        $forms_query = new WP_Query([
+                            'post_type' => 'wpcf7_contact_form',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 1,
+                        ]);
+
+                        if ($forms_query->have_posts()) {
+                            $forms_query->the_post();
+                            echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
+                            wp_reset_postdata();
+                        } else {
+                            // Fallback if no forms available
+                            echo '<div class="contact-form-fallback">';
+                            echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+                            echo '<div class="contact-info">';
+                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+                            echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    }
+                } else {
+                    // Fallback if Contact Form 7 is not available
+                    echo '<div class="contact-form-fallback">';
+                    echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+                    echo '<div class="contact-info">';
+                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+                    echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+?>
+
                 <div class="fs-12 lh-20 fw400 text-3" style="margin-top: 12px">
                     (*) Chúng tôi đặc biệt cẩn trọng trong việc chuẩn bị nội dung trên website này. Các thông tin/ hình ảnh/ bản vẽ chỉ thể hiện thông số kỹ thuật, tính thẩm mỹ và sự sáng tạo tại thời điểm được đăng tải và mang tính chất tham khảo.
                 </div>

@@ -2057,100 +2057,56 @@ else: ?>
                             ĐĂNG KÍ NHẬN THÔNG TIN
                         </div>
 
-                        <div class="wpcf7 js" id="wpcf7-f552-o1" lang="vi" dir="ltr" data-wpcf7-id="552">
-                            <div class="screen-reader-response">
-                                <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                <ul></ul>
-                            </div>
-                            <form action="/#wpcf7-f552-o1" method="post" class="form-lienhe init" aria-label="Form liên hệ" novalidate="novalidate" data-status="init">
-                                <fieldset class="hidden-fields-container">
-                                    <input type="hidden" name="_wpcf7" value="552" /><input type="hidden" name="_wpcf7_version" value="6.1" /><input type="hidden" name="_wpcf7_locale" value="vi" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f552-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" /><input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                </fieldset>
-                                <div style="display: none">
-                                    <p>
-                                        <span class="wpcf7-form-control-wrap" data-name="devtt"><input size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" value="" type="text" name="devtt" /></span>
-                                    </p>
-                                </div>
-                                <div class="form-wrap flex-box flex-wrap al-center jus-between">
-                                    <div class="form-group col-12">
-                                        <span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="your-name" aria-required="true" aria-invalid="false" placeholder="Họ và tên" value="" type="text" name="your-name" /></span>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" id="your-email" aria-required="true" aria-invalid="false" placeholder="E-mail" value="" type="email" name="your-email" /></span>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <span class="wpcf7-form-control-wrap" data-name="your-tel"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" id="your-tel" aria-required="true" aria-invalid="false" placeholder="Số điện thoại" value="" type="tel" name="your-tel" /></span>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <span class="wpcf7-form-control-wrap" data-name="your-message">
-                                            <textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" id="your-message" aria-invalid="false" placeholder="Nội dung..." name="your-message"></textarea>
-                                        </span>
-                                    </div>
-                                    <div class="form-group col-12 form-recaptcha">
-                                        <span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha"><span data-sitekey="6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE" class="wpcf7-form-control wpcf7-recaptcha g-recaptcha">
-                                                <div style="width: 304px; height: 78px">
-                                                    <div>
-                                                        <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-ofm4l8cl0c1e" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE&amp;co=aHR0cHM6Ly9rLWhvbWVuZXdjaXR5LnZuOjQ0Mw..&amp;hl=vi&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=lck3xqvnf86y"></iframe>
-                                                    </div>
-                                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="
-                                    width: 250px;
-                                    height: 40px;
-                                    border: 1px solid rgb(193, 193, 193);
-                                    margin: 10px 25px;
-                                    padding: 0px;
-                                    resize: none;
-                                    display: none;
-                                  "></textarea>
-                                                </div>
-                                                <iframe style="display: none"></iframe>
-                                            </span>
-                                            <noscript>
-                                                <div class="grecaptcha-noscript">
-                                                    <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE" frameborder="0" scrolling="no" width="310" height="430">
-                                                    </iframe>
-                                                    <textarea name="g-recaptcha-response" rows="3" cols="40" placeholder="reCaptcha Response Here">
-                                </textarea>
-                                                </div>
-                                            </noscript>
-                                        </span>
-                                    </div>
-                                    <!-- <div class="form-group col-12 submit-btn">
-                  <input
-                    class="wpcf7-form-control wpcf7-submit has-spinner"
-                    type="submit"
-                    value="Gửi thông tin"
-                  /><span class="wpcf7-spinner"></span>
-                  <div class="btn btn-primary btn-icon-right">
-                    <span class="text">ĐĂNG KÝ</span>
-                    <span class="icon">
-                        <svg
-                        width="25"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4.25 12H20.75"
-                          stroke="white"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                        <path
-                          d="M14 5.25L20.75 12L14 18.75"
-                          stroke="white"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path></svg
-                    ></span>
-                  </div>
-                </div> -->
-                                </div>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
-                            </form>
-                        </div>
+                        <?php
+            // Display Contact Form 7 form if available
+            if (function_exists('wpcf7_contact_form')) {
+                // Use WP_Query instead of deprecated get_page_by_title
+                $form_query = new WP_Query([
+                    'post_type' => 'wpcf7_contact_form',
+                    'title' => 'Liên hệ mặc định',
+                    'post_status' => 'publish',
+                    'posts_per_page' => 1,
+                ]);
+
+                if ($form_query->have_posts()) {
+                    $form_query->the_post();
+                    echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="Liên hệ mặc định"]');
+                    wp_reset_postdata();
+                } else {
+                    // Fallback to any available Contact Form 7 form
+                    $forms_query = new WP_Query([
+                        'post_type' => 'wpcf7_contact_form',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 1,
+                    ]);
+
+                    if ($forms_query->have_posts()) {
+                        $forms_query->the_post();
+                        echo do_shortcode('[contact-form-7 id="' . get_the_ID() . '" title="' . get_the_title() . '"]');
+                        wp_reset_postdata();
+                    } else {
+                        // Fallback if no forms available
+                        echo '<div class="contact-form-fallback">';
+                        echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+                        echo '<div class="contact-info">';
+                        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+                        echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                }
+            } else {
+                // Fallback if Contact Form 7 is not available
+                echo '<div class="contact-form-fallback">';
+                echo '<p class="fs-14 lh-20 fw400 text-3" style="margin-bottom: 15px;">Để nhận thông tin chi tiết, vui lòng liên hệ:</p>';
+                echo '<div class="contact-info">';
+                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Điện thoại:</strong> ' . esc_html(get_theme_mod('phone_number', '0937961212')) . '</p>';
+                echo '<p class="fs-14 lh-20 fw400 text-3"><strong>Email:</strong> ' . esc_html(get_theme_mod('email_address', 'info@kimoanhgroup.vn')) . '</p>';
+                echo '</div>';
+                echo '</div>';
+            }
+?>
+
                         <div class="fs-12 lh-20 fw400 text-3">
                             (*) Chúng tôi đặc biệt cẩn trọng trong việc chuẩn bị nội
                             dung trên website này. Các thông tin/ hình ảnh/ bản vẽ chỉ
