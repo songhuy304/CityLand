@@ -56,11 +56,13 @@ function link_city_scripts()
     wp_enqueue_style('fullpage-css', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.css', [], '4.0.37');
     wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], '2.3.1');
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], '11.0.0');
+    wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css', [], '6.0.0');
 
     // Enqueue external JavaScript
     wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], '2.3.1', true);
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', ['jquery'], '11.0.0', true);
     wp_enqueue_script('fullpage-js', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js', ['jquery'], '4.0.37', true);
+    wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js', ['jquery'], '6.0.0', true);
 
     // Enqueue custom JavaScript
     wp_enqueue_script('link-city-app', get_template_directory_uri() . '/assets/js/app.js', ['jquery'], '1.0.0', true);
@@ -187,6 +189,55 @@ function link_city_customize_register($wp_customize)
     ]);
 }
 add_action('customize_register', 'link_city_customize_register');
+
+/**
+ * Auto-install Classic Editor plugin on theme activation.
+ */
+function link_city_auto_install_classic_editor()
+{
+    // Only attempt installs in admin and with proper capability
+    if (!is_admin() || !current_user_can('install_plugins')) {
+        return;
+    }
+
+    // Ensure plugin helpers are available
+    if (!function_exists('is_plugin_active')) {
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+    }
+
+    // Skip if already active
+    if (is_plugin_active('classic-editor/classic-editor.php')) {
+        return;
+    }
+
+    // Ensure filesystem helpers are available
+    require_once ABSPATH . 'wp-admin/includes/file.php';
+
+    // Only proceed when filesystem method is direct to avoid credential prompts on activation
+    if (function_exists('get_filesystem_method') && get_filesystem_method() !== 'direct') {
+        return;
+    }
+
+    // Include the plugin installer classes
+    require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+    require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+    require_once ABSPATH . 'wp-admin/includes/class-automatic-upgrader-skin.php';
+
+    // Install Classic Editor
+    $plugin = 'classic-editor/classic-editor.php';
+    $api = plugins_api('plugin_information', ['slug' => 'classic-editor']);
+
+    if (is_wp_error($api) || empty($api->download_link)) {
+        return;
+    }
+
+    $upgrader = new Plugin_Upgrader(new Automatic_Upgrader_Skin());
+    $result = $upgrader->install($api->download_link);
+    if (!is_wp_error($result)) {
+        activate_plugin($plugin);
+    }
+}
+add_action('after_switch_theme', 'link_city_auto_install_classic_editor');
 
 /**
  * Auto-install Contact Form 7 plugin.
@@ -455,3 +506,26 @@ add_action('after_switch_theme', 'link_city_activate_sample_post');
  * Disable Contact Form 7 auto paragraph wrapping
  */
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+// Thêm trường video_url vào bài viết khi là bài thuộc category video
+function add_video_url_custom_field($post) {
+    if (has_term('video', 'category', $post)) {
+        $video_url = get_post_meta($post->ID, 'video_url', true);
+        ?>
+        <div class="video-url-field">
+            <label for="video_url"><?php _e('Video URL', 'textdomain'); ?></label>
+            <input type="text" name="video_url" id="video_url" value="<?php echo esc_url($video_url); ?>" class="widefat" />
+        </div>
+        <?php
+    }
+}
+add_action('edit_form_after_title', 'add_video_url_custom_field');
+
+// Lưu giá trị video_url khi bài viết được lưu
+function save_video_url_custom_field($post_id) {
+    if (isset($_POST['video_url'])) {
+        // Lưu giá trị video_url vào post meta
+        update_post_meta($post_id, 'video_url', sanitize_text_field($_POST['video_url']));
+    }
+}
+add_action('save_post', 'save_video_url_custom_field');

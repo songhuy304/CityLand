@@ -309,35 +309,17 @@ function fistPopUp() {
 }
 
 function swiper() {
-    // const swiper = new Swiper(".home-banner", {
-    //   // modules: [SwiperGL],
+    const swiper = new Swiper(".home-banner", {
+        speed: 1600,
 
-    //   speed: 1600,
+        effect: "fade",
 
-    //   effect: "fade",
+        pagination: {
+            el: ".home-banner .swiper-pagination",
 
-    //   // loop: true,
-
-    //   // gl: {
-
-    //   //     shader: ['pixelize', 'ripple', 'flyeye'],
-
-    //   // },
-
-    //   pagination: {
-    //     el: ".home-banner .swiper-pagination",
-
-    //     clickable: true,
-    //   },
-
-    //   // autoplay:{
-
-    //   //     delay: 5000,
-
-    //   //     disableOnInteraction: false,
-
-    //   // }
-    // });
+            clickable: true,
+        },
+    });
 
     // var utilitiesSwiper1 = new Swiper(".utilities-swiper-1", {
     //   slidesPerView: 1,
@@ -1111,3 +1093,11 @@ function addHeaderMobileClass() {
         jQuery("#header").removeClass("header-mobile");
     }
 }
+
+// Khởi tạo Fancybox 6.0
+document.addEventListener("DOMContentLoaded", function () {
+    // Khởi tạo Fancybox cho tất cả các liên kết có data-fancybox
+    Fancybox.bind("[data-fancybox]", {
+        // Tùy chọn cấu hình (nếu cần)
+    });
+});

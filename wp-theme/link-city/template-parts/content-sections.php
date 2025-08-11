@@ -12,6 +12,30 @@
 
     <!-- // section 1 -->
     <section class="section section-trangchu section-dark fp-section fp-table" data-title="Trang chủ" data-anchors="trang-chu" data-anchor="trang-chu">
+    <div class="swiper home-banner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide relative">
+                                <img
+                                    width="1920"
+                                    height="1080"
+                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/04/V22_KH_PK1_masterplan_day-small-1.jpg"
+                                    class="swiper-gl-image"
+                                    alt=""
+                                />
+                            </div>
+
+                            <div class="swiper-slide relative">
+                                <img
+                                    width="1920"
+                                    height="1080"
+                                    src="https://k-homenewcity.vn/wp-content/uploads/2025/04/4.-Khu-am-thuc-1536x866.png"
+                                    class="swiper-gl-image"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
     </section>
 
     <!-- // section 2 -->
@@ -459,6 +483,23 @@ else: ?>
                         </svg>
                     </div>
                 </div>
+                <div
+                                style="margin-top: 3rem"
+                                data-aos="fade-up"
+                                data-aos-delay="700"
+                                data-aos-duration="500"
+                                class="aos-init aos-animate"
+                            >
+                                <a
+                                    href="/category/tin-du-an"
+                                    title="Tin tức"
+                                    class="btn btn-primary mx-auto"
+                                >
+                                    <span>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-right.svg" alt="arrow-right" />
+                                    </span>
+                                </a>
+                            </div>
             </div>
         </div>
     </section>
