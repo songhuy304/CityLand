@@ -662,6 +662,7 @@ header#header {
     position: fixed;
     z-index: 9999;
     width: 100%;
+    transition: all 0.6s ease;
 }
 
 .header,
@@ -3173,6 +3174,10 @@ body.is-light-section header#header .header-logo-dark {
     opacity: 0;
 }
 
+body.is-dark-section .nav-icon .menu-text {
+    color: #fff;
+}
+
 body.is-light-section .wrap-fp-nav #fp-nav ul li a.active + .fp-tooltip,
 body.is-light-section .wrap-fp-nav #fp-nav ul li:hover .fp-tooltip {
     color: var(--main-cl);
@@ -3560,25 +3565,44 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 }
 
 header.header-mobile {
-    background-color: #fff;
     position: sticky !important;
     top: 0;
 }
 
-header.header-mobile .nav-icon .hamburger > span {
+header.header-mobile:not(.menu-active) {
+    background-color: #fff;
+}
+
+header.header-mobile:not(.menu-active) .nav-icon .hamburger > span {
     background-color: var(--main-cl);
 }
 
-header.header-mobile .header-button-1 > a > span.icon > svg:nth-of-type(1) path {
+header.header-mobile:not(.menu-active) .header-button-1 > a > span.icon > svg:nth-of-type(1) path {
     fill: var(--main-cl);
 }
 
-header.header-mobile .header-search > a path {
+header.header-mobile:not(.menu-active) .header-search > a path {
     stroke: var(--main-cl);
 }
 
-header.header-mobile .header-logo-dark {
+header.header-mobile:not(.menu-active) .header-logo-dark {
     opacity: 0;
+}
+
+.header-single {
+    position: sticky;
+    top: 0;
+    transition: all 0.6s ease;
+}
+
+header.header-single:not(.menu-active) {
+    background-color: #fff;
+    transition: background-color 0.6s ease;
+    transition-delay: 0.7s;
+}
+
+header.header-shadow {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
 }
 
 /*  ============================ DETAIL PAGE ============================ */
@@ -3911,10 +3935,4 @@ section.post-category-page .btn.load-more-posts {
         font-size: 16px;
         line-height: 20px;
     }
-}
-
-.header-single {
-    background-color: #fff;
-    transition: background-color 0.5s ease;
-    transition-delay: 0.5s;
 }

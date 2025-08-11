@@ -6,6 +6,7 @@ $(document).ready(function () {
     fistPopUp();
     NKcustomSelect();
     addHeaderMobileClass();
+    handleHeaderScroll();
 
     swiper();
 });
@@ -82,9 +83,6 @@ function AOSInit() {
 
 function MenuOpen() {
     $(".header-nav-icon").on("click", function () {
-        if ($("#header").hasClass("header-single")) {
-            $("#header").removeClass("header-single");
-        }
         $(".header-nav-icon").toggleClass("is-showing");
         $("#nk-main-menu").toggleClass("active");
 
@@ -98,12 +96,13 @@ function MenuOpen() {
                 .css("transition-delay", 1 + $("#menu-main li").length * 0.1 + "s");
 
             $("body").removeClass("is-light-section").addClass("is-dark-section");
+            $("body").css("overflow", "hidden");
+            $("#header").addClass("menu-active");
         } else {
             $("#menu-main li").css("transition-delay", "");
             $("body").removeClass("is-dark-section").addClass("is-light-section");
-            if (!$("#header").hasClass("header-single")) {
-                $("#header").addClass("header-single");
-            }
+            $("body").css("overflow", "");
+            $("#header").removeClass("menu-active");
         }
     });
 }
@@ -1086,7 +1085,6 @@ function NKcustomSelect() {
 }
 
 function addHeaderMobileClass() {
-    console.log(window.innerWidth);
     if (window.innerWidth <= 549) {
         jQuery("#header").addClass("header-mobile");
     } else {
@@ -1094,10 +1092,21 @@ function addHeaderMobileClass() {
     }
 }
 
-// Khởi tạo Fancybox 6.0
 document.addEventListener("DOMContentLoaded", function () {
-    // Khởi tạo Fancybox cho tất cả các liên kết có data-fancybox
-    Fancybox.bind("[data-fancybox]", {
-        // Tùy chọn cấu hình (nếu cần)
-    });
+    Fancybox.bind("[data-fancybox]", {});
 });
+
+function handleHeaderScroll() {
+    $(window).scroll(function () {
+        const scrollPosition = $(window).scrollTop();
+
+        // Kiểm tra nếu có header-single hoặc header-mobile
+        if ($("header.header-single, header.header-mobile").length) {
+            if (scrollPosition > 50) {
+                $("header.header-single, header.header-mobile").addClass("header-shadow");
+            } else {
+                $("header.header-single, header.header-mobile").removeClass("header-shadow");
+            }
+        }
+    });
+}
