@@ -3936,3 +3936,7 @@ section.post-category-page .btn.load-more-posts {
         line-height: 20px;
     }
 }
+
+.click-copy {
+    cursor: pointer;
+}

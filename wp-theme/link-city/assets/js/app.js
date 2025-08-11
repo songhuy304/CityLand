@@ -7,7 +7,7 @@ $(document).ready(function () {
     NKcustomSelect();
     addHeaderMobileClass();
     handleHeaderScroll();
-
+    copyOnClick();
     swiper();
 });
 
@@ -1092,9 +1092,9 @@ function addHeaderMobileClass() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    Fancybox.bind("[data-fancybox]", {});
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     Fancybox.bind("[data-fancybox]", {});
+// });
 
 function handleHeaderScroll() {
     $(window).scroll(function () {
@@ -1110,3 +1110,76 @@ function handleHeaderScroll() {
         }
     });
 }
+
+function copyOnClick(){
+
+    jQuery(".click-copy").click(function(){
+
+        var data = jQuery(this).attr("data-copy");
+
+
+
+        if(data){
+
+            var tempInput = jQuery("<textarea>");
+
+            jQuery("body").append(tempInput);
+
+            tempInput.val(data).select();
+
+            document.execCommand('copy');
+
+            tempInput.remove();
+
+            Swal.fire({
+
+                title: "Đã sao chép",
+
+                icon: "success",
+
+                button: "Close"
+
+            });
+
+        }
+
+        else{
+
+            Swal.fire({
+
+                title: "Lỗi không xác định. Vui lòng thử lại sau",
+
+                icon: "error",
+
+                button: "Close"
+
+            });
+
+        }
+
+    })
+
+
+
+    jQuery(document).on("click", ".click-popup-alert", function(e){
+
+        e.preventDefault();
+
+
+
+
+
+        Swal.fire({
+
+            title: "Chúng tôi đang cập nhật thông tin.<br>Vui lòng quay lại sau",
+
+            icon: "warning",
+
+            button: "Close"
+
+        });
+
+    })
+
+}
+
