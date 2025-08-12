@@ -755,3 +755,9 @@ swiper-container .swiper-notification {
     backface-visibility: hidden;
     overflow: hidden;
 }
+
+.fp-watermark {
+    display: none !important;
+    z-index: -9999 !important;
+    visibility: hidden !important;
+}
