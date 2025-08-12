@@ -13,6 +13,7 @@
             referrerpolicy="no-referrer"
         />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
         <link rel="stylesheet" href="core.css" />
         <title>Document</title>
     </head>
@@ -736,50 +737,50 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <iframe
-                                                        style="aspect-ratio: 16/9"
-                                                        src="https://www.youtube.com/embed/egKUHx-8hiE"
-                                                        title="YouTube video player"
-                                                        frameborder="0"
-                                                        allowfullscreen
-                                                    >
-                                                    </iframe
-                                                ></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="video-wrap"
-                                                    ><iframe
-                                                        style="aspect-ratio: 16/9"
-                                                        src="https://www.youtube.com/embed/D166kPGiUmM"
-                                                        title="YouTube video player"
-                                                        frameborder="0"
-                                                        allowfullscreen
-                                                    >
-                                                    </iframe
-                                                ></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="video-wrap">
-                                                    <iframe
-                                                        style="aspect-ratio: 16/9"
-                                                        src="https://www.youtube.com/embed/ySj6KLxigJk"
-                                                        title="YouTube video player"
-                                                        frameborder="0"
-                                                        allowfullscreen
-                                                    >
-                                                    </iframe>
+                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                            allowfullscreen
+                                                            allowtransparency
+                                                            allow="autoplay"
+                                                        ></iframe>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <iframe
-                                                        style="aspect-ratio: 16/9"
-                                                        src="https://www.youtube.com/embed/egKUHx-8hiE"
-                                                        title="YouTube video player"
-                                                        frameborder="0"
-                                                        allowfullscreen
-                                                    >
-                                                    </iframe>
+                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/D166kPGiUmM?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                            allowfullscreen
+                                                            allowtransparency
+                                                            allow="autoplay"
+                                                        ></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="video-wrap">
+                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/ySj6KLxigJk?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                            allowfullscreen
+                                                            allowtransparency
+                                                            allow="autoplay"
+                                                        ></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="video-wrap">
+                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                                        <iframe
+                                                            src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                            allowfullscreen
+                                                            allowtransparency
+                                                            allow="autoplay"
+                                                        ></iframe>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -5779,39 +5780,6 @@
                                                         </noscript>
                                                     </span>
                                                 </div>
-                                                <!-- <div class="form-group col-12 submit-btn">
-                  <input
-                    class="wpcf7-form-control wpcf7-submit has-spinner"
-                    type="submit"
-                    value="Gửi thông tin"
-                  /><span class="wpcf7-spinner"></span>
-                  <div class="btn btn-primary btn-icon-right">
-                    <span class="text">ĐĂNG KÝ</span>
-                    <span class="icon">
-                        <svg
-                        width="25"
-                        height="24"
-                        viewBox="0 0 25 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M4.25 12H20.75"
-                          stroke="white"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                        <path
-                          d="M14 5.25L20.75 12L14 18.75"
-                          stroke="white"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path></svg
-                    ></span>
-                  </div>
-                </div> -->
                                             </div>
                                             <div class="wpcf7-response-output" aria-hidden="true"></div>
                                         </form>
@@ -6165,6 +6133,8 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
         <script src="app.js"></script>
         <div id="active-fullpage"></div>

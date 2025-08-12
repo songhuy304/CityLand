@@ -759,36 +759,60 @@ function swiper() {
             },
         },
     });
+    // Khởi tạo Plyr cho tất cả các video YouTube
+    const players = Array.from(document.querySelectorAll(".plyr__video-embed")).map(
+        (p) =>
+            new Plyr(p, {
+                controls: [
+                    "play-large",
+                    "play",
+                    "progress",
+                    "current-time",
+                    "mute",
+                    "volume",
+                    "fullscreen",
+                ],
+                youtube: {
+                    noCookie: true,
+                    rel: 0,
+                    showinfo: 0,
+                    iv_load_policy: 3,
+                    modestbranding: 1,
+                },
+            })
+    );
+
     var swiper2 = new Swiper(".swiper-video", {
         slidesPerView: 1,
         spaceBetween: 20,
-
         speed: 600,
-
         thumbs: {
             swiper: swiperThietket,
         },
-
         on: {
-            transitionStart: function () {
-                var videos = document.querySelectorAll("video");
-
-                Array.prototype.forEach.call(videos, function (video) {
-                    video.pause();
+            slideChange: function () {
+                // Tạm dừng tất cả các video khi chuyển slide
+                players.forEach((player) => {
+                    player.pause();
                 });
             },
-
-            transitionEnd: function () {
-                var activeIndex = this.activeIndex;
-                var activeSlide = document.getElementsByClassName("swiper-slide")[activeIndex];
-                var activeSlideVideo = activeSlide.getElementsByTagName("video")[0];
-
-                if (activeSlideVideo) {
-                    activeSlideVideo.play();
-
-                    activeSlideVideo.onended = () => {
-                        this.slideNext();
-                    };
+            slideChangeTransitionEnd: function () {
+                // Tìm video trong slide hiện tại
+                const activeIndex = this.activeIndex;
+                const activeSlide = document.querySelector(".swiper-video .swiper-slide-active");
+                if (activeSlide) {
+                    const activePlayer = activeSlide.querySelector(".plyr__video-embed");
+                    if (activePlayer) {
+                        const playerIndex = Array.from(
+                            document.querySelectorAll(".plyr__video-embed")
+                        ).indexOf(activePlayer);
+                        if (playerIndex !== -1 && players[playerIndex]) {
+                            // Tự động phát video trong slide hiện tại
+                            setTimeout(() => {
+                                players[playerIndex].play();
+                            }, 300);
+                        }
+                    }
                 }
             },
         },
