@@ -510,21 +510,23 @@ add_action('after_switch_theme', 'link_city_activate_sample_post');
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Thêm trường video_url vào bài viết khi là bài thuộc category video
-function add_video_url_custom_field($post) {
+function add_video_url_custom_field($post)
+{
     if (has_term('video', 'category', $post)) {
         $video_url = get_post_meta($post->ID, 'video_url', true);
         ?>
-        <div class="video-url-field">
-            <label for="video_url"><?php _e('Video URL', 'textdomain'); ?></label>
-            <input type="text" name="video_url" id="video_url" value="<?php echo esc_url($video_url); ?>" class="widefat" />
-        </div>
-        <?php
+<div class="video-url-field">
+    <label for="video_url"><?php _e('Video URL', 'textdomain'); ?></label>
+    <input type="text" name="video_url" id="video_url" value="<?php echo esc_url($video_url); ?>" class="widefat" />
+</div>
+<?php
     }
 }
 add_action('edit_form_after_title', 'add_video_url_custom_field');
 
 // Lưu giá trị video_url khi bài viết được lưu
-function save_video_url_custom_field($post_id) {
+function save_video_url_custom_field($post_id)
+{
     if (isset($_POST['video_url'])) {
         // Lưu giá trị video_url vào post meta
         update_post_meta($post_id, 'video_url', sanitize_text_field($_POST['video_url']));

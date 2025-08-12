@@ -1092,9 +1092,9 @@ function addHeaderMobileClass() {
     }
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     Fancybox.bind("[data-fancybox]", {});
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    Fancybox.bind("[data-fancybox]", {});
+});
 
 function handleHeaderScroll() {
     $(window).scroll(function () {
@@ -1111,75 +1111,48 @@ function handleHeaderScroll() {
     });
 }
 
-function copyOnClick(){
-
-    jQuery(".click-copy").click(function(){
-
+function copyOnClick() {
+    jQuery(".click-copy").click(function () {
         var data = jQuery(this).attr("data-copy");
 
-
-
-        if(data){
-
+        if (data) {
             var tempInput = jQuery("<textarea>");
 
             jQuery("body").append(tempInput);
 
             tempInput.val(data).select();
 
-            document.execCommand('copy');
+            document.execCommand("copy");
 
             tempInput.remove();
 
             Swal.fire({
-
                 title: "Copy thĂ nh cĂ´ng",
 
                 icon: "success",
 
-                button: "Close"
-
+                button: "Close",
             });
-
-        }
-
-        else{
-
+        } else {
             Swal.fire({
-
                 title: "Lá»—i khĂ´ng xĂ¡c Ä‘á»‹nh. Vui lĂ²ng thá»­ láº¡i sau",
 
                 icon: "error",
 
-                button: "Close"
-
+                button: "Close",
             });
-
         }
+    });
 
-    })
-
-
-
-    jQuery(document).on("click", ".click-popup-alert", function(e){
-
+    jQuery(document).on("click", ".click-popup-alert", function (e) {
         e.preventDefault();
 
-
-
-
-
         Swal.fire({
-
             title: "ChĂºng tĂ´i Ä‘ang cáº­p nháº­t thĂ´ng tin.<br>Vui lĂ²ng quay láº¡i sau",
 
             icon: "warning",
 
-            button: "Close"
-
+            button: "Close",
         });
-
-    })
-
+    });
 }
-

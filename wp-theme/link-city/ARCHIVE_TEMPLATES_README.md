@@ -7,39 +7,46 @@ Bộ template archive này được tạo dựa trên thiết kế từ file `ca
 ## Các Template đã tạo
 
 ### 1. `archive.php`
+
 - Template chính cho tất cả các trang archive
 - Xử lý category, tag, author, date archives
 - Hiển thị menu categories
 - Hỗ trợ pagination và load more button
 
 ### 2. `category.php`
+
 - Template riêng cho category pages
 - Hiển thị tên category trong tiêu đề
 - Menu categories với highlight category hiện tại
 - Load more button với AJAX support
 
 ### 3. `tag.php`
+
 - Template cho tag pages
 - Hiển thị tên tag trong tiêu đề
 - Layout tương tự category nhưng đơn giản hơn
 
 ### 4. `author.php`
+
 - Template cho author archive pages
 - Hiển thị tên tác giả
 - Danh sách bài viết của tác giả
 
 ### 5. `date.php`
+
 - Template cho date archives (năm, tháng, ngày)
 - Tự động hiển thị định dạng ngày phù hợp
 - Hỗ trợ year, month, day archives
 
 ### 6. `search.php`
+
 - Template cho search results
 - Hiển thị từ khóa tìm kiếm
 - Thêm excerpt cho mỗi bài viết
 - Gợi ý tìm kiếm khi không có kết quả
 
 ### 7. `404.php`
+
 - Template cho trang lỗi 404
 - Giao diện thân thiện với người dùng
 - Hiển thị bài viết gần đây để giữ chân người dùng
@@ -48,21 +55,25 @@ Bộ template archive này được tạo dựa trên thiết kế từ file `ca
 ## Tính năng chính
 
 ### Responsive Design
+
 - Grid layout: 3 cột trên desktop, 2 cột trên tablet và mobile
 - CSS classes tương thích với theme hiện tại
 
 ### Pagination
+
 - WordPress native pagination
 - Load more button cho AJAX pagination
 - Hỗ trợ custom post types
 
 ### SEO Friendly
+
 - Proper heading hierarchy
 - Meta information (date, author)
 - Alt text cho images
 - Semantic HTML structure
 
 ### Performance
+
 - Lazy loading cho images
 - Optimized database queries
 - Minimal JavaScript dependencies
@@ -70,7 +81,9 @@ Bộ template archive này được tạo dựa trên thiết kế từ file `ca
 ## Cách sử dụng
 
 ### 1. Cài đặt
+
 Các template này sẽ tự động được WordPress sử dụng dựa trên URL và context:
+
 - `/category/tin-du-an/` → `category.php`
 - `/tag/du-an/` → `tag.php`
 - `/author/admin/` → `author.php`
@@ -79,6 +92,7 @@ Các template này sẽ tự động được WordPress sử dụng dựa trên 
 - Trang không tồn tại → `404.php`
 
 ### 2. Customization
+
 Để tùy chỉnh template:
 
 ```php
@@ -97,7 +111,9 @@ add_image_size('archive-thumb', 400, 300, true);
 ```
 
 ### 3. Styling
+
 Các template sử dụng CSS classes có sẵn từ theme:
+
 - `.grid-container` - Container chính
 - `.grid-box` - Grid layout
 - `.post-item` - Item bài viết
@@ -109,14 +125,16 @@ Các template sử dụng CSS classes có sẵn từ theme:
 Template hỗ trợ AJAX load more với data attributes:
 
 ```html
-<div class="btn btn-primary mx-auto load-more-posts"
-     data-page="2"
-     data-max="4"
-     data-limit="9"
-     data-tax="category"
-     data-term="86"
-     data-target="post-grid"
-     data-post-type="post">
+<div
+    class="btn btn-primary mx-auto load-more-posts"
+    data-page="2"
+    data-max="4"
+    data-limit="9"
+    data-tax="category"
+    data-term="86"
+    data-target="post-grid"
+    data-post-type="post"
+></div>
 ```
 
 ## Tương thích
