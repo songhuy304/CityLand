@@ -48,24 +48,54 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <iframe style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/egKUHx-8hiE" title="YouTube video player" frameborder="0" allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="video-wrap"><iframe style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/D166kPGiUmM" title="YouTube video player" frameborder="0" allowfullscreen>
-                                        </iframe></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="video-wrap">
-                                        <iframe style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/ySj6KLxigJk" title="YouTube video player" frameborder="0" allowfullscreen>
-                                        </iframe>
+                                        <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                                clickToPlay
+                                            ></iframe>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <iframe style="aspect-ratio: 16/9" src="https://www.youtube.com/embed/egKUHx-8hiE" title="YouTube video player" frameborder="0" allowfullscreen>
-                                        </iframe>
+                                        <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/D166kPGiUmM?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                                clickToPlay
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="video-wrap">
+                                        <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/ySj6KLxigJk?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                                clickToPlay
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="video-wrap">
+                                        <div class="plyr__video-embed" style="aspect-ratio: 16/9">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                                                allowfullscreen
+                                                allowtransparency
+                                                allow="autoplay"
+                                                clickToPlay
+                                            ></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -74,32 +104,88 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <img width="792" height="400" src="https://k-homenewcity.vn/wp-content/uploads/2025/07/DSC01503-small-792x400.jpg" alt="" />
+                                        <img
+                                            width="792"
+                                            height="400"
+                                            src="https://k-homenewcity.vn/wp-content/uploads/2025/07/DSC01503-small-792x400.jpg"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <img width="792" height="400" src="https://k-homenewcity.vn/wp-content/uploads/2025/04/Blog12-avatar.png" alt="" />
+                                        <img
+                                            width="792"
+                                            height="400"
+                                            src="https://k-homenewcity.vn/wp-content/uploads/2025/04/Blog12-avatar.png"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <img width="792" height="400" src="https://k-homenewcity.vn/wp-content/uploads/2024/10/blog13-8-600x400.jpg" alt="" />
+                                        <img
+                                            width="792"
+                                            height="400"
+                                            src="https://k-homenewcity.vn/wp-content/uploads/2024/10/blog13-8-600x400.jpg"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="video-wrap">
-                                        <img width="792" height="400" src="https://k-homenewcity.vn/wp-content/uploads/2025/04/blog1-11-708x400.jpg" alt="" />
+                                        <img
+                                            width="792"
+                                            height="400"
+                                            src="https://k-homenewcity.vn/wp-content/uploads/2025/04/blog1-11-708x400.jpg"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-video-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-21551032a842d7ca3">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 4.5L7.5 12L15 19.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <div
+                                class="swiper-video-button-prev"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-21551032a842d7ca3"
+                            >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M15 4.5L7.5 12L15 19.5"
+                                        stroke="#fff"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
                                 </svg>
                             </div>
-                            <div class="swiper-video-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f322213b796b610a3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 4.5L16.5 12L9 19.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <div
+                                class="swiper-video-button-next"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Next slide"
+                                aria-controls="swiper-wrapper-f322213b796b610a3"
+                                ><svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 4.5L16.5 12L9 19.5"
+                                        stroke="#fff"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
                                 </svg>
                             </div>
                         </div>

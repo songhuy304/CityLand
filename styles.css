@@ -1529,7 +1529,7 @@ body.is-dark-section .wrap-fp-nav #fp-nav ul li a:before {
 }
 
 .home-banner .swiper-pagination {
-    display: none;
+    /* display: none; */
 }
 
 .swiper-gl-image {
@@ -3394,7 +3394,7 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
 @media only screen and (max-width: 767px) {
     .load_home_page svg {
-        width: 200px;
+        width: 260px;
     }
 
     #masthead .logo-wrapper > a {
@@ -3430,7 +3430,7 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     }
 
     #masthead .header_logo {
-        width: 120px;
+        width: 160px;
         height: auto;
     }
 

@@ -16,7 +16,7 @@
 <div class="modal-container" id="lepopup-form-13">
     <div class="modal-content lepopup-form-inner">
         <div class="lepopup-element lepopup-element-2">
-            <form class="lepopup-form">
+            <form class="lepopup-form" id="lepopup-contact-form">
                 <h2 class="lepopup-element-title" data-aos="fade-up" data-aos-duration="700">
                     ĐĂNG KÝ TÌM HIỂU <br />
                     THÔNG TIN DỰ ÁN
@@ -29,18 +29,23 @@
 
                 <div class="flex-box" style="gap: 15px; margin-top: 20px" data-aos="fade-up" data-aos-duration="800">
                     <div class="lepopup-input">
-                        <input type="text" name="lepopup-7" class="lepopup-ta-left" placeholder="Tên của bạn" autocomplete="off" value="" aria-label="Name Field" />
+                        <input type="text" name="lepopup_name" class="lepopup-ta-left" placeholder="Tên của bạn" autocomplete="off" value="" aria-label="Name Field" required />
                     </div>
                     <div class="lepopup-input">
-                        <input type="text" name="lepopup-6" class="lepopup-ta-left" placeholder="Số điện thoại" autocomplete="tel" value="" aria-label="Phone Field" />
+                        <input type="tel" name="lepopup_phone" class="lepopup-ta-left" placeholder="Số điện thoại" autocomplete="tel" value="" aria-label="Phone Field" required />
                     </div>
                 </div>
 
                 <div class="lepopup-input" style="margin-top: 15px" data-aos="fade-up" data-aos-duration="900">
-                    <input type="email" name="lepopup-18" class="lepopup-ta-left" placeholder="Email của bạn" autocomplete="email" data-default="" value="" aria-label="E-mail Field" />
+                    <input type="email" name="lepopup_email" class="lepopup-ta-left" placeholder="Email của bạn" autocomplete="email" value="" aria-label="E-mail Field" required />
                 </div>
+                
+                <!-- Hidden fields for form processing -->
+                <input type="hidden" name="lepopup_form_submit" value="yes" />
+                <input type="hidden" name="lepopup_nonce" value="<?php echo wp_create_nonce('lepopup_form_nonce'); ?>" />
+                
                 <div class="lepopup-button-wrapper" data-aos="fade-up" data-aos-duration="1000">
-                    <a class="lepopup-button lepopup-button-zoom-out" href="#" onclick="return lepopup_submit(this);">GỬI THÔNG TIN</a>
+                    <button type="submit" class="lepopup-button lepopup-button-zoom-out">GỬI THÔNG TIN</button>
                 </div>
 
                 <div class="lepopup-close">

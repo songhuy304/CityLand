@@ -58,6 +58,7 @@ function link_city_scripts()
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], '11.0.0');
     wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css', [], '6.0.0');
     wp_enqueue_style('sweetalert2-css', 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css', [], '11.0.0');
+    wp_enqueue_style('plyr-css', 'https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css', [], '3.7.8');
 
     // Enqueue external JavaScript
     wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], '2.3.1', true);
@@ -65,6 +66,7 @@ function link_city_scripts()
     wp_enqueue_script('fullpage-js', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js', ['jquery'], '4.0.37', true);
     wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js', ['jquery'], '6.0.0', true);
     wp_enqueue_script('sweetalert2-js', 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js', ['jquery'], '11.0.0', true);
+    wp_enqueue_script('plyr-js', 'https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js', ['jquery'], '3.7.8', true);
 
     // Enqueue custom JavaScript
     wp_enqueue_script('link-city-app', get_template_directory_uri() . '/assets/js/app.js', ['jquery'], '1.0.0', true);
@@ -310,10 +312,10 @@ function link_city_create_default_cf7_form()
                         [text* your-name placeholder "Họ và tên *"]
                     </div>
                     <div class="form-group col-12">
-                        [email* your-email placeholder "Email *"]
+                        [email your-email placeholder "Email"]
                     </div>
                     <div class="form-group col-12">
-                        [tel your-phone placeholder "Số điện thoại"]
+                        [tel* your-phone placeholder "Số điện thoại *"]
                     </div>
                     <div class="form-group col-12">
                         [textarea your-message placeholder "Nội dung tin nhắn *"]
@@ -533,3 +535,103 @@ function save_video_url_custom_field($post_id)
     }
 }
 add_action('save_post', 'save_video_url_custom_field');
+
+/*
+ * Handle lepopup form submission and send email to admin
+ */
+function handle_lepopup_form_submission() {
+    // Check if this is a lepopup form submission
+    if (!isset($_POST['lepopup_form_submit']) || $_POST['lepopup_form_submit'] !== 'yes') {
+        return;
+    }
+
+    // Verify nonce for security
+    if (!wp_verify_nonce($_POST['lepopup_nonce'], 'lepopup_form_nonce')) {
+        wp_die('Security check failed');
+    }
+
+    // Get form data
+    $name = sanitize_text_field($_POST['lepopup_name']);
+    $phone = sanitize_text_field($_POST['lepopup_phone']);
+    $email = sanitize_email($_POST['lepopup_email']);
+
+    // Validate required fields
+    if (empty($name) || empty($phone) || empty($email)) {
+        wp_die('Vui lòng điền đầy đủ thông tin');
+    }
+
+    // Prepare email content
+    $subject = 'Thông tin đăng ký tìm hiểu dự án từ website';
+    
+    $message = "
+    <html>
+    <head>
+        <title>Thông tin đăng ký dự án</title>
+    </head>
+    <body>
+        <h2>Thông tin đăng ký tìm hiểu dự án</h2>
+        <table style='border-collapse: collapse; width: 100%;'>
+            <tr style='background-color: #f2f2f2;'>
+                <td style='border: 1px solid #ddd; padding: 8px; font-weight: bold;'>Họ và tên:</td>
+                <td style='border: 1px solid #ddd; padding: 8px;'>{$name}</td>
+            </tr>
+            <tr>
+                <td style='border: 1px solid #ddd; padding: 8px; font-weight: bold;'>Số điện thoại:</td>
+                <td style='border: 1px solid #ddd; padding: 8px;'>{$phone}</td>
+            </tr>
+            <tr style='background-color: #f2f2f2;'>
+                <td style='border: 1px solid #ddd; padding: 8px; font-weight: bold;'>Email:</td>
+                <td style='border: 1px solid #ddd; padding: 8px;'>{$email}</td>
+            </tr>
+            <tr>
+                <td style='border: 1px solid #ddd; padding: 8px; font-weight: bold;'>Thời gian gửi:</td>
+                <td style='border: 1px solid #ddd; padding: 8px;'>" . current_time('d/m/Y H:i:s') . "</td>
+            </tr>
+        </table>
+        <br>
+        <p><strong>Ghi chú:</strong> Khách hàng đã đăng ký tìm hiểu thông tin dự án qua popup form trên website.</p>
+    </body>
+    </html>
+    ";
+
+    // Email headers
+    $headers = array(
+        'Content-Type: text/html; charset=UTF-8',
+        'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>',
+        'Reply-To: ' . $name . ' <' . $email . '>'
+    );
+
+    // Get admin email
+    $admin_email = get_option('admin_email');
+    
+    // Send email
+    $mail_sent = wp_mail($admin_email, $subject, $message, $headers);
+
+    // Send response back to JavaScript
+    if ($mail_sent) {
+        wp_send_json_success(array(
+            'message' => 'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ lại sớm nhất có thể.',
+            'status' => 'success'
+        ));
+    } else {
+        wp_send_json_error(array(
+            'message' => 'Có lỗi xảy ra, vui lòng thử lại sau.',
+            'status' => 'error'
+        ));
+    }
+}
+add_action('wp_ajax_lepopup_form_submit', 'handle_lepopup_form_submission');
+add_action('wp_ajax_nopriv_lepopup_form_submit', 'handle_lepopup_form_submission');
+
+/*
+ * Add AJAX URL to WordPress
+ */
+function add_lepopup_ajax_url() {
+    ?>
+    <script type="text/javascript">
+        var lepopup_ajax_url = '<?php echo admin_url('admin-ajax.php'); ?>';
+        var lepopup_nonce = '<?php echo wp_create_nonce('lepopup_form_nonce'); ?>';
+    </script>
+    <?php
+}
+add_action('wp_head', 'add_lepopup_ajax_url');

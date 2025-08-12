@@ -84,4 +84,9 @@ if ($pagination) : ?>
     </section>
 </div>
 
-<?php get_footer(); ?>
+<?php
+// Include footer contact section similar to index layout
+get_template_part('template-parts/section', 'footer');
+
+get_footer();
+?>

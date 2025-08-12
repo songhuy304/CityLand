@@ -114,37 +114,37 @@
                                 <a href="<?php echo home_url(); ?>" aria-current="page">Trang chủ</a>
                             </li>
                             <li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-673">
-                                <a href="/#thiet-ke">Thiết kế</a>
+                                <a href="<?php echo home_url(); ?>/#thiet-ke">Thiết kế</a>
                             </li>
                             <li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
-                                <a href="/#tong-quan">Tổng quan</a>
+                                <a href="<?php echo home_url(); ?>/#tong-quan">Tổng quan</a>
                             </li>
                             <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671">
-                                <a href="/#vi-tri">Vị trí</a>
+                                <a href="<?php echo home_url(); ?>/#vi-tri">Vị trí</a>
                             </li>
                             <li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672">
-                                <a href="/#noi-khu">Nội khu</a>
+                                <a href="<?php echo home_url(); ?>/#noi-khu">Nội khu</a>
                             </li>
                             <li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721">
-                                <a href="/#ngoai-khu">Ngoại khu</a>
+                                <a href="<?php echo home_url(); ?>/#ngoai-khu">Ngoại khu</a>
                             </li>
                             <li id="menu-item-2356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2356">
-                                <a href="/#mat-bang">Mặt bằng</a>
+                                <a href="<?php echo home_url(); ?>/#mat-bang">Mặt bằng</a>
                             </li>
                             <li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674">
-                                <a href="/#tien-do">Tiến độ dự án</a>
+                                <a href="<?php echo home_url(); ?>/#tien-do">Tiến độ dự án</a>
                             </li>
                             <li id="menu-item-2674" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2674">
                                 <a href="/category/tin-du-an">Tin tức</a>
                             </li>
                             <li id="menu-item-1164" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1164">
-                                <a href="/#doi-tac" aria-current="page">Đối tác</a>
+                                <a href="<?php echo home_url(); ?>/#doi-tac" aria-current="page">Đối tác</a>
                             </li>
                             <li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566">
-                                <a href="/#footer">Liên hệ</a>
+                                <a href="<?php echo home_url(); ?>/#footer">Liên hệ</a>
                             </li>
                         </ul>
-                        <form method="get" class="searchform" action="https://k-homenewcity.vn/" role="search">
+                        <form method="get" class="searchform" action="<?php echo home_url(); ?>" role="search">
                             <div class="flex-row relative">
                                 <div class="input-container">
                                     <input class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm" />
