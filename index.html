@@ -13,7 +13,8 @@
             referrerpolicy="no-referrer"
         />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" /> -->
+        <link href="https://vjs.zencdn.net/8.23.3/video-js.css" rel="stylesheet" />
         <link rel="stylesheet" href="core.css" />
         <title>Document</title>
     </head>
@@ -738,49 +739,61 @@
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
                                                     <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <iframe
-                                                            src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                                            allowfullscreen
-                                                            allowtransparency
-                                                            allow="autoplay"
-                                                            clickToPlay
-                                                        ></iframe>
+                                                        <video
+                                                            class="video-js vjs-default-skin"
+                                                            controls
+                                                            playsinline
+                                                            autoplay
+                                                            data-setup='{
+                                                                "techOrder": ["youtube"],
+                                                                "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=egKUHx-8hiE" }]
+                                                            }'
+                                                        ></video>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
                                                     <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <iframe
-                                                            src="https://www.youtube.com/embed/D166kPGiUmM?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                                            allowfullscreen
-                                                            allowtransparency
-                                                            allow="autoplay"
-                                                        ></iframe>
+                                                        <video
+                                                            class="video-js vjs-default-skin"
+                                                            controls
+                                                            playsinline
+                                                            data-setup='{
+                                                                "techOrder": ["youtube"],
+                                                                "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=D166kPGiUmM" }]
+                                                            }'
+                                                        ></video>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
                                                     <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <iframe
-                                                            src="https://www.youtube.com/embed/ySj6KLxigJk?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                                            allowfullscreen
-                                                            allowtransparency
-                                                            allow="autoplay"
-                                                        ></iframe>
+                                                        <video
+                                                            class="video-js vjs-default-skin"
+                                                            controls
+                                                            playsinline
+                                                            data-setup='{
+                                                                "techOrder": ["youtube"],
+                                                                "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=ySj6KLxigJk" }]
+                                                            }'
+                                                        ></video>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
                                                     <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <iframe
-                                                            src="https://www.youtube.com/embed/egKUHx-8hiE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-                                                            allowfullscreen
-                                                            allowtransparency
-                                                            allow="autoplay"
-                                                        ></iframe>
+                                                        <video
+                                                            class="video-js vjs-default-skin"
+                                                            controls
+                                                            playsinline
+                                                            data-setup='{
+                                                                "techOrder": ["youtube"],
+                                                                "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=egKUHx-8hiE" }]
+                                                            }'
+                                                        ></video>
                                                     </div>
                                                 </div>
                                             </div>
@@ -5760,7 +5773,7 @@
                                                             </div>
                                                             <iframe style="display: none"></iframe
                                                         ></span>
-                                                        <noscript>
+                                                        <!-- <noscript>
                                                             <div class="grecaptcha-noscript">
                                                                 <iframe
                                                                     src="https://www.google.com/recaptcha/api/fallback?k=6LcrfXorAAAAABrJZDZwDyxR7zh0nXZCEkqsEBCE"
@@ -5778,7 +5791,7 @@
                                                                 >
                                                                 </textarea>
                                                             </div>
-                                                        </noscript>
+                                                        </noscript> -->
                                                     </span>
                                                 </div>
                                             </div>
@@ -6136,8 +6149,11 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="https://vjs.zencdn.net/8.23.3/video.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js"></script>
+
 
         <script src="app.js"></script>
         <div id="active-fullpage"></div>

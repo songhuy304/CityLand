@@ -310,36 +310,36 @@ function fistPopUp() {
     });
 
     // Handle lepopup form submission
-    $(document).on("submit", "#lepopup-contact-form", function(e) {
+    $(document).on("submit", "#lepopup-contact-form", function (e) {
         e.preventDefault();
-        
+
         var form = $(this);
         var submitBtn = form.find('button[type="submit"]');
         var originalText = submitBtn.text();
-        
+
         // Disable submit button and show loading
-        submitBtn.prop('disabled', true).text('Đang gửi...');
-        
+        submitBtn.prop("disabled", true).text("Đang gửi...");
+
         // Get form data
         var formData = new FormData(this);
-        formData.append('action', 'lepopup_form_submit');
-        
+        formData.append("action", "lepopup_form_submit");
+
         // Send AJAX request
         $.ajax({
             url: lepopup_ajax_url,
-            type: 'POST',
+            type: "POST",
             data: formData,
             processData: false,
             contentType: false,
-            success: function(response) {
+            success: function (response) {
                 if (response.success) {
                     // Show success message
                     Swal.fire({
-                        icon: 'success',
-                        title: 'Thành công!',
+                        icon: "success",
+                        title: "Thành công!",
                         text: response.data.message,
-                        confirmButtonText: 'Đóng',
-                        confirmButtonColor: '#28a745'
+                        confirmButtonText: "Đóng",
+                        confirmButtonColor: "#28a745",
                     }).then((result) => {
                         // Close popup and reset form
                         $("#lepopup-form-13").removeClass("active");
@@ -349,28 +349,28 @@ function fistPopUp() {
                 } else {
                     // Show error message
                     Swal.fire({
-                        icon: 'error',
-                        title: 'Lỗi!',
+                        icon: "error",
+                        title: "Lỗi!",
                         text: response.data.message,
-                        confirmButtonText: 'Thử lại',
-                        confirmButtonColor: '#dc3545'
+                        confirmButtonText: "Thử lại",
+                        confirmButtonColor: "#dc3545",
                     });
                 }
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 // Show error message
                 Swal.fire({
-                    icon: 'error',
-                    title: 'Lỗi!',
-                    text: 'Có lỗi xảy ra, vui lòng thử lại sau.',
-                    confirmButtonText: 'Thử lại',
-                    confirmButtonColor: '#dc3545'
+                    icon: "error",
+                    title: "Lỗi!",
+                    text: "Có lỗi xảy ra, vui lòng thử lại sau.",
+                    confirmButtonText: "Thử lại",
+                    confirmButtonColor: "#dc3545",
                 });
             },
-            complete: function() {
+            complete: function () {
                 // Re-enable submit button
-                submitBtn.prop('disabled', false).text(originalText);
-            }
+                submitBtn.prop("disabled", false).text(originalText);
+            },
         });
     });
 }
@@ -833,29 +833,21 @@ function swiper() {
             },
         },
     });
-    // Khởi tạo Plyr cho tất cả các video YouTube
-    const players = Array.from(document.querySelectorAll(".plyr__video-embed")).map(
-        (p) =>
-            new Plyr(p, {
-                controls: [
-                    "play-large",
-                    "play",
-                    "progress",
-                    "current-time",
-                    "mute",
-                    "volume",
-                    "fullscreen",
-                ],
-                youtube: {
-                    noCookie: true,
-                    rel: 0,
-                    showinfo: 0,
-                    iv_load_policy: 3,
-                    modestbranding: 1,
-                },
-            })
-    );
+    // 1. Khởi tạo tất cả Video.js player và lưu vào mảng
+    const videoPlayers = [];
 
+    function isIOS() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
+
+    const isiOS = isIOS();
+
+    document.querySelectorAll(".video-js").forEach((videoEl) => {
+        const player = videojs(videoEl);
+        videoPlayers.push(player);
+    });
+
+    // 2. Khởi tạo Swiper + xử lý slideChange
     var swiper2 = new Swiper(".swiper-video", {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -865,26 +857,32 @@ function swiper() {
         },
         on: {
             slideChange: function () {
-                // Tạm dừng tất cả các video khi chuyển slide
-                players.forEach((player) => {
-                    player.pause();
+                // ⛔ Dừng tất cả video khi chuyển slide
+                videoPlayers.forEach((player) => {
+                    if (!player.paused()) {
+                        player.pause();
+                    }
                 });
             },
             slideChangeTransitionEnd: function () {
-                // Tìm video trong slide hiện tại
-                const activeIndex = this.activeIndex;
+                // ✅ Phát video trong slide đang active
                 const activeSlide = document.querySelector(".swiper-video .swiper-slide-active");
+
                 if (activeSlide) {
-                    const activePlayer = activeSlide.querySelector(".plyr__video-embed");
-                    if (activePlayer) {
+                    const videoEl = activeSlide.querySelector(".video-js");
+                    if (videoEl) {
                         const playerIndex = Array.from(
-                            document.querySelectorAll(".plyr__video-embed")
-                        ).indexOf(activePlayer);
-                        if (playerIndex !== -1 && players[playerIndex]) {
-                            // Tự động phát video trong slide hiện tại
-                            setTimeout(() => {
-                                players[playerIndex].play();
-                            }, 300);
+                            document.querySelectorAll(".video-js")
+                        ).indexOf(videoEl);
+                        const player = videoPlayers[playerIndex];
+
+                        if (player) {
+                            player.ready(() => {
+                                if (isiOS) {
+                                    player.muted(true);
+                                }
+                                player.play();
+                            });
                         }
                     }
                 }

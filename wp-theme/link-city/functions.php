@@ -58,7 +58,7 @@ function link_city_scripts()
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], '11.0.0');
     wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css', [], '6.0.0');
     wp_enqueue_style('sweetalert2-css', 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css', [], '11.0.0');
-    wp_enqueue_style('plyr-css', 'https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css', [], '3.7.8');
+    wp_enqueue_style('videojs-css', 'https://vjs.zencdn.net/8.23.3/video-js.css', [], '8.23.3');
 
     // Enqueue external JavaScript
     wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', ['jquery'], '2.3.1', true);
@@ -66,7 +66,8 @@ function link_city_scripts()
     wp_enqueue_script('fullpage-js', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.37/fullpage.min.js', ['jquery'], '4.0.37', true);
     wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js', ['jquery'], '6.0.0', true);
     wp_enqueue_script('sweetalert2-js', 'https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js', ['jquery'], '11.0.0', true);
-    wp_enqueue_script('plyr-js', 'https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js', ['jquery'], '3.7.8', true);
+    wp_enqueue_script('videojs-js', 'https://vjs.zencdn.net/8.23.3/video.js', ['jquery'], '8.23.3', true);
+    wp_enqueue_script('videojs-youtube-js', 'https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js', ['videojs-js'], '3.0.1', true);
 
     // Enqueue custom JavaScript
     wp_enqueue_script('link-city-app', get_template_directory_uri() . '/assets/js/app.js', ['jquery'], '1.0.0', true);
@@ -539,7 +540,8 @@ add_action('save_post', 'save_video_url_custom_field');
 /*
  * Handle lepopup form submission and send email to admin
  */
-function handle_lepopup_form_submission() {
+function handle_lepopup_form_submission()
+{
     // Check if this is a lepopup form submission
     if (!isset($_POST['lepopup_form_submit']) || $_POST['lepopup_form_submit'] !== 'yes') {
         return;
@@ -556,13 +558,13 @@ function handle_lepopup_form_submission() {
     $email = sanitize_email($_POST['lepopup_email']);
 
     // Validate required fields
-    if (empty($name) || empty($phone) || empty($email)) {
+    if (empty($name) || empty($phone)) {
         wp_die('Vui lòng điền đầy đủ thông tin');
     }
 
     // Prepare email content
     $subject = 'Thông tin đăng ký tìm hiểu dự án từ website';
-    
+
     $message = "
     <html>
     <head>
@@ -585,39 +587,39 @@ function handle_lepopup_form_submission() {
             </tr>
             <tr>
                 <td style='border: 1px solid #ddd; padding: 8px; font-weight: bold;'>Thời gian gửi:</td>
-                <td style='border: 1px solid #ddd; padding: 8px;'>" . current_time('d/m/Y H:i:s') . "</td>
+                <td style='border: 1px solid #ddd; padding: 8px;'>" . current_time('d/m/Y H:i:s') . '</td>
             </tr>
         </table>
         <br>
         <p><strong>Ghi chú:</strong> Khách hàng đã đăng ký tìm hiểu thông tin dự án qua popup form trên website.</p>
     </body>
     </html>
-    ";
+    ';
 
     // Email headers
-    $headers = array(
+    $headers = [
         'Content-Type: text/html; charset=UTF-8',
         'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>',
-        'Reply-To: ' . $name . ' <' . $email . '>'
-    );
+        'Reply-To: ' . $name . ' <' . $email . '>',
+    ];
 
     // Get admin email
     $admin_email = get_option('admin_email');
-    
+
     // Send email
     $mail_sent = wp_mail($admin_email, $subject, $message, $headers);
 
     // Send response back to JavaScript
     if ($mail_sent) {
-        wp_send_json_success(array(
+        wp_send_json_success([
             'message' => 'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ lại sớm nhất có thể.',
-            'status' => 'success'
-        ));
+            'status' => 'success',
+        ]);
     } else {
-        wp_send_json_error(array(
+        wp_send_json_error([
             'message' => 'Có lỗi xảy ra, vui lòng thử lại sau.',
-            'status' => 'error'
-        ));
+            'status' => 'error',
+        ]);
     }
 }
 add_action('wp_ajax_lepopup_form_submit', 'handle_lepopup_form_submission');
@@ -628,10 +630,10 @@ add_action('wp_ajax_nopriv_lepopup_form_submit', 'handle_lepopup_form_submission
  */
 function add_lepopup_ajax_url() {
     ?>
-    <script type="text/javascript">
+<script type="text/javascript">
         var lepopup_ajax_url = '<?php echo admin_url('admin-ajax.php'); ?>';
         var lepopup_nonce = '<?php echo wp_create_nonce('lepopup_form_nonce'); ?>';
-    </script>
-    <?php
+</script>
+<?php
 }
 add_action('wp_head', 'add_lepopup_ajax_url');

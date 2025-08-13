@@ -39,11 +39,11 @@
                 <div class="lepopup-input" style="margin-top: 15px" data-aos="fade-up" data-aos-duration="900">
                     <input type="email" name="lepopup_email" class="lepopup-ta-left" placeholder="Email của bạn" autocomplete="email" value="" aria-label="E-mail Field" required />
                 </div>
-                
+
                 <!-- Hidden fields for form processing -->
                 <input type="hidden" name="lepopup_form_submit" value="yes" />
                 <input type="hidden" name="lepopup_nonce" value="<?php echo wp_create_nonce('lepopup_form_nonce'); ?>" />
-                
+
                 <div class="lepopup-button-wrapper" data-aos="fade-up" data-aos-duration="1000">
                     <button type="submit" class="lepopup-button lepopup-button-zoom-out">GỬI THÔNG TIN</button>
                 </div>

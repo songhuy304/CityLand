@@ -1660,6 +1660,11 @@ section.section-home-1 .swiper-video .swiper-slide .video-wrap {
     border: 0;
 }
 
+.video-js {
+    width: 100%;
+    height: 100%;
+}
+
 section.section-home-1 .swiper-video-thumb .swiper-slide .video-wrap {
     border: 2px solid transparent;
     cursor: pointer;

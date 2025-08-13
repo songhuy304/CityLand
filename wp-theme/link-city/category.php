@@ -55,7 +55,7 @@ if ($categories) : ?>
 
                             <?php
                                 $video_url = get_post_meta(get_the_ID(), 'video_url', true);
-                                if ($video_url) : ?>
+                        if ($video_url) : ?>
                             <a href="<?php echo esc_url($video_url); ?>" data-fancybox data-aspect-ratio="16 / 9">
                                 <?php else : ?>
                                 <a href="<?php the_permalink(); ?>" data-fancybox data-aspect-ratio="16 / 9">
