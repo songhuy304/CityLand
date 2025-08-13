@@ -738,63 +738,55 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <video
-                                                            class="video-js vjs-default-skin"
-                                                            controls
-                                                            playsinline
-                                                            autoplay
-                                                            data-setup='{
+                                                    <video
+                                                        class="video-js vjs-default-skin vjs-fluid"
+                                                        controls
+                                                        playsinline
+                                                        autoplay
+                                                        data-setup='{
                                                                 "techOrder": ["youtube"],
                                                                 "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=egKUHx-8hiE" }]
                                                             }'
-                                                        ></video>
-                                                    </div>
+                                                    ></video>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <video
-                                                            class="video-js vjs-default-skin"
-                                                            controls
-                                                            playsinline
-                                                            data-setup='{
+                                                    <video
+                                                        class="video-js vjs-default-skin vjs-fluid"
+                                                        controls
+                                                        playsinline
+                                                        data-setup='{
                                                                 "techOrder": ["youtube"],
                                                                 "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=D166kPGiUmM" }]
                                                             }'
-                                                        ></video>
-                                                    </div>
+                                                    ></video>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <video
-                                                            class="video-js vjs-default-skin"
-                                                            controls
-                                                            playsinline
-                                                            data-setup='{
+                                                    <video
+                                                        class="video-js vjs-default-skin vjs-fluid"
+                                                        controls
+                                                        playsinline
+                                                        data-setup='{
                                                                 "techOrder": ["youtube"],
                                                                 "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=ySj6KLxigJk" }]
                                                             }'
-                                                        ></video>
-                                                    </div>
+                                                    ></video>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="video-wrap">
-                                                    <div class="plyr__video-embed" style="aspect-ratio: 16/9">
-                                                        <video
-                                                            class="video-js vjs-default-skin"
-                                                            controls
-                                                            playsinline
-                                                            data-setup='{
+                                                    <video
+                                                        class="video-js vjs-default-skin vjs-fluid"
+                                                        controls
+                                                        playsinline
+                                                        data-setup='{
                                                                 "techOrder": ["youtube"],
                                                                 "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=egKUHx-8hiE" }]
                                                             }'
-                                                        ></video>
-                                                    </div>
+                                                    ></video>
                                                 </div>
                                             </div>
                                         </div>
@@ -5873,11 +5865,15 @@
                                 required
                             />
                         </div>
-                        
+
                         <!-- Hidden fields for form processing -->
                         <input type="hidden" name="lepopup_form_submit" value="yes" />
-                        <input type="hidden" name="lepopup_nonce" value="<?php echo wp_create_nonce('lepopup_form_nonce'); ?>" />
-                        
+                        <input
+                            type="hidden"
+                            name="lepopup_nonce"
+                            value="<?php echo wp_create_nonce('lepopup_form_nonce'); ?>"
+                        />
+
                         <div class="lepopup-button-wrapper" data-aos="fade-up" data-aos-duration="1000">
                             <button type="submit" class="lepopup-button lepopup-button-zoom-out">GỬI THÔNG TIN</button>
                         </div>
@@ -6153,7 +6149,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="https://vjs.zencdn.net/8.23.3/video.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/videojs-youtube@3.0.1/dist/Youtube.min.js"></script>
-
 
         <script src="app.js"></script>
         <div id="active-fullpage"></div>
