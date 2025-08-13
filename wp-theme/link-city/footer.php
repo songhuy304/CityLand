@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="lepopup-input" style="margin-top: 15px" data-aos="fade-up" data-aos-duration="900">
-                    <input type="email" name="lepopup_email" class="lepopup-ta-left" placeholder="Email của bạn" autocomplete="email" value="" aria-label="E-mail Field" required />
+                    <input type="email" name="lepopup_email" class="lepopup-ta-left" placeholder="Email của bạn" autocomplete="email" value="" aria-label="E-mail Field" />
                 </div>
 
                 <!-- Hidden fields for form processing -->
