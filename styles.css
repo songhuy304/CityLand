@@ -629,6 +629,31 @@ body {
     padding: 0.521rem 0.625rem;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.position-map-lines {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+.position-map-lines line,
+.position-map-lines path {
+    animation: mapLines 1s infinite linear;
+    stroke-width: 0.5px;
+    stroke-dasharray: 10;
+    fill: transparent;
+}
+@keyframes mapLines {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -2030,6 +2055,10 @@ section.position-sec {
     background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/05/bg-du-an.jpg);
 }
 
+section.position-sec .fp-tableCell {
+    height: 100vh;
+}
+
 .position-sec .left-col {
     width: 37%;
 }
@@ -2057,8 +2086,186 @@ section.position-sec {
     text-decoration: underline;
 }
 
+.position-sec .left-col .list-position {
+    padding: 2.083rem;
+    position: relative;
+    z-index: 5;
+    margin-top: 1.042rem;
+    background: linear-gradient(180deg, #326768 0%, rgba(50, 103, 104, 0) 100%);
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+}
+.position-sec .left-col .list-position:before {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    position: absolute;
+    z-index: -1;
+    content: "";
+    left: 2px;
+    top: 2px;
+    background: linear-gradient(
+        180deg,
+        #ffffff 19.7%,
+        rgba(255, 255, 255, 0.8) 53.51%,
+        rgba(255, 255, 255, 0.4) 100%
+    );
+    -webkit-border-radius: 18px 18px 0 0;
+    -moz-border-radius: 18px 18px 0 0;
+    border-radius: 18px 18px 0 0;
+}
+.position-sec .left-col .list-position-inner {
+    max-height: 19.896rem;
+    padding-right: 0.729rem;
+}
+.position-sec .left-col .list-position-inner > .item {
+    margin-bottom: 0.521rem;
+    position: relative;
+    cursor: pointer;
+}
+.position-sec .left-col .list-position-inner > .item .icon-wrap img {
+    width: 1.146rem;
+    min-width: 1.146rem;
+    height: 1.146rem;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+.position-sec .left-col .list-position-inner > .item .icon-wrap {
+    background-color: var(--main-cl);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--main-cl);
+    display: flex;
+    aspect-ratio: 1;
+    padding: 0.521rem;
+    position: relative;
+    z-index: 3;
+}
+.position-sec .left-col .list-position-inner > .item:before {
+    left: 1.042rem;
+    top: 0;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: calc(100% - 1.042rem);
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(14, 129, 138, 0.2) 0%, rgba(14, 129, 138, 0) 100%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.position-sec .left-col .list-position-inner > .item:after {
+    left: 1.042rem;
+    top: 0;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: calc(100% - 1.042rem);
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(90deg, #f26a23 0%, rgba(242, 106, 35, 0) 100%);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.position-sec .left-col .list-position-inner > .item .name-wrap {
+    padding-left: 0.729rem;
+    font-size: 0.833rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    position: relative;
+    z-index: 3;
+}
+.position-sec .left-col .list-position-inner > .item.active:before,
+.position-sec .left-col .list-position-inner > .item:hover:before {
+    opacity: 0;
+}
+.position-sec .left-col .list-position-inner > .item.active:after,
+.position-sec .left-col .list-position-inner > .item:hover:after {
+    opacity: 0.3;
+}
+.position-sec .left-col .list-position-inner > .item.active .icon-wrap,
+.position-sec .left-col .list-position-inner > .item:hover .icon-wrap {
+    border-color: #ffcb8b;
+    background-color: var(--sub-cl);
+}
+.position-sec .left-col .sec-title {
+    margin-bottom: 0.9375rem;
+}
+.position-sec .left-col .content-wrapper {
+    max-height: 5.052rem;
+}
+.position-sec .left-col a.text-white {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.354rem;
+    gap: 0.521rem;
+    margin-top: 1.042rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+.position-sec .left-col a.text-white > span.text {
+    text-decoration: underline;
+}
+.position-sec .left-col a.text-white:hover {
+    color: #fff;
+}
+.position-sec .right-col {
+    padding-left: 1.042rem;
+    flex-grow: 1;
+}
+.position-sec .right-col img {
+    max-height: 100vh;
+    object-fit: contain;
+}
+.position-sec .right-col .map-icon {
+    text-align: center;
+    position: relative;
+}
+.position-sec .right-col .map-icon:before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.167rem;
+    height: 4.167rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.position-sec .right-col .map-icon.active:before,
+.position-sec .right-col .map-icon:hover:before {
+    background-color: rgba(242, 106, 35, 0.8);
+    animation: scaleBorder 1.2s infinite;
+}
+.position-sec .right-col .map-icon img {
+    width: 5.208rem;
+    height: 5.208rem;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+    z-index: 3;
+}
+.position-sec .right-col .map-icon .name {
+    font-size: 0.3125rem;
+    line-height: 0.521rem;
+}
+
 section.utilities-3 {
-    background-image: url(https://k-homenewcity.vn/wp-content/uploads/2024/10/Tienich_DS_3.jpg);
+    background-image: url(./assets/images/bg-news.jpg);
 }
 
 section .fp-tableCell {
@@ -2205,10 +2412,11 @@ section.utilities-3 .btn {
 .utilities-swiper-2-wrap {
     position: relative;
     padding: 0 3.90625rem;
-    margin-top: 2.604rem;
+    /* margin-top: 2.604rem; */
+    margin-top: 1.5625rem;
 }
 .utilities-swiper-2-wrap:before {
-    top: 50%;
+    top: 13rem;
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
@@ -3757,12 +3965,7 @@ section.normal-post .content-post .share-btn > * {
 section.default-page {
     padding: 5rem 0;
 }
-.content-wrapper,
-.content-wrapper p,
-.content-wrapper li {
-    font-size: 1rem;
-    line-height: 1.25rem;
-}
+
 .content-wrapper h2 {
     font-size: 1.5625rem;
     font-weight: 700;
