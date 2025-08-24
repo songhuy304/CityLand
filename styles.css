@@ -427,6 +427,14 @@ body {
     line-height: 2.083rem;
 }
 
+.ts-03 {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .ts-04 {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -1237,6 +1245,47 @@ header#header .header-button-2 > a > span.hotline {
     -webkit-border-radius: 1.042rem;
     -moz-border-radius: 1.042rem;
     border-radius: 1.042rem;
+}
+
+.gallery-popup {
+    display: none;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: unset;
+    flex-direction: column;
+}
+.gallery-popup .swiper {
+    width: 60.9375rem;
+    max-width: 100%;
+}
+.gallery-popup .swiper.gallery-thumb {
+    margin-top: 0.521rem;
+}
+.gallery-popup .swiper.gallery-thumb .img-wrap {
+    height: 6.771rem;
+    border: 3px solid transparent;
+}
+.gallery-popup .swiper.gallery-thumb .swiper-slide-thumb-active .img-wrap {
+    background-color: var(--sub-cl);
+}
+.gallery-popup .popup-title {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 1.979rem;
+    color: #fff;
+    margin-bottom: 1.5625rem;
+}
+.gallery-popup .swiper.gallery-main .img-wrap {
+    height: 33.854rem;
+}
+.gallery-popup .swiper.gallery-main .img-wrap img {
+    object-fit: contain;
+    -webkit-border-radius: 1.302rem;
+    -moz-border-radius: 1.302rem;
+    border-radius: 1.302rem;
+    width: auto;
+    margin: auto;
+    max-width: 100%;
 }
 
 #nk-main-menu.active .main-menu:before {
@@ -2219,6 +2268,9 @@ section.position-sec .fp-tableCell {
 .position-sec .right-col {
     padding-left: 1.042rem;
     flex-grow: 1;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
 }
 .position-sec .right-col img {
     max-height: 100vh;
@@ -2741,7 +2793,7 @@ section.utilities-2 .section-bg .dot .box-tooltip {
     transition: all 0.6s ease-in-out;
     z-index: 99;
     display: block;
-    position: relative;
+    position: absolute;
 }
 
 section.utilities-2 .section-bg .dot .box-tooltip::after {
@@ -2757,7 +2809,7 @@ section.utilities-2 .section-bg .dot .box-tooltip::after {
 
 /* When .box-tooltip has a child div.img-wrap, adjust top */
 section.utilities-2 .section-bg .dot .box-tooltip:has(> .wrap-link) {
-    top: -440% !important;
+    top: -350% !important;
 }
 
 section.utilities-2 .section-bg .dot .box-tooltip .img-wrap {
@@ -2940,6 +2992,10 @@ section.experience-page .box-360 .add-circle {
     top: 0;
     z-index: 20;
     opacity: 0 !important;
+}
+
+.wrap-fancybox > img {
+    display: none;
 }
 
 @keyframes scaleBorder {
@@ -3902,7 +3958,7 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
     }
 
     .position-sec .flex-box {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .position-sec .left-col {
@@ -3924,6 +3980,8 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
         padding-right: 10px;
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
+        overflow: hidden;
     }
 }
 
@@ -3965,6 +4023,10 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
     #fullpage > section {
         min-height: 100vh;
+    }
+
+    #fullpage > section.position-sec {
+        height: auto;
     }
 
     #nk-main-menu .menu-logo {
@@ -4512,6 +4574,16 @@ section.post-category-page .btn.load-more-posts {
     section.normal-post .content-post {
         padding: 2rem 3rem;
     }
+
+    .position-sec .right-col {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 @media only screen and (max-width: 767px) {
     section.normal-post .content-post {
@@ -4543,6 +4615,14 @@ section.post-category-page .btn.load-more-posts {
     .post-item .cont-wrap h3 {
         font-size: 16px;
         line-height: 20px;
+    }
+
+    .position-sec .right-col {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 

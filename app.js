@@ -8,6 +8,7 @@ $(document).ready(function () {
     addHeaderMobileClass();
     handleHeaderScroll();
     copyOnClick();
+    utilitiesActions();
     swiper();
 });
 
@@ -958,4 +959,21 @@ function copyOnClick() {
             button: "Close",
         });
     });
+}
+
+function utilitiesActions() {
+    jQuery(".list-utilities .item, section.utilities-2 .section-bg .dot").hover(
+        function () {
+            var id = jQuery(this).attr("data-id");
+
+            jQuery("section.utilities-2 .section-bg .dot[data-id='" + id + "']").addClass("active");
+
+            jQuery(".list-utilities .item[data-id='" + id + "']").addClass("active");
+        },
+        function () {
+            jQuery("section.utilities-2 .section-bg .dot").removeClass("active");
+
+            jQuery(".list-utilities .item").removeClass("active");
+        }
+    );
 }
