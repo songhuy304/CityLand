@@ -2685,6 +2685,10 @@ section.utilities-2 .section-bg {
 section.utilities-2 {
     overflow: hidden;
 }
+
+section.utilities-2 > .fp-tableCell {
+    height: 100%;
+}
 section.utilities-2 .col-6 {
     padding-right: 2.083rem;
 }
@@ -2886,20 +2890,169 @@ section.utilities-2 .section-bg .dot:hover .box-tooltip {
     transform: translateY(-50%) scale(1);
 }
 section.utilities-2 .cont-wrap {
-    position: absolute;
-    left: calc(calc(100vw - var(--container-w)) / 2);
-    transform: translateY(-50%);
-    z-index: 9;
-    display: inline-block;
-    padding-top: 8.333rem;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
 }
 section.utilities-2 .cont-wrap .sec-title {
-    width: 34.375rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-bottom: 1.5625rem;
 }
 
+/* section 7 */
+
+section.products-1 .section-bg {
+    background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/04/new-masterplan-2.jpg);
+}
+
+section.products-1 .section-bg {
+    background-size: 100% 100%;
+}
+
+section.products-1 .fp-tableCell {
+    height: 100%;
+}
+
+section.products-1 .cont-wrap .btn {
+    margin-top: 1.25rem;
+}
+
+section.products-1 .section-bg .sub-division-img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+section.products-1 .section-bg .sub-division-img img {
+    object-fit: unset;
+}
+section.products-1 .section-bg .sub-division-img.active {
+    opacity: 1;
+}
+
+section.products-1 .custom-tooltip {
+    transform: translateY(1.5625rem);
+    opacity: 0;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+section.products-1.fp-completely .custom-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+section.products-1.fp-completely .custom-tooltip:nth-of-type(2) {
+    transition-delay: 0.3s;
+}
+section.products-1.fp-completely .custom-tooltip:nth-of-type(4) {
+    transition-delay: 0.5s;
+}
+section.products-1.fp-completely .custom-tooltip:nth-of-type(6) {
+    transition-delay: 0.7s;
+}
+section.products-1.fp-completely .custom-tooltip:nth-of-type(8) {
+    transition-delay: 0.9s;
+}
+section.products-1.fp-completely .custom-tooltip:nth-of-type(10) {
+    transition-delay: 1.1s;
+}
+
+.custom-tooltip {
+    position: absolute;
+    z-index: 10;
+}
+.custom-tooltip .tooltip-text {
+    font-size: 1.042rem;
+    font-weight: 700;
+    line-height: 1.458rem;
+    padding: 0.625rem 1.25rem;
+    -webkit-border-radius: 2.604rem;
+    -moz-border-radius: 2.604rem;
+    border-radius: 2.604rem;
+    border: 2px solid var(--tooltip-cl);
+    background-color: #fff;
+    color: var(--tooltip-cl);
+    margin-bottom: 5.208rem;
+    position: relative;
+}
+.custom-tooltip .tooltip-text:before {
+    left: 50%;
+    height: 5.3125rem;
+    top: 100%;
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    content: "";
+    transform: translateX(-50%);
+}
+.custom-tooltip .tooltip-dot {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+.custom-tooltip .tooltip-dot:before {
+    width: 0.625rem;
+    height: 0.625rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    content: "";
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: var(--tooltip-cl);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.custom-tooltip.active .tooltip-text,
+.custom-tooltip:hover .tooltip-text {
+    border-color: var(--tooltip-hover-cl);
+    color: var(--tooltip-hover-cl);
+}
+.custom-tooltip.active .tooltip-dot:before,
+.custom-tooltip:hover .tooltip-dot:before {
+    background-color: var(--tooltip-hover-cl);
+}
+
+section.products-1 .ground-svg {
+    width: 100%;
+    height: 100%;
+}
+section.products-1 .ground-svg path {
+    cursor: pointer;
+}
+
+section.products-1 .cont-wrap {
+    width: 52%;
+    position: relative;
+    margin-top: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 5;
+    padding-bottom: 3.125rem;
+}
+
+.page-template-home section.products-1 .cont-wrap {
+    padding-bottom: 3.229rem;
+}
 /* section 8 */
 
 section.experience-page {
@@ -3983,6 +4136,24 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
         width: 100%;
         overflow: hidden;
     }
+
+    section.products-1 .cont-wrap {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    section.products-1 .section-bg {
+        display: none;
+    }
+
+    section.products-1 {
+        display: block;
+        background-image: url(https://k-homenewcity.com/wp-content/uploads/2025/04/new-masterplan-2.jpg);
+        background-size: contain !important;
+        background-color: #181e1c;
+        background-position: center top !important;
+        min-height: max-content !important;
+    }
 }
 
 @media (max-width: 849px) {
@@ -4218,6 +4389,33 @@ body.is-light-section .wrap-fp-nav #fp-nav ul li a span {
 
     .position-sec {
         padding: 3rem 0 0;
+    }
+
+    section.products-1 .cont-wrap {
+        padding-left: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section.products-1 {
+        padding: 0 0 0 !important;
+    }
+
+    section.utilities-2 > .fp-tableCell {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #0d4b4d;
+    }
+
+    section.utilities-2 .section-bg {
+        background-image: url(https://k-homenewcity.vn/wp-content/uploads/2025/04/new-masterplan.jpg);
+        margin-top: 1.5rem;
+        height: 250px;
+    }
+
+    section.utilities-2 .cont-wrap {
+        width: 100%;
     }
 }
 
@@ -4567,6 +4765,12 @@ section.post-category-page .btn.load-more-posts {
 
     #detail-page {
         padding-top: 0;
+    }
+
+    section.products-1 {
+        display: flex;
+        align-items: end;
+        padding: 14rem 0 0;
     }
 }
 

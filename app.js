@@ -4,6 +4,7 @@ $(document).ready(function () {
     addFullpage();
     MenuOpen();
     fistPopUp();
+    subdivisionActions();
     NKcustomSelect();
     addHeaderMobileClass();
     handleHeaderScroll();
@@ -958,6 +959,159 @@ function copyOnClick() {
 
             button: "Close",
         });
+    });
+}
+
+function subdivisionActions() {
+    jQuery("section.products-1 .custom-tooltip").hover(
+        function () {
+            var id = jQuery(this).attr("data-id");
+
+            jQuery(this).addClass("active");
+
+            jQuery("section.products-1 .sub-division-img[data-id='" + id + "']").addClass("active");
+        },
+        function () {
+            jQuery(this).removeClass("active");
+
+            jQuery("section.products-1 .sub-division-img").removeClass("active");
+        }
+    );
+
+    jQuery("section.products-1 .ground-svg path").hover(
+        function () {
+            var id = jQuery(this).attr("data-id");
+
+            jQuery(this).addClass("active");
+
+            jQuery("section.products-1 .sub-division-img[data-id='" + id + "']").addClass("active");
+
+            jQuery("section.products-1 .custom-tooltip[data-id='" + id + "']").addClass("active");
+        },
+        function () {
+            jQuery(this).removeClass("active");
+
+            jQuery("section.products-1 .sub-division-img").removeClass("active");
+
+            jQuery("section.products-1 .custom-tooltip").removeClass("active");
+        }
+    );
+
+    jQuery(document).on("click", "section.products-1 .ground-svg path", function () {
+        var id = jQuery(this).attr("data-id");
+
+        section_id = jQuery(
+            "section.products-1 .custom-tooltip[data-id='" + id + "'] a.wrap-link"
+        ).attr("href");
+
+        console.log(section_id);
+
+        if (section_id != "javascript:void(0);") {
+            if (jQuery(".home-products-1").length) {
+                location.href = section_id;
+            } else {
+                jQuery(".wrap-fp-nav #fp-nav ul li a[href='" + section_id + "']").click();
+            }
+        } else {
+            jQuery("section.products-1 .custom-tooltip[data-id='" + id + "'] a.wrap-link").click();
+        }
+    });
+
+    // thêm click mặt bằng
+
+    jQuery("section.products-2 .area-wrap > svg > path").hover(
+        function () {
+            var id = jQuery(this).attr("data-id");
+
+            jQuery("section.products-2 .custom-tooltip[data-id='" + id + "']").addClass("active");
+
+            jQuery("section.products-2 .area-wrap > svg > path[data-id='" + id + "']").addClass(
+                "active"
+            );
+        },
+        function () {
+            jQuery("section.products-2 .custom-tooltip").removeClass("active");
+
+            jQuery("section.products-2 .area-wrap > svg > path").removeClass("active");
+        }
+    );
+
+    jQuery(document).on("click", "section.products-2 .area-wrap > svg > path", function () {
+        var id = jQuery(this).attr("data-id");
+
+        var section = jQuery(this).closest("section.products-2");
+
+        if (id == 4 && section.hasClass("product-4")) {
+            window.open("https://k-homenewcity.vn/can-ho/", "_blank");
+        } else {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            var key = jQuery(this).closest(".area-wrap").attr("data-key");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[data-id='" + parseInt(key) + "" + (parseInt(id) - 1) + "']")
+                .trigger("click");
+        }
+    });
+
+    jQuery(document).on("click", "section.products-2 .note-pk .note-item", function () {
+        var id = jQuery(this).attr("linkdata-id");
+
+        if (parseInt(id) === 01) {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='01']")
+                .trigger("click");
+        } else if (parseInt(id) === 02) {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='02']")
+                .trigger("click");
+        } else if (parseInt(id) === 03) {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='03']")
+                .trigger("click");
+        } else if (parseInt(id) === 04) {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='04']")
+                .trigger("click");
+        } else if (parseInt(id) === 44) {
+            window.open("https://k-homenewcity.vn/can-ho/", "_blank");
+        } else {
+            jQuery(this).parents(".products-2").find(".subdivision-popup").addClass("show");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='" + parseInt(id) + "']")
+                .trigger("click");
+
+            jQuery(this)
+                .parents(".products-2")
+                .find(".subdivision-popup")
+                .find(".tab-title[linkdata-id='44']")
+                .addClass("hide-all");
+        }
+    });
+
+    jQuery(document).on("click", ".products-2 .close-popup", function () {
+        jQuery(this).parents(".subdivision-popup").removeClass("show");
     });
 }
 
